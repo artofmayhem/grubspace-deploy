@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.recipes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+h1 {
+  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-style: normal;
+  font-weight: 500;
+}
+
+.home {
+  background-image: url("./assets/pasta.jpg");
+}
+
+.recipes-container {
+  background-image: url("./assets/kitchenbg.jpg");
+  background-size: cover;
+}

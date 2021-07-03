@@ -19,6 +19,7 @@ const baseUri = "https://spoonacular.com/recipeImages/";
 const useStyles = makeStyles({
   root: {
     width: 375,
+    minWidth: 375,
     height: 450,
     padding: "5vh 0",
     margin: "5vh",

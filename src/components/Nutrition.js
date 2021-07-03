@@ -5,7 +5,7 @@ export default function Nutrition() {
     <React.Fragment>
       <div
         className={
-          "nutrition-container bg-black  w-screen flex flex-col justify-center align-center"
+          "nutrition-container bg-black text-center w-screen flex flex-col justify-center align-center"
         }
       >
         {" "}

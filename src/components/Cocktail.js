@@ -5,12 +5,12 @@ export default function Cocktail() {
     <React.Fragment>
       <div
         className={
-          "cocktail-container bg-black  w-screen flex flex-col justify-center align-center"
+          "cocktail-container bg-black text-center w-screen flex flex-col justify-center align-center"
         }
       >
         {" "}
         <h1 className={"text-white mx-auto text-5xl"} style={{textShadow: '0 0 1.5rem black'}}>
-          Cocktail Culture Holder
+          Cocktail Culture
         </h1>
       </div>
       <div

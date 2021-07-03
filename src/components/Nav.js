@@ -7,8 +7,12 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MenuIcon from "@material-ui/icons/Menu";
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+import LocalBarIcon from '@material-ui/icons/LocalBar';
+import LocalDiningIcon from '@material-ui/icons/LocalDining';
+import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const useStyles = makeStyles({
@@ -62,7 +66,7 @@ export default function Nav() {
         <List className={classes.list}>
           <ListItem button>
             <ListItemIcon>
-              <InboxIcon />
+            <EmojiPeopleIcon />
             </ListItemIcon>
             <Link to={"about"} onClick={handleDrawerClose}>
               <ListItemText primary="About" />
@@ -70,7 +74,7 @@ export default function Nav() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <InboxIcon />
+             <LibraryBooksIcon />
             </ListItemIcon>
             <Link to={"chef"} onClick={handleDrawerClose}>
               <ListItemText primary="Chef's Manifesto" />
@@ -78,10 +82,26 @@ export default function Nav() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <InboxIcon />
+             <LocalDiningIcon />
             </ListItemIcon>
             <Link to={"recipes"} onClick={handleDrawerClose}>
               <ListItemText primary="Recipe Box" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+            <LocalGroceryStoreIcon />
+            </ListItemIcon>
+            <Link to={"nutrition"} onClick={handleDrawerClose}>
+              <ListItemText primary="Nutrition Corner" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+            <LocalBarIcon/>
+            </ListItemIcon>
+            <Link to={"cocktails"} onClick={handleDrawerClose}>
+              <ListItemText primary="Cocktail Culture" />
             </Link>
           </ListItem>
         </List>

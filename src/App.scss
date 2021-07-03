@@ -45,12 +45,14 @@ h3 {
   background-image: url('./assets/recipe.jpg');
   background-size: cover;
   background-position: center center;
+  height: 34rem;
 }
 
 .about-container {
-  background-image: url('./assets/team.jpg');
+  background-image: url('./assets/about.jpg');
   background-size: cover;
   background-position: 25% 25%;
+  height: 39rem;
 }
 
 .chef-container {
@@ -58,6 +60,21 @@ h3 {
   background-size: cover;
   background-position: center center;
   height: 39rem;
+}
+
+
+.nutrition-container {
+  background-image: url('./assets/nutrition.jpg');
+  background-size: cover;
+  background-position: 25% 25%;
+  height: 34rem;
+}
+
+.cocktail-container {
+  background-image: url('./assets/cocktail.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 34rem;
 }
 
 .progress {

@@ -1,17 +1,20 @@
 import React from "react";
 
-export default function About() {
+export default function Nutrition() {
   return (
     <React.Fragment>
       <div
         className={
-          "about-container bg-black w-screen flex flex-col justify-center align-center"
+          "nutrition-container bg-black  w-screen flex flex-col justify-center align-center"
         }
       >
         {" "}
-        <h1 className={"text-white mt-20 mx-auto text-5xl"} style={{textShadow: '0 0 1rem black'}}>
-          Meet the Grubspace team
-        </h1>
+        <h2
+          className={"text-white mx-auto mt-32 text-5xl"}
+          style={{ textShadow: "0 0 1rem Black" }}
+        >
+          Nutrition Holder
+        </h2>
       </div>
       <div
         className={

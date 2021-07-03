@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     minWidth: 375,
     height: 450,
     padding: "5vh 0",
-    margin: "5vh",
+    margin: "1vh 5vh",
     borderRadius: "25px",
     top: "50%",
     left: "50%",
@@ -74,7 +74,7 @@ const Recipe = (props) => {
           "flex flex-row flex-wrap justify-center align-start w-screen h-screen p-10 -my-64 bg-white"
         }
       >
-        <h5 className={'progress'}>
+        <h5 className={'text-black'}>
           Your delicious results are on their way...
         </h5>
         <LinearProgress  />
@@ -85,7 +85,7 @@ const Recipe = (props) => {
       <>
         <div
           className={
-            "flex flex-row flex-wrap justify-center w-screen h-auto p-32 -my-64 bg-white shadow-inner "
+            "flex flex-row flex-wrap justify-center w-screen h-auto p-32 -my-72 bg-white shadow-inner "
           }
         >
           {recipe &&

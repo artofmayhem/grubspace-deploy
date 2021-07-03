@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { searchValue, getRecipe } from "../state/ReducerState/Actions";
 import { AppRecipeCards } from "./index";
 import { Button } from "@material-ui/core";
+import ScrollToTop from "react-scroll-to-top";
 
 const Recipes = (props) => {
   //initialize the recipes list
@@ -25,6 +26,7 @@ const Recipes = (props) => {
 
   return (
     <div className={"flex flex-col text-center"}>
+      <ScrollToTop smooth />
       <div className={"recipes-container bg-black w-screen h-screen"}>
         <form onSubmit={handleSubmit}>
           <h2 className={"mt-64 text-white text-6xl"}>Recipes</h2>
@@ -52,7 +54,7 @@ const Recipes = (props) => {
           </Button>{" "}
         </form>
       </div>
-      <div className={"self-center bg-white text-white mt-10"}>
+      <div className={"self-center bg-white text-white mt-32"}>
         <AppRecipeCards />
       </div>
     </div>

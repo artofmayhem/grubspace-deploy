@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-style: normal;
+  font-weight: 500;
 }
 
 html {
@@ -26,11 +29,39 @@ h1 {
   font-weight: 500;
 }
 
+h2 {
+  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-style: normal;
+  font-weight: 500;
+  text-shadow: 0 0 2.5rem black;
+}
+
+h3 {
+  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-style: normal;
+  font-weight: 500;
+  text-shadow: 0 0 2.5rem black;
+}
+
 .home {
   background-image: url("./assets/pasta.jpg");
 }
 
 .recipes-container {
-  background-image: url("./assets/kitchenbg.jpg");
+  background-image: url("./assets/recipe.jpg");
   background-size: cover;
+  background-position: center center;
+}
+
+.about-container {
+  background-image: url("./assets/team.jpg");
+  background-size: cover;
+  background-position: 25% 25%;
+}
+
+.chef-container {
+  background-image: url("./assets/chef.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 39rem;
 }

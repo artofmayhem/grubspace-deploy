@@ -26,6 +26,8 @@ const useStyles = makeStyles({
     borderRadius: "25px",
     top: "50%",
     left: "50%",
+    backgroundColor: '#FAFAFA',
+    boxShadow: '0 0 1rem #444'
   },
   media: {
     height: 140,
@@ -69,7 +71,7 @@ const Recipe = (props) => {
     return (
       <div
         className={
-          "flex flex-row flex-wrap justify-center align-start w-screen h-screen p-10 -my-64 bg-black"
+          "flex flex-row flex-wrap justify-center align-start w-screen h-screen p-10 -my-64 bg-white"
         }
       >
         <h5 className={'progress'}>
@@ -83,7 +85,7 @@ const Recipe = (props) => {
       <>
         <div
           className={
-            "flex flex-row flex-wrap justify-center w-screen h-auto p-32 -my-64 bg-black"
+            "flex flex-row flex-wrap justify-center w-screen h-auto p-32 -my-64 bg-white shadow-inner "
           }
         >
           {recipe &&
@@ -131,8 +133,8 @@ const Recipe = (props) => {
                     <Button size="small" color="primary" onClick={handleLikeButton}>
                       Like
                       {
-                        like === false ? <ThumbUpIcon color={'disabled'} className="-my-24" /> : 
-                        <ThumbUpIcon color={'primary'} className="-my-24" />
+                        like === false ? <ThumbUpIcon color={'disabled'} className="-my-24 ml-2" /> : 
+                        <ThumbUpIcon color={'primary'} className="-my-24 ml-2" />
                       }
                       
                     </Button>

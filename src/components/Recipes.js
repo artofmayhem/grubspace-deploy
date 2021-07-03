@@ -18,6 +18,7 @@ const Recipes = (props) => {
     event.preventDefault();
     props.searchValue(searchValues);
     props.getRecipe(searchValues);
+    setSearchValue('')
   };
 
 
@@ -26,30 +27,32 @@ const Recipes = (props) => {
     <div className={"flex flex-col text-center"}>
       <div className={"recipes-container bg-black w-screen h-screen"}>
         <form onSubmit={handleSubmit}>
-          <h2 className={"mt-64 text-black text-6xl"}>Recipes</h2>
-          <h3 className={"mx-auto mt-3 text-black "}>
+          <h2 className={"mt-64 text-white text-6xl"}>Recipes</h2>
+          <h3 className={"mx-auto mt-3 text-white text-xl "}>
             Thousands of ideas await
           </h3>
           <input
             name={"searchBar"}
             className={
-              "mx-auto mt-3 border-solid border-2 border-white shadow-xl h-12 text-center mb-20 mt-10 mr-5"
+              "mx-auto mt-3 border-solid border-2 border-white h-12 text-center mb-20 mt-10 mr-5"
             }
             type="text"
             value={searchValues}
+            style={{boxShadow: "0 0 1.5rem #444"}}
             onChange={handleChange}
           />{" "}
           <Button
             type="submit"
             variant="outlined"
             className={"shadow-xl"}
+            style={{color: '#FFF'}}
             onclick={handleSubmit}
           >
             Enter
           </Button>{" "}
         </form>
       </div>
-      <div className={"self-center bg-black text-white mt-10"}>
+      <div className={"self-center bg-white text-white mt-10"}>
         <AppRecipeCards />
       </div>
     </div>

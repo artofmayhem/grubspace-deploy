@@ -43,11 +43,11 @@ export default function Nav() {
       >
         <div className={'flex flex-row mlfa-rotate-180'}>
           <Button onClick={handleDrawerOpen}>
-            <MenuIcon className={"mt-6"} />
+            <MenuIcon className={"mt-6 ml-6"} />
           </Button>
 
           <Link to="/">
-            <h1 className={" mt-6 text-black text-4xl"}>Grubspace</h1>
+            <h1 className={" mt-6 ml-6 text-black text-4xl"}>Grubspace</h1>
           </Link>
         </div>
       </AppBar>
@@ -64,7 +64,7 @@ export default function Nav() {
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <Link to={"about"}>
+            <Link to={"about"} onClick={handleDrawerClose}>
               <ListItemText primary="About" />
             </Link>
           </ListItem>
@@ -72,7 +72,7 @@ export default function Nav() {
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <Link to={"home"}>
+            <Link to={"chef"} onClick={handleDrawerClose}>
               <ListItemText primary="Chef's Manifesto" />
             </Link>
           </ListItem>
@@ -80,7 +80,7 @@ export default function Nav() {
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <Link to={"recipes"}>
+            <Link to={"recipes"} onClick={handleDrawerClose}>
               <ListItemText primary="Recipe Box" />
             </Link>
           </ListItem>

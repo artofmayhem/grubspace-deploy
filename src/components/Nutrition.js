@@ -13,7 +13,7 @@ export default function Nutrition() {
           className={"text-white mx-auto mt-32 text-5xl"}
           style={{ textShadow: "0 0 1rem Black" }}
         >
-          Nutrition Holder
+          Nutrition Corner
         </h2>
       </div>
       <div

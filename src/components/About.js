@@ -5,7 +5,7 @@ export default function About() {
     <React.Fragment>
       <div
         className={
-          "about-container bg-black w-screen flex flex-col justify-center align-center"
+          "about-container bg-black w-screen text-center flex flex-col justify-center align-center"
         }
       >
         {" "}

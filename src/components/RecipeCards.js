@@ -12,7 +12,8 @@ import { Button } from "@material-ui/core";
 import { LinearProgress } from "@material-ui/core";
 import ShareIcon from '@material-ui/icons/Share';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
-import ThumbDownIcon from '@material-ui/icons/ThumbDown';
+
+
 const baseUri = "https://spoonacular.com/recipeImages/";
 
 const useStyles = makeStyles({

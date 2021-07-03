@@ -8,6 +8,7 @@ const Recipes = (props) => {
   //initialize the recipes list
   const [searchValues, setSearchValue] = React.useState("");
 
+
   const handleChange = (event) => {
     //console.log("Incoming event target value in recipe", event.target.value);
     setSearchValue(event.target.value);
@@ -19,10 +20,7 @@ const Recipes = (props) => {
     props.getRecipe(searchValues);
   };
 
-  React.useEffect(() => {
-    props.getRecipe(props.searchValues);
-    //console.log("Search Value from Recipes", searchValues);
-  }, [props.searchValues]);
+
 
   return (
     <div className={"flex flex-col text-center"}>

@@ -65,3 +65,7 @@ h3 {
   background-position: center center;
   height: 39rem;
 }
+
+.progress {
+  color: black;
+}

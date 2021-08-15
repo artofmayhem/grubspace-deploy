@@ -14,7 +14,10 @@ export const getRecipe = (props) => (dispatch) => {
   const options = {
     method: "GET",
     url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search",
-    params: { query: props },
+    params: { 
+      query: props,
+      number: 100,
+     },
     headers: {
       "x-rapidapi-key": "b461d692bemshe80b4354ca6ba03p184f2ejsn08a3bb994638",
       "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",

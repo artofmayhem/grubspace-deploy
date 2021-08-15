@@ -5,9 +5,15 @@ import { AppRecipeCards } from "./index";
 import { Button } from "@material-ui/core";
 import ScrollToTop from "react-scroll-to-top";
 
+const initialState = {
+searchValue: "",
+number: 10,
+}
+
 const Recipes = (props) => {
   //initialize the recipes list
-  const [searchValues, setSearchValue] = React.useState("");
+  const [searchValues, setSearchValue] = React.useState(initialState.searchValue);
+  // const [numbers, setNumber] = React.useState(initialState.number);
 
 
   const handleChange = (event) => {
@@ -15,10 +21,16 @@ const Recipes = (props) => {
     setSearchValue(event.target.value);
   };
 
+  // const handleNumber = (event) => {
+  //   //console.log("Incoming event number in recipe", event.target.value);
+  //   setNumber(event.target.value);
+  // };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     props.searchValue(searchValues);
     props.getRecipe(searchValues);
+    // props.number(numbers);
     setSearchValue('')
   };
 
@@ -29,26 +41,36 @@ const Recipes = (props) => {
       <ScrollToTop smooth />
       <div className={"recipes-container bg-black w-screen h-screen"}>
         <form onSubmit={handleSubmit}>
-          <h2 className={"mt-64 text-white text-6xl"}>Recipes</h2>
+          <h2 className={"mt-64 text-white text-8xl"}>Recipes</h2>
           <h3 className={"mx-auto mt-3 text-white text-xl "}>
             Thousands of ideas await
           </h3>
           <input
             name={"searchBar"}
             className={
-              "mx-auto mt-3 border-solid border-2 border-white h-12 text-center mb-20 mt-10 mr-5"
+              "mx-auto mt-3 border-solid border-2 border-white h-12  text-center mb-20 mt-10 mr-5"
             }
             type="text"
             value={searchValues}
             style={{boxShadow: "0 0 1.5rem #444"}}
             onChange={handleChange}
           />{" "}
+          {/* <input
+            name={"numberOfRecipes"}
+            className={
+              "mx-auto mt-3 border-solid border-2 border-white h-12  text-center mb-20 mt-10 mr-5"
+            }
+            type="text"
+            value={numbers}
+            style={{boxShadow: "0 0 1.5rem #444"}}
+            onChange={handleNumber}
+          />{" "} */}
           <Button
             type="submit"
             variant="outlined"
             className={"shadow-xl"}
             style={{color: '#FFF'}}
-            onclick={handleSubmit}
+            onClick={handleSubmit}
           >
             Enter
           </Button>{" "}
@@ -62,7 +84,7 @@ const Recipes = (props) => {
 };
 const mapStateToProps = (state) => {
   getRecipe(state.searchValue);
-  //console.log("searchValue being sent into getRecipes from recipe input", state.searchValue)
+  // console.log("searchValue being sent into getRecipes from recipe input", state.searchValue, state.number);
   return {
     searchValue: state.searchValue,
   };

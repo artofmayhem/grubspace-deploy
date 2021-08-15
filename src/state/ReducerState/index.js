@@ -12,6 +12,7 @@ import {
     loading: false,
     error: "",
     searchValue: "",
+    number: 50
   };
   
   

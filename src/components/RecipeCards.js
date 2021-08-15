@@ -149,8 +149,10 @@ const Recipe = (props) => {
                       )}
                     </Button>
                     <Button size="small" color="primary">
-                      Share
-                      <ShareIcon className={"ml-2"} />
+                      <a href={`mailto:?subject=You have to see this recipe&body=Check out this recipe ${recipe.sourceUrl}`}>
+                        Share
+                        <ShareIcon className={"ml-2"} />
+                      </a>
                     </Button>
                   </CardActions>
                 </Card>

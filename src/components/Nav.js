@@ -40,18 +40,18 @@ export default function Nav() {
       <AppBar
         color="primary"
         style={{
-          height: "10vh",
+          height: "auto",
           backgroundColor: "#FAFAFA",
           width: "100vw",
         }}
       >
         <div className={'flex flex-row mlfa-rotate-180'}>
           <Button onClick={handleDrawerOpen}>
-            <MenuIcon className={"mt-6 ml-6"} />
+            <MenuIcon className={" ml-10"} />
           </Button>
 
           <Link to="/">
-            <h1 className={" mt-6 ml-6 text-black text-4xl"}>Grubspace</h1>
+            <h1 className={" my-6 ml-6 text-black text-4xl"}>Grubspace</h1>
           </Link>
         </div>
       </AppBar>

@@ -70,7 +70,7 @@ const Recipe = (props) => {
     return (
       <div
         className={
-          "flex flex-row flex-wrap justify-center align-start w-screen h-screen p-10 -my-64 bg-white"
+          "flex flex-row flex-wrap justify-center align-start w-screen h-screen py-10  bg-white"
         }
       >
         <h5 className={"text-black"}>
@@ -84,7 +84,7 @@ const Recipe = (props) => {
       <>
         <div
           className={
-            "flex flex-row flex-wrap justify-center w-screen h-auto p-32 -my-72 bg-white shadow-inner "
+            "flex flex-row flex-wrap justify-center w-screen h-auto py-10 bg-gray-200 shadow-inner "
           }
         >
           {recipe &&

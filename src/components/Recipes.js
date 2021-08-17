@@ -38,10 +38,12 @@ const Recipes = (props) => {
   return (
     <div className={"flex flex-col text-center"}>
       <ScrollToTop smooth />
-      <div className={"recipes-container bg-black w-screen h-screen"}>
-        <form onSubmit={handleSubmit}>
-          <h2 className={"mt-64 text-white text-8xl"}>Recipes</h2>
-          <h3 className={"mx-auto mt-3 text-white text-xl "}>
+      <div className={"recipes-container bg-black w-screen h-screen"} style={{height: '39rem'}}>
+        <h2 className={"mt-64 text-white text-8xl"}>Recipes</h2>   
+       
+      </div>
+        <form className={'bg-gray-800 justify-center p-10'}  style={{height: '24rem'}} onSubmit={handleSubmit}> 
+        <h3 className={"mx-auto mt-3 text-white text-3xl mt-20 "}>
             Thousands of ideas await
           </h3>
           <input
@@ -55,16 +57,6 @@ const Recipes = (props) => {
             onChange={handleChange}
             placeholder="Find your next meal here!"
           />{" "}
-          {/* <input
-            name={"numberOfRecipes"}
-            className={
-              "mx-auto mt-3 border-solid border-2 border-white h-12  text-center mb-20 mt-10 mr-5"
-            }
-            type="text"
-            value={numbers}
-            style={{boxShadow: "0 0 1.5rem #444"}}
-            onChange={handleNumber}
-          />{" "} */}
           <button
             type="submit"
 
@@ -74,8 +66,7 @@ const Recipes = (props) => {
             Enter
           </button>{" "}
         </form>
-      </div>
-      <div className={"self-center bg-white text-white mt-32"}>
+      <div className={"self-center bg-white text-white "}>
         <AppRecipeCards />
       </div>
     </div>

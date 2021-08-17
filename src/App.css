@@ -76,10 +76,10 @@ h3 {
 }
 
 .cocktail-container {
-  background-image: url("./assets/wine.jpg");
+  background-image: url("./assets/vino-bg.jpg");
   background-size: cover;
-  background-position: center center;
-  height: 34rem;
+  background-position: center 5%;
+  height: 39rem;
 }
 
 .content-wine {
@@ -93,7 +93,7 @@ h3 {
 }
 
 .progress-container {
-  height: 50vh;
+  height: 64vh;
   background-image: url("./assets/wines.jpg");
   background-size: cover;
   background-position: center center;

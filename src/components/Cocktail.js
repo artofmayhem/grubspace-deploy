@@ -1,10 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {
-  WineSet1Img,
-  WineSet6Img,
-  WineSet3Img,
-} from "../assets/";
+import { WineSet1Img, WineSet6Img, WineSet3Img } from "../assets/";
 
 import { AppPairingResults } from "../components/index";
 
@@ -68,20 +64,18 @@ export default function Cocktail() {
         {" "}
         <h1
           className={"text-white mt-20 mx-auto text-7xl "}
-          style={{ textShadow: "0 0 1rem black" }}
+          style={{ textShadow: "1rem 1rem 2rem black" }}
         >
           Wine Source
         </h1>
       </div>
       <div
         className={
-          "bg-white h-auto w-screen flex flex-col justify-center text-center align-center my-0"
+          "bg-white h-auto w-screen flex flex-col justify-center text-center align-center "
         }
       >
-        <div className={"align-center bg-yellow-500 bg-opacity-90"}>
-          <h5
-            className={" text-white text-4xl w-6/12 mx-auto my-10 py-32 px-48 "}
-          >
+        <div className={"align-center bg-gray-600 bg-opacity-90"}>
+          <h5 className={" text-white text-4xl w-6/12 mx-auto my-10 py-32  "}>
             Let Spoonacular help you find the right wine for your occasion
             today!
           </h5>
@@ -101,19 +95,11 @@ export default function Cocktail() {
             Celebrating With Friends and Family
           </label>
           <label htmlFor="wine-set-1" className="w-72 text-xl mx-auto">
-            <img
-              src={WineSet6Img}
-              alt=""
-              className={"w-96 my-4 shadow-2xl"}
-            />
+            <img src={WineSet6Img} alt="" className={"w-96 my-4 shadow-2xl"} />
             Looking For a Special Something
           </label>
           <label htmlFor="wine-set-1" className="w-72 text-xl mx-auto">
-            <img
-              src={WineSet3Img}
-              alt=""
-              className={"w-96 my-4 shadow-2xl"}
-            />
+            <img src={WineSet3Img} alt="" className={"w-96 my-4 shadow-2xl"} />
             Find a wine that suits your taste
           </label>
         </div>
@@ -159,7 +145,9 @@ export default function Cocktail() {
               placeholder="Price"
             />
             <button
-              className={"border-b-2 bg-gray-400 text-white px-10 py-3 m-1.5 w-60"}
+              className={
+                "border-b-2 bg-gray-400 text-white px-10 py-3 m-1.5 w-60"
+              }
               onClick={handleSubmit}
               type="submit"
             >

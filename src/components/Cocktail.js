@@ -50,6 +50,8 @@ export default function Cocktail() {
       .then((res) => {
         setFoodData(res.data);
         setIsLoading(false);
+        setFoodSearchValue("");
+        setPriceValue("");
       })
       .catch((error) => {
         console.log("This API request failed", { error });

@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import {
-  WineParingBg,
   WineSet1Img,
   WineSet6Img,
   WineSet3Img,

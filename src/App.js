@@ -1,7 +1,7 @@
 import "./App.css";
 import "tailwindcss/dist/tailwind.css";
 import React from "react";
-import { AppNav, AppHome, AppAbout, AppRecipes, AppChef, AppNutrition, AppCocktail } from "./components/index";
+import { AppNav, AppHome, AppAbout, AppRecipes, AppChef, AppNutrition, AppCocktail, AppFooter } from "./components/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -19,6 +19,7 @@ function App() {
         <Route path={'/nutrition'} component={AppNutrition}/>
         <Route path={'/cocktails'} component={AppCocktail}/>
       </Switch>
+      <AppFooter />
     </Router>
   );
 }

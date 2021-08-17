@@ -76,12 +76,31 @@ h3 {
 }
 
 .cocktail-container {
-  background-image: url("./assets/cocktail.jpg");
+  background-image: url("./assets/wine.jpg");
   background-size: cover;
   background-position: center center;
   height: 34rem;
 }
 
+.content-wine {
+  background-image: url("./assets/sunset.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
 .progress {
   color: black;
+}
+
+.progress-container {
+  height: 50vh;
+  background-image: url("./assets/wines.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-hide {
+    display: none;
+  }
 }

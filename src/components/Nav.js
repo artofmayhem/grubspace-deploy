@@ -101,7 +101,7 @@ export default function Nav() {
             <LocalBarIcon/>
             </ListItemIcon>
             <Link to={"cocktails"} onClick={handleDrawerClose}>
-              <ListItemText primary="Cocktail Culture" />
+              <ListItemText primary="Wine Source" />
             </Link>
           </ListItem>
         </List>

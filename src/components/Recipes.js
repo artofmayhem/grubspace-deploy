@@ -48,12 +48,13 @@ const Recipes = (props) => {
           <input
             name={"searchBar"}
             className={
-              "mx-auto mt-3 border-solid border-2 border-white h-12  text-center mb-20 mt-10 mr-5"
+              "mx-auto mt-3 border-solid border-2 border-white h-12 w-60 text-center mb-20 mt-10 mr-5"
             }
             type="text"
             value={searchValues}
             style={{boxShadow: "0 0 1.5rem #444"}}
             onChange={handleChange}
+            placeholder="Find your next meal here!"
           />{" "}
           {/* <input
             name={"numberOfRecipes"}
@@ -65,15 +66,14 @@ const Recipes = (props) => {
             style={{boxShadow: "0 0 1.5rem #444"}}
             onChange={handleNumber}
           />{" "} */}
-          <Button
+          <button
             type="submit"
-            variant="outlined"
-            className={"shadow-xl"}
-            style={{color: '#FFF'}}
+
+            className={"border-2 bg-gray-400 text-white px-10 py-3 m-1.5 w-60"}
             onClick={handleSubmit}
           >
             Enter
-          </Button>{" "}
+          </button>{" "}
         </form>
       </div>
       <div className={"self-center bg-white text-white mt-32"}>

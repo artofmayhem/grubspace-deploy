@@ -7,7 +7,7 @@ export default function Footer() {
           <h1 className={" mt-6 text-4xl text-white"}>Grubspace</h1>
         </Link>
         <p className={'text-white'}>3600 Kalakaua Ave, Honolulu, HI 96822</p>
-        <p className={'text-white pb-4'}>Site Design By: SONVR Design</p>
+        <p className={'text-white pb-4'}>Site Design By: SONVR Design {" "} (808.481.1640)</p>
       </div>
       <div className="text-white my-auto">
         <Link className={'px-3'} to={"about"}>About</Link>

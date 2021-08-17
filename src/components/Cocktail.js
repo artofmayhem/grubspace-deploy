@@ -158,7 +158,7 @@ export default function Cocktail() {
               placeholder="Price"
             />
             <button
-              className={"border-b-2 bg-gray-400 px-10 py-3 m-1.5 w-60"}
+              className={"border-b-2 bg-gray-400 text-white px-10 py-3 m-1.5 w-60"}
               onClick={handleSubmit}
               type="submit"
             >

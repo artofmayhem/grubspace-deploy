@@ -18,13 +18,13 @@ export default function PairingResults(props) {
     return (
       <div className={"flex flex-col justify-center"}>
         <div className="row bg-gray-600 text-white">
-          <h1 className={"m-10 pt-16 text-3xl"}>
+          <h1 className={"m-16 py-16 bg-gray-400 text-4xl"}>
             Your recommendations <em>powered by Spoonacular</em>
           </h1>
           <div
             className={"flex flew-row flex-wrap align-center justify-evenly py-20"}
           >
-            <h2 className={"w-96 text-2xl "}>{data.pairingText}</h2>
+            <h2 className={"w-96 py-16 text-3xl "}>{data.pairingText}</h2>
             <div className={'flex flex-col bg-yellow-600 px-10 py-5'}>
                 <h3 className={'text-2xl border-b-2 p-4'}>Best Wines For Your Meal</h3>
               {data.pairedWines &&
@@ -57,7 +57,7 @@ export default function PairingResults(props) {
                     </h2>
                     <img
                       src={data.productMatches[index].imageUrl}
-                      className={"w-72 mx-auto my-6"}
+                      className={"w-auto h-auto mx-auto my-6"}
                       alt={data.productMatches[index].title}
                     />
                   </a>

@@ -165,7 +165,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="h-auto w-screen flex flex-row flex-wrap justify-evenly align-center py-16 text-white bg-gray-800 -mb-24">
+          <div className=" w-screen flex flex-row flex-wrap justify-evenly align-center pt-16 pb-60 text-white bg-gray-800 -mb-24">
             <h3 className={"absolute text-5xl pt-10"}>Our Street Team</h3>
             <div
               className="flex flex-col flex-wrap flex-center justify-center my-20 text-center"

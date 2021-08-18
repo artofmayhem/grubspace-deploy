@@ -1,8 +1,10 @@
-
 import React from "react";
+import ScrollToTop from "react-scroll-to-top";
+
 export default function Chef() {
     return (
         <React.Fragment>
+           <ScrollToTop smooth />
       <div className={"chef-container bg-black  w-screen flex flex-col justify-center align-center"}>
       <h2 className={"text-white mx-auto -mt-10 text-5xl"}>Chef's Manifesto</h2>
       </div>

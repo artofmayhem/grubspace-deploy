@@ -1,8 +1,10 @@
 import React from "react";
+import ScrollToTop from "react-scroll-to-top";
 
 export default function Nutrition() {
   return (
     <React.Fragment>
+       <ScrollToTop smooth />
       <div
         className={
           "nutrition-container bg-black text-center w-screen flex flex-col justify-center align-center"

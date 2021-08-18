@@ -87,7 +87,7 @@ export default function About() {
               style={{ minWidth: 375, boxShadow: '1rem 1rem 2.55rem #e75480' }}
             />
           </div>
-          <div className="flex flex-col flex-wrap flex-center my-20 text-center">
+          <div className="flex flex-col flex-wrap flex-center mt-2 text-center">
             <h3 className={"text-4xl my-32"}>But Seriously!</h3>
             <h5 className={"text-2xl"} style={{ width: 350 }}>
               Who makes up this amazing (albeit sometimes insane) group of
@@ -99,9 +99,9 @@ export default function About() {
           <div>
             <img src={StaffFourImg} alt="Staff One" className="w-auto h-auto" />
           </div>
-          <div className="h-auto w-screen flex flex-wrap-reverse flex-row justify-evenly py-24 -mb-24 text-white bg-yellow-900">
+          <div className="h-auto w-screen flex flex-wrap-reverse flex-row justify-evenly py-16  text-white bg-yellow-900">
             <div
-              className="flex flex-row flex-wrap flex-center text-left my-auto py-20 px-8 bg-gray-600 text-white text-xl"
+              className="flex flex-row flex-wrap flex-center text-left my-auto py-6 px-8 bg-gray-600 text-white text-xl"
               style={{ width: 350, boxShadow: "0 1rem 2rem black" }}
             >
               <h1>Kelsey Lang / Co-Editor</h1>
@@ -130,7 +130,7 @@ export default function About() {
               />
             </div>
           </div>
-          <div className="h-auto w-screen flex flex-row flex-wrap justify-evenly py-24 -mb-24 text-white bg-white">
+          <div className="h-auto w-screen flex flex-row flex-wrap justify-evenly py-16 text-white bg-white">
             <div
               className="flex flex-row flex-wrap justify-center my-20 text-center"
               style={{ width: "50%" }}
@@ -165,7 +165,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="h-auto w-screen flex flex-row flex-wrap justify-evenly align-center py-16 text-white bg-gray-800 -mb-32">
+          <div className="h-auto w-screen flex flex-row flex-wrap justify-evenly align-center py-16 text-white bg-gray-800 -mb-24">
             <h3 className={"absolute text-5xl pt-10"}>Our Street Team</h3>
             <div
               className="flex flex-col flex-wrap flex-center justify-center my-20 text-center"

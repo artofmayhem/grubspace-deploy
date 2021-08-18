@@ -83,8 +83,8 @@ export default function About() {
             <img
               src={StaffTwoImg}
               alt="Staff One"
-              className="w-auto h-auto"
-              style={{ minWidth: 375 }}
+              className="w-auto h-auto border-2"
+              style={{ minWidth: 375, boxShadow: '1rem 1rem 2.55rem #e75480' }}
             />
           </div>
           <div className="flex flex-col flex-wrap flex-center my-20 text-center">

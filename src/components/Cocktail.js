@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { WineSet1Img, WineSet6Img, WineSet3Img } from "../assets/";
-
+import ScrollToTop from "react-scroll-to-top";
 import { AppPairingResults } from "../components/index";
 
 const initialFoodSearchValue = "";
@@ -56,6 +56,7 @@ export default function Cocktail() {
 
   return (
     <React.Fragment>
+      <ScrollToTop smooth/>
       <div
         className={
           "cocktail-container bg-black text-center w-screen flex flex-col justify-center align-center"

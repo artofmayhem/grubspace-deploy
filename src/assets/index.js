@@ -12,6 +12,9 @@ import StaffFour from "./staff-4.jpg";
 import StaffFive from "./staff-5.jpg";
 import StaffSix from "./staff-6.jpg";
 import StaffSeven from "./staff-7.jpg";
+import TeamOne from "./team-1.jpg";
+import TeamTwo from "./team-2.jpg";
+import TeamThree from "./team-3.jpg";
 
 export { 
     Grubspace as Logo,
@@ -27,5 +30,8 @@ export {
     StaffFour as StaffFourImg,
     StaffFive as StaffFiveImg,
     StaffSix as StaffSixImg,
-    StaffSeven as StaffSevenImg
+    StaffSeven as StaffSevenImg,
+    TeamOne as TeamOneImg,
+    TeamTwo as TeamTwoImg,
+    TeamThree as TeamThreeImg
 };

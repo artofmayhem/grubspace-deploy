@@ -81,8 +81,8 @@ export default function About() {
           </div>
         </div>
         <div className="h-auto flex flex-row flex-wrap justify-evenly py-24 bg-white">
-          <div className="flex flex-center my-20 " style={{ width: "50%" }}>
-            <img src={StaffTwoImg} alt="Staff One" className="w-auto h-auto" />
+          <div className="flex flex-row flex-wrap justify-center my-20 " style={{ width: "50%" }}>
+            <img src={StaffTwoImg} alt="Staff One" className="w-auto h-auto" style={{minWidth: 375}}/>
           </div>
           <div className="flex flex-col flex-wrap flex-center my-20 text-center">
             <h3 className={"text-4xl my-32"}>But Seriously!</h3>
@@ -96,7 +96,7 @@ export default function About() {
           <div>
             <img src={StaffFourImg} alt="Staff One" className="w-auto h-auto" />
           </div>
-          <div className="h-auto w-screen flex flex-row flex-wrap justify-evenly py-24 -mb-24 text-white bg-yellow-900">
+          <div className="h-auto w-screen flex flex-wrap flex-row-reverse justify-evenly py-24 -mb-24 text-white bg-yellow-900">
             
             <div
               className="flex flex-row flex-wrap flex-center text-left my-auto py-20 px-8 bg-gray-600 text-white text-xl"
@@ -117,12 +117,12 @@ export default function About() {
               </p>
             </div>
             <div
-              className="flex flex-row flex-wrap flex-center my-20 text-center"
+              className="flex flex-row flex-wrap justify-center my-20 text-center"
               style={{ width: "50%" }}
             >
               <img
                 src={StaffThreeImg}
-                style={{ boxShadow: "0 1rem 2rem black" }}
+                style={{ boxShadow: "0 1rem 2rem black", minWidth: 375 }}
                 alt="Staff One"
                 className="w-auto h-auto"
               />
@@ -131,12 +131,12 @@ export default function About() {
           <div className="h-auto w-screen flex flex-row flex-wrap justify-evenly py-24 -mb-24 text-white bg-white">
             
             <div
-              className="flex flex-row flex-wrap flex-center my-20 text-center"
+              className="flex flex-row flex-wrap justify-center my-20 text-center"
               style={{ width: "50%" }}
             >
               <img
                 src={StaffSevenImg}
-                style={{ boxShadow: "0 1rem 2rem black" }}
+                style={{ boxShadow: "0 1rem 2rem black", minWidth: 375 }}
                 alt="Staff One"
                 className="w-auto h-auto"
               />

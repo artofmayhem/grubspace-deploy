@@ -42,7 +42,7 @@ const Recipes = (props) => {
         <h2 className={"mt-64 text-white text-8xl"}>Recipes</h2>   
        
       </div>
-        <form className={'bg-gray-800 justify-center p-10'}  style={{height: '24rem'}} onSubmit={handleSubmit}> 
+        <form className={'bg-gray-800 justify-center p-10'}  style={{height: '32rem'}} onSubmit={handleSubmit}> 
         <h3 className={"mx-auto mt-3 text-white text-3xl mt-20 "}>
             Thousands of ideas await
           </h3>

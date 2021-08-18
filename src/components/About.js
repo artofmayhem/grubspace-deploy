@@ -75,9 +75,9 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="h-auto flex flex-row flex-wrap justify-evenly py-24 bg-white">
+        <div className="h-auto flex flex-row flex-wrap justify-evenly pt-16 bg-white">
           <div
-            className="flex flex-row flex-wrap justify-center my-20 "
+            className="flex flex-row flex-wrap justify-center my-24 "
             style={{ width: "50%" }}
           >
             <img
@@ -87,8 +87,8 @@ export default function About() {
               style={{ minWidth: 375, boxShadow: '1rem 1rem 2.55rem #e75480' }}
             />
           </div>
-          <div className="flex flex-col flex-wrap flex-center mt-2 text-center">
-            <h3 className={"text-4xl my-32"}>But Seriously!</h3>
+          <div className="flex flex-col flex-wrap flex-center mt-24 text-center">
+            <h3 className={"text-4xl my-16"}>But Seriously!</h3>
             <h5 className={"text-2xl"} style={{ width: 350 }}>
               Who makes up this amazing (albeit sometimes insane) group of
               thinkers, tinkerers, food lovers, and creatives that are the

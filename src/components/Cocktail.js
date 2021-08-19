@@ -56,7 +56,7 @@ export default function Cocktail() {
 
   return (
     <React.Fragment>
-      <ScrollToTop smooth/>
+      <ScrollToTop smooth />
       <div
         className={
           "cocktail-container bg-black text-center w-screen flex flex-col justify-center align-center"

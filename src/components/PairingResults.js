@@ -5,16 +5,17 @@ export default function PairingResults(props) {
     props.data
   );
   const { data } = props;
+  console.log(props.data.length)
+  console.log(data.pairedWines)
 
   // this creates a conditional that renders if props.data = []
-  if (props.data.length === 0) {
+ if (props.data.length === 0) {
     return (
       <div className="row">
         <div className="col-md-12 progress-container"></div>
       </div>
     );
   } else {
-    console.log(data.productMatches[0]);
     return (
       <div className={"flex flex-col justify-center"}>
         <div className="row bg-gray-600 text-white">
@@ -30,7 +31,7 @@ export default function PairingResults(props) {
               {data.pairedWines &&
                 data.pairedWines.map((pairing, idx) => {
                   return (
-                    <div className="flex flex-col text-3xl p-8">
+                    <div key={idx} className="flex flex-col text-3xl p-8">
                       <h3>{data.pairedWines[idx]}</h3>
                     </div>
                   );

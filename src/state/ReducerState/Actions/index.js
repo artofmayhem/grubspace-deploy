@@ -36,5 +36,6 @@ export const getRecipe = (props) => (dispatch) => {
     .catch((error) => {
       dispatch({ type: FETCHING_API_FAILURE, payload: error });
       console.log("This API request failed", error);
+      alert(error.response.data.message);
     });
 };

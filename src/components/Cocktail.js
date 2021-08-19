@@ -14,6 +14,7 @@ export default function Cocktail() {
   );
   const [priceValue, setPriceValue] = React.useState(initialPriceValue);
   const [isLoading, setIsLoading] = React.useState(true);
+  const [errorMessage, setErrorMessage] = React.useState("");
 
   const handleFoodChange = (e) => {
     setFoodSearchValue(e.target.value);
@@ -50,7 +51,9 @@ export default function Cocktail() {
         setPriceValue("");
       })
       .catch((error) => {
-        console.log("This API request failed", { error });
+        setErrorMessage(error.response.data.message);
+        console.log("This API request failed", { errorMessage });
+        alert(error.response.data.message);
       });
   };
 

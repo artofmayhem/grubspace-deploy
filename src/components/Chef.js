@@ -20,9 +20,7 @@ export default function Chef() {
   };
 
   const youtubeOptions = {
-    height: 375,
-    minWidth: 375,
-    maxWidth: 640,
+    width: 350,
     playerVars: {
       rel: 0,
       showinfo: 0,
@@ -60,9 +58,9 @@ export default function Chef() {
           "bg-white h-auto w-screen flex flex-col text-center justify-center align-center"
         }
       >
-        <div className="h-auto flex flex-row flex-wrap justify-evenly pt-16 bg-white">
+        <div className="h-auto flex flex-row flex-wrap justify-evenly py-20 bg-white">
           <div
-            className="flex flex-row flex-wrap justify-center my-24 "
+            className="flex flex-row flex-wrap justify-center  "
             style={{ width: "50%" }}
           >
             <img
@@ -72,8 +70,8 @@ export default function Chef() {
               style={{ minWidth: 375, boxShadow: "1rem 1rem 2.55rem black" }}
             />
           </div>
-          <div className="flex flex-col flex-wrap flex-center mt-24 text-center">
-            <h5 className={"text-xl mt-20 mb-4"} style={{ width: 350 }}>
+          <div className="flex flex-col flex-wrap flex-center my-24 text-center">
+            <h5 className={"text-xl mb-4"} style={{ width: 350 }}>
               You've reached the <strong>Chef Spot</strong>! It is this place
               that you will find videos to be inspired by or learn how to make
               something. This is where you can choose from a curated collection
@@ -92,7 +90,7 @@ export default function Chef() {
             className="flex flex-row flex-wrap justify-evenly bg-gray-800 border-4 text-center"
             style={{ width: 375 }}
           >
-            <h2 className={"mx-auto my-auto text-5xl"}>Food Fun Facts!</h2>
+            <h2 className={"mx-auto my-auto py-10 text-5xl"}>Food Fun Facts!</h2>
             <button
               className={
                 "px-20 py-6 bg-gray-400 h-20 text-white text-2xl mx-auto"
@@ -113,7 +111,7 @@ export default function Chef() {
               className={"my-auto py-20 px-8 bg-yellow-600 text-xl"}
               style={{
                 boxShadow: "0 1rem 2rem black",
-                minWidth: 375,
+                minWidth: 350,
                 width: 640,
               }}
             >
@@ -153,7 +151,7 @@ export default function Chef() {
             </div>
           </a>
         </div>
-        <div className="h-auto flex flex-col flex-wrap justify-center pt-16 bg-gray-600">
+        <div className="h-auto w-screen flex flex-col flex-wrap justify-center pt-16 bg-gray-600">
           <div className={"flex justify-center text-5xl mt-10  text-white"}>
             <h3>Latest Videos</h3>
           </div>
@@ -184,7 +182,7 @@ export default function Chef() {
                 Get the Recipe
               </a>
             </div>
-            <div className="flex justify-center my-6 " style={{ width: "50%" }}>
+            <div className="flex justify-center align-center mb-24 " style={{ width: "50%", paddingTop: '5rem' }}>
               <YouTube opts={youtubeOptions} videoId="E1z55dYHv8c" />
             </div>
           </div>
@@ -212,8 +210,8 @@ export default function Chef() {
               </a>
             </div>
             <div
-              className="flex justify-center my-24 "
-              style={{ width: "50%" }}
+              className="flex justify-center align-center mb-24 "
+              style={{ width: "50%", paddingTop: '5rem' }}
             >
               <YouTube opts={youtubeOptions} videoId="BMgLRD2v5w0" />
             </div>
@@ -245,15 +243,15 @@ export default function Chef() {
               </a>
             </div>
             <div
-              className="flex justify-center my-24 "
-              style={{ width: "50%" }}
+              className="flex justify-center mb-24 "
+              style={{ width: "50%", paddingTop: '5rem' }}
             >
               <YouTube opts={youtubeOptions} videoId="mCJUcJJUmvg" />
             </div>
           </div>
-          <div className={"h-auto flex flex-row flex-wrap justify-evenly"}>
+          <div className={"h-auto flex flex-row flex-wrap justify-evenly py-20"}>
             <div
-              className="flex flex-col flex-wrap flex-center my-auto py-10 px-4 text-white bg-yellow-600 text-center"
+              className="flex flex-col flex-wrap flex-center  py-10 px-4 text-white bg-yellow-600 text-center"
               style={{ width: 350 }}
             >
               <h3 className={"text-3xl my-2"}><strong>Niki Shariley</strong></h3>
@@ -274,13 +272,13 @@ export default function Chef() {
               </a>
             </div>
             <div
-              className="flex justify-center my-24 "
-              style={{ width: "50%" }}
+              className="flex justify-center mb-24 "
+              style={{ width: "50%", paddingTop: '5rem' }}
             >
               <YouTube opts={youtubeOptions} videoId="-65DoHCZGdQ" />
             </div>
           </div>
-          <div className={"h-auto flex flex-row flex-wrap justify-evenly mb-20"}>
+          <div className={"h-auto flex flex-row flex-wrap justify-evenly items-end mb-20"}>
             <div
               className="flex flex-col flex-wrap flex-center my-auto py-10 px-4 text-white bg-yellow-600 text-center"
               style={{ width: 350 }}
@@ -303,8 +301,8 @@ export default function Chef() {
               </a>
             </div>
             <div
-              className="flex justify-center my-24 "
-              style={{ width: "50%" }}
+              className="flex justify-center mb-24 "
+              style={{ width: "50%", paddingTop: '5rem' }}
             >
               <YouTube opts={youtubeOptions} videoId="gjhOPHoRJBs" />
             </div>

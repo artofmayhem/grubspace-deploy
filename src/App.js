@@ -19,8 +19,8 @@ function App() {
         <Route path={'/nutrition'} component={AppNutrition}/>
         <Route path={'/cocktails'} component={AppCocktail}/>
       </Switch>
-      <div className={'flex flex-col'}>
-          <AppFooter />
+      <div className={'flex flex-col h-auto'}>
+          <AppFooter/>
       </div>
     
     </Router>

@@ -34,7 +34,7 @@ export default function About() {
           "bg-white h-auto w-screen flex flex-col justify-center text-center align-center"
         }
       >
-        <div className="h-auto flex flex-row flex-wrap justify-evenly py-24 text-white bg-gray-600">
+        <div className="h-auto flex flex-row flex-wrap justify-evenly py-8 text-white bg-gray-600">
           <div
             className="flex flex-row flex-wrap flex-center my-20 text-center"
             style={{ width: 350 }}
@@ -77,7 +77,7 @@ export default function About() {
         </div>
         <div className="h-auto flex flex-row flex-wrap justify-evenly pt-16 bg-white">
           <div
-            className="flex flex-row flex-wrap justify-center my-24 "
+            className="flex flex-row flex-wrap justify-center mt-24 mb-20 "
             style={{ width: "50%" }}
           >
             <img
@@ -87,8 +87,8 @@ export default function About() {
               style={{ minWidth: 375, boxShadow: '1rem 1rem 2.55rem #e75480' }}
             />
           </div>
-          <div className="flex flex-col flex-wrap flex-center mt-24 text-center">
-            <h3 className={"text-4xl my-16"}>But Seriously!</h3>
+          <div className="flex flex-col flex-wrap flex-center mt-24 mb-10 text-center">
+            <h3 className={"text-4xl mb-16"}>But Seriously!</h3>
             <h5 className={"text-2xl"} style={{ width: 350 }}>
               Who makes up this amazing (albeit sometimes insane) group of
               thinkers, tinkerers, food lovers, and creatives that are the
@@ -165,54 +165,56 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className=" w-screen flex flex-row flex-wrap justify-evenly align-center pt-16 pb-60 text-white bg-gray-800 -mb-24">
-            <h3 className={"absolute text-5xl pt-10"}>Our Street Team</h3>
+          <div className=" w-screen flex flex-col flex-wrap justify-evenly align-center pb-32 text-white bg-gray-800">
+            <h3 className={"text-5xl bg-gray-600 w-screen py-10"}>Our Street Team</h3>
+            <div className="flex flex-row flex-wrap justify-evenly align-center">
             <div
-              className="flex flex-col flex-wrap flex-center justify-center my-20 text-center"
+              className="flex flex-col flex-wrap flex-center justify-center align-center text-center h-auto"
               style={{ width: 350 }}
             >
-              <h3 className={"text-2xl pb-4"} htmlFor={"Gwendolyn Johnson"}>
+              <h3 className={"text-2xl my-16"} htmlFor={"Gwendolyn Johnson"}>
                 Gwendolyn Johnson
               </h3>
               <img
                 name={"Gwendolyn Johnson"}
                 src={TeamOneImg}
                 alt="Staff One"
-                style={{ boxShadow: "0 1rem 2rem black" }}
+                style={{ boxShadow: "0 1rem 2rem black mt-32" }}
                 className="w-auto h-auto"
               />
             </div>
-
-            <div
-              className="flex flex-row flex-wrap justify-center mt-20 text-center"
+             <div
+              className="flex flex-col flex-wrap flex-center justify-center align-center text-center h-auto"
               style={{ width: 350 }}
             >
-              <h3 className={"text-2xl pt-72 pb-16"} htmlFor={"Ahmed Khan"}>
+              <h3 className={"text-2xl my-16"} htmlFor={"Ahmed Khan"}>
                 Ahmed Khan
               </h3>
               <img
                 name={"Ahmed Khan"}
                 src={TeamThreeImg}
+                alt="Ahmed Khan"
+                style={{ boxShadow: "0 1rem 2rem black mt-32" }}
+                className="w-auto h-auto"
+              />
+            </div>
+            <div
+              className="flex flex-col flex-wrap flex-center justify-center align-center text-center h-auto"
+              style={{ width: 350 }}
+            >
+              <h3 className={"text-2xl my-16"} htmlFor={"Noriko Sumida"}>
+                Noriko Sumida
+              </h3>
+              <img
+                name={"Noriko Sumida"}
+                src={TeamTwoImg}
                 alt="Staff One"
-                style={{ boxShadow: "0 1rem 1rem black" }}
-                className=" -mt-16"
+                style={{ boxShadow: "0 1rem 2rem black mt-32" }}
+                className="w-auto h-auto"
               />
             </div>
 
-            <div
-              className="flex flex-row flex-wrap justify-center my-20 text-center"
-              style={{ width: 350 }}
-            >
-              <h3 className={"text-2xl pt-48"} htmlFor={"Noriko Tachibana"}>
-                Noriko Tachibana
-              </h3>
-              <img
-                name={"Noriko Tachibana"}
-                src={TeamTwoImg}
-                style={{ boxShadow: "0 1rem 2rem black", height: "55%" }}
-                alt="Staff One"
-                className="w-auto h-auto pt-"
-              />
+
             </div>
           </div>
         </div>

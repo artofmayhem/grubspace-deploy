@@ -5,7 +5,7 @@ import { CookingShow1Img, SurLaTableImg } from "../assets";
 import YouTube from "react-youtube";
 
 const initialState =
-  "As are cherries, apricots, plums, pears, apples, quinces, peaches, strawberries, and blackberries. These types of fruits typically have flowers with five equal petals arranged around a central core. Unlike many other fruits, once picked, unripe raspberries do not ripen.";
+  "Cherries, apricots, plums, pears, apples, quinces, peaches, strawberries, and blackberries are all part of the rose family. These types of fruits typically have flowers with five equal petals arranged around a central core. Unlike many other fruits, once picked, unripe raspberries do not ripen.";
 
 export default function Chef() {
   const [trivia, setTrivia] = useState(initialState);

@@ -2,6 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { searchValue, getRecipe } from "../state/ReducerState/Actions";
 import { AppRecipeCards } from "./index";
+import {
+  RecipesOneImg,
+  RecipesTwoImg,
+  RecipesThreeImg,
+  RecipesFourImg,
+  RecipesFiveImg,
+} from "../assets/index";
 import ScrollToTop from "react-scroll-to-top";
 
 const initialState = {
@@ -45,7 +52,7 @@ const Recipes = (props) => {
       </div>
       <form
         className={"bg-gray-800 justify-center p-10 border-b-2"}
-        style={{ height: "32rem" }}
+        style={{ height: "auto" }}
         onSubmit={handleSubmit}
       >
         <h3 className={"mx-auto mt-3 text-white text-3xl mt-20 "}>
@@ -54,7 +61,7 @@ const Recipes = (props) => {
         <input
           name={"searchBar"}
           className={
-            "mx-auto mt-3 border-solid border-2 border-white h-12 w-60 text-center mb-20 mt-10 mr-5"
+            "border-solid border-2 border-white p-4 w-60 text-center  mb-20 mt-10 mr-5"
           }
           type="text"
           value={searchValues}
@@ -64,14 +71,20 @@ const Recipes = (props) => {
         />{" "}
         <button
           type="submit"
-          className={"border-2 bg-gray-400 text-white px-10 py-3 m-1.5 w-60"}
+          className={"border-2 bg-gray-400 text-white px-10 py-4 m-1.5 w-60"}
           onClick={handleSubmit}
         >
           Enter
         </button>{" "}
       </form>
-
       <AppRecipeCards />
+      <div className="flex flex-row flex-wrap justify-center py-20 h-auto bg-yellow-600 border-t-2">
+        <img src={RecipesOneImg} alt="Recipes One" className="h-80 p-2" />
+        <img src={RecipesTwoImg} alt="Recipes Two" className="h-80 p-2" />
+        <img src={RecipesThreeImg} alt="Recipes Three" className="h-80 p-2" />
+        <img src={RecipesFourImg} alt="Recipes Four" className="h-80 p-2" />
+        <img src={RecipesFiveImg} alt="Recipes Five" className="h-80 p-2" />
+      </div>
     </div>
   );
 };

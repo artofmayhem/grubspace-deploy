@@ -62,7 +62,7 @@ export default function Cocktail() {
       <ScrollToTop smooth />
       <div
         className={
-          "cocktail-container bg-black text-center w-screen flex flex-col justify-center align-center"
+          "cocktail-container text-center w-screen flex flex-col justify-center align-center"
         }
       >
         {" "}
@@ -78,15 +78,15 @@ export default function Cocktail() {
           "bg-white h-auto w-screen flex flex-col justify-center text-center align-center "
         }
       >
-        <div className={"align-center bg-gray-600 bg-opacity-90"}>
-          <h5 className={" text-white text-4xl w-6/12 mx-auto my-10 py-32  "}>
+        <div className={"align-center bg-gray-900 bg-opacity-90"} >
+          <h5 className={" text-white text-4xl bg-gray-800 w-5/6 mx-auto my-10 py-32 px-10 "}>
             Let Spoonacular help you find the right wine for your occasion
             today!
           </h5>
         </div>
         <div
           className={
-            "flex flex-wrap justify-center my-20 grid-rows-2 justify-stretch mobile-hide"
+            "flex flex-wrap justify-center border-t-2 border-b-2 border-yellow-400 my-20 py-24 grid-rows-2 justify-stretch"
           }
         >
           <label htmlFor="wine-set-1" className="w-72 text-xl mx-auto">
@@ -109,11 +109,11 @@ export default function Cocktail() {
         </div>
         <div
           className={
-            "flex flex-row bg-gray-700 py-20 mt-10 flex-wrap justify-evenly"
+            "flex flex-row bg-gray-800 py-20 mt-10 flex-wrap justify-evenly"
           }
         >
           <div
-            className={"px-10 py-20 bg-yellow-600 bg-opacity-80"}
+            className={"px-10 py-20 bg-yellow-600"}
             style={{ minWidth: 350, width: "50%" }}
           >
             <h2 className={"text-4xl text-white pt-16"}>

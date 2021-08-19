@@ -17,6 +17,11 @@ import TeamTwo from "./team-2.jpg";
 import TeamThree from "./team-3.jpg";
 import CookingShow1 from "./cookingshow1.jpg";
 import SurLaTable from "./surlatable.jpg";
+import RecipesOne from "./recipes-1.jpg";
+import RecipesTwo from "./recipes-2.jpg";
+import RecipesThree from "./recipes-3.jpg";
+import RecipesFour from "./recipes-4.jpg";
+import RecipesFive from "./recipes-5.jpg";
 
 export { 
     Grubspace as Logo,
@@ -37,5 +42,10 @@ export {
     TeamTwo as TeamTwoImg,
     TeamThree as TeamThreeImg,
     CookingShow1 as CookingShow1Img,
-    SurLaTable as SurLaTableImg
+    SurLaTable as SurLaTableImg,
+    RecipesOne as RecipesOneImg,
+    RecipesTwo as RecipesTwoImg,
+    RecipesThree as RecipesThreeImg,
+    RecipesFour as RecipesFourImg,
+    RecipesFive as RecipesFiveImg,
 };

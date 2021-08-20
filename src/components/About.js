@@ -172,11 +172,12 @@ export default function About() {
             className="flex flex-row flex-wrap justify-center mt-24 mb-20 "
             style={{ width: "50%" }}
           >
+
             <img
               src={StaffTwoImg}
               alt="Staff One"
               id={'pink-image'}
-              className="w-auto h-auto border-2"
+              className="animate-staff-two w-auto h-auto border-2"
               style={{ minWidth: 375, boxShadow: "1rem 1rem 2.55rem #e75480" }}
             />
           </div>

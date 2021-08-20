@@ -93,7 +93,7 @@ export default function Chef() {
             <h2 className={"mx-auto my-auto py-10 text-5xl"}>Food Fun Facts!</h2>
             <button
               className={
-                "animate-fade-in-down px-20 py-6 bg-gray-400 h-20 text-white text-2xl mx-auto"
+                "animate-bounce px-20 py-6 bg-gray-400 h-20 text-white text-2xl mx-auto"
               }
               onClick={handleSubmit}
             >

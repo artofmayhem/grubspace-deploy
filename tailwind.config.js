@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       pulse: "pulse 10s ease-in-out infinite",
       keyframes: {
+
         "fade-in-down": {
           "0%": {
             opacity: "0",
@@ -82,7 +83,17 @@ module.exports = {
             opacity: "1",
             transform: "translateX(0px)",
           },
-        },
+        }, 
+        "staff-two": {
+         from: {
+           opacity: "0",
+           transform: "translateY(200px)",
+         },
+         to: {
+           opacity: "1",
+           transform: "translateY(0px)",
+         },
+       },
       },
       animation: {
         "fade-in-down": "fade-in-down 1s ease-out",
@@ -93,6 +104,7 @@ module.exports = {
         "fade-out-up": "fade-out-up 0.5s ease-out",
         "fade-in-right": "fade-in-right 1.35s ease-out",
         "fade-in-left": "fade-in-left 1.75s ease-out",
+        "staff-two": "staff-two 7s ease-out",
       },
     },
     screens: {

@@ -1,6 +1,30 @@
 import React from "react";
 import axios from "axios";
 import ScrollToTop from "react-scroll-to-top";
+// import Swiper core and required modules
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import YouTube from "react-youtube";
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
+
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+
+const youtubeOptions = {
+  width: 350,
+  playerVars: {
+    rel: 0,
+    showinfo: 0,
+    controls: 1,
+    autoplay: 0,
+    loop: 1,
+  },
+};
 
 export default function Nutrition() {
 
@@ -48,7 +72,26 @@ export default function Nutrition() {
         className={
           "bg-white h-96 w-screen flex flex-col justify-center text-center align-center"
         }
-      ></div>
+      >
+        <Swiper
+      spaceBetween={350}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide >
+      <YouTube opts={youtubeOptions} videoId="E1z55dYHv8c" />
+      </SwiperSlide>
+      <SwiperSlide> <YouTube opts={youtubeOptions} videoId="gjhOPHoRJBs" /></SwiperSlide>
+      <SwiperSlide> <YouTube opts={youtubeOptions} videoId="-65DoHCZGdQ" /></SwiperSlide>
+      <SwiperSlide>  <YouTube opts={youtubeOptions} videoId="mCJUcJJUmvg" /></SwiperSlide>
+      <SwiperSlide>  <YouTube opts={youtubeOptions} videoId="BMgLRD2v5w0" /></SwiperSlide>
+      ...
+    </Swiper>
+      </div>
     </React.Fragment>
   );
 }

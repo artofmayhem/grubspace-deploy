@@ -7,7 +7,7 @@ import {
   RecipesTwoImg,
   RecipesThreeImg,
   RecipesFourImg,
-  RecipesFiveImg,
+  RecipesSixImg,
 } from "../assets/index";
 import ScrollToTop from "react-scroll-to-top";
 
@@ -83,7 +83,7 @@ const Recipes = (props) => {
         <img src={RecipesTwoImg} alt="Recipes Two" className="h-80 p-2" />
         <img src={RecipesThreeImg} alt="Recipes Three" className="h-80 p-2" />
         <img src={RecipesFourImg} alt="Recipes Four" className="h-80 p-2" />
-        <img src={RecipesFiveImg} alt="Recipes Five" className="h-80 p-2" />
+        <img src={RecipesSixImg} alt="Recipes Six" className="h-80 p-2" />
       </div>
     </div>
   );

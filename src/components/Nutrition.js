@@ -74,7 +74,7 @@ export default function Nutrition() {
         }
       >
         <Swiper
-      spaceBetween={350}
+      spaceBetween={300}
       slidesPerView={3}
       navigation
       pagination={{ clickable: true }}

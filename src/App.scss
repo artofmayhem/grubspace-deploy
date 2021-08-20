@@ -37,6 +37,10 @@ h3 {
   text-shadow: 0 0 2.5rem black;
 }
 
+.hero {
+  visibility: hidden;
+}
+
 .home {
   // this creates a background image
   background-image: url("./assets/pasta.jpg");
@@ -100,4 +104,8 @@ background-position: center center;
     display: none;
   }
   
+}
+
+.pink-image {
+ background-color: white; 
 }

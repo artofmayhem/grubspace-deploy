@@ -13,7 +13,8 @@ import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import LocalBarIcon from '@material-ui/icons/LocalBar';
 import LocalDiningIcon from '@material-ui/icons/LocalDining';
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { TimelineLite } from "gsap";
 import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   list: {
@@ -27,6 +28,25 @@ const useStyles = makeStyles({
 export default function Nav() {
   const classes = useStyles();
   const [state, setState] = useState({ left: false });
+  // set up animation variables
+  let nav = useRef(null);
+  //set up timeline
+  const timeline = new TimelineLite();
+
+  useEffect(() => {
+    //set up the animation
+    timeline.from(nav, 1.75, {
+      opacity: 0,
+      y: -100,
+      backgroundColor: '#222',
+    })
+      .to(nav, 1.75, {
+        opacity: 1,
+        y: 0,
+        backgroundColor: 'white'
+      })
+  }, []);// eslint-disable-line
+
 
   const handleDrawerOpen = () => {
     setState({ left: true });
@@ -44,8 +64,9 @@ export default function Nav() {
           backgroundColor: "#FAFAFA",
           width: "100vw",
         }}
+        ref={(el) => (nav = el)}
       >
-        <div className={'flex flex-row mlfa-rotate-180'}>
+        <div className={'flex flex-row'}>
           <Button onClick={handleDrawerOpen}>
             <MenuIcon className={" ml-10"} />
           </Button>

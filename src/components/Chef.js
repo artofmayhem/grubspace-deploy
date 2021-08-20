@@ -168,8 +168,9 @@ export default function Chef() {
           </a>
         </div>
         <div className="h-auto w-screen flex flex-col flex-wrap justify-center pt-16 pb-48 bg-gray-600">
-          <div className={"flex justify-center text-5xl mt-10  text-white"}>
+          <div className={"flex flex-col justify-center text-5xl mt-10  text-white"}>
             <h3>Video Gallery</h3>
+            <h5 className={"text-2xl pt-6"}>Find some inspiration for your next meal with some of the best in the game</h5>
           </div>
           <hr
             className="my-16 self-center"
@@ -217,7 +218,7 @@ export default function Chef() {
                 <YouTube opts={youtubeOptions} videoId="-65DoHCZGdQ" />{" "}
                 <a
                   href={
-                    "https://www.joshuaweissman.com/post/2-dollar-sandwich-but-cheaper"
+                    "https://www.youtube.com/channel/UCUqHjTLwXaCjYIxK7XaD16A"
                   }
                 >
                   Explore the tantalizing flavors of Nikisha Riley
@@ -281,6 +282,18 @@ export default function Chef() {
                   }
                 >
                   Re-live the classics with Julia Child
+                </a>
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p className={"text-2xl"}>
+                <YouTube opts={youtubeOptions} videoId="bF9zOykErJ4" />{" "}
+                <a
+                  href={
+                    "https://www.youtube.com/watch?v=bF9zOykErJ4"
+                  }
+                >
+                  Romantic Evening? Try this
                 </a>
               </p>
             </SwiperSlide>

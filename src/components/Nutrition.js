@@ -43,14 +43,14 @@ export default function Nutrition() {
     },
   };
 
-  // axios
-  //   .request(options)
-  //   .then(function (response) {
-  //     console.log(response.data);
-  //   })
-  //   .catch(function (error) {
-  //     console.error(error);
-  //   });
+  axios
+    .request(options)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
 
   return (
     <React.Fragment>
@@ -70,10 +70,11 @@ export default function Nutrition() {
       </div>
       <div
         className={
-          "bg-gray-600 py-48 w-screen my-auto mx-auto flex flex-col justify-center text-center align-center"
+          "bg-white pb-48 w-screen my-auto mx-auto flex flex-col justify-center text-center align-center"
         }
         style={{ height: "100%", maxWidth: "100vw" }}
       >
+        <p className={'animate-fade-in-right text-4xl text-gray-600 my-10'}>Healthy Living, Healthy Choices</p>
         <Swiper
           spaceBetween={300}
           slidesPerView={3}
@@ -82,14 +83,14 @@ export default function Nutrition() {
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
-          className={"py-10 bg-yellow-600 border-2 text-white"}
-          style={{ maxWidth: "90vw", minWidth: "350px" }}
+          className={"animate-fade-in-left py-10 white text-gray-800"}
+          style={{ maxWidth: "98vw", minWidth: "350px" }}
         >
           <SwiperSlide>
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="E1z55dYHv8c" />{" "}
-              <a href={"https://basicswithbabish.co/basicsepisodes/date-night"}>
-                Click here for the best of Basics With Babish
+              <YouTube opts={youtubeOptions} videoId="vmdITEguAnE" />{" "}
+              <a href={"https://mailchi.mp/downshiftology/meal-prep/"}>
+                Meal prep guide here
               </a>
             </p>
           </SwiperSlide>
@@ -98,98 +99,98 @@ export default function Nutrition() {
               <YouTube
                 name={"weissman"}
                 opts={youtubeOptions}
-                videoId="gjhOPHoRJBs"
+                videoId="Acs7ZnIdo4o"
               />{" "}
               <a
                 href={
-                  "https://www.joshuaweissman.com/post/2-dollar-sandwich-but-cheaper"
+                  "https://www.youtube.com/watch?v=Acs7ZnIdo4o"
                 }
               >
-                Click here for Joshua Weissman's recipe
+                Click here for the recipe
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="-65DoHCZGdQ" />{" "}
+              <YouTube opts={youtubeOptions} videoId="bC0JJlBQK6M" />{" "}
               <a
                 href={
-                  "https://www.joshuaweissman.com/post/2-dollar-sandwich-but-cheaper"
+                  "https://www.ruled.me/"
                 }
               >
-                Explore the tantalizing flavors of Nikisha Riley
+                Elevate your keto game here
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="mCJUcJJUmvg" />{" "}
+              <YouTube opts={youtubeOptions} videoId="0L6YCy_kDiM" />{" "}
               <a
                 href={
-                  "https://www.joshuaweissman.com/post/2-dollar-sandwich-but-cheaper"
+                  "https://www.youtube.com/watch?v=0L6YCy_kDiM"
                 }
               >
-                Get Creative with Chef Meach of Tastemade
+                Get the most from your veggies
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="BMgLRD2v5w0" />{" "}
+              <YouTube opts={youtubeOptions} videoId="9QJC2e2Vnvk" />{" "}
               <a
                 href={
-                  "https://www.joshuaweissman.com/post/2-dollar-sandwich-but-cheaper"
+                  "https://youtu.be/9QJC2e2Vnvk"
                 }
               >
-                Experience the flavors and charm of Kenji Lopez-Alt
+               Start your health journey here!
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="UbNiP8ilvCc" />{" "}
+              <YouTube opts={youtubeOptions} videoId="MIF4Imp92OM" />{" "}
               <a
                 href={
-                  "https://www.youtube.com/channel/UCSX8k4RapYLGEO5G_y_M37Q"
+                  "https://youtu.be/MIF4Imp92OM"
                 }
               >
-                Try something new with the ladies of Natural Life TV Cooking
+                Sharpen your sushi game
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="E8b7PwchlIg" />{" "}
+              <YouTube opts={youtubeOptions} videoId="4kLpo6TjTPU" />{" "}
               <a
                 href={
-                  "https://kentrollins.com/homemade-candied-jalapeno-bacon/"
+                  "https://www.youtube.com/watch?v=4kLpo6TjTPU"
                 }
               >
-                Experience the open trails with Cowboy Kent Rollins
+                Healthy, easy, and delicious
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="nW_Tpken5cg" />{" "}
+              <YouTube opts={youtubeOptions} videoId="Lkl9_3-jX6c" />{" "}
               <a
                 href={
-                  "https://www.youtube.com/channel/UCSX8k4RapYLGEO5G_y_M37Q"
+                  "https://downshiftology.com/recipes/overnight-oats/"
                 }
               >
-               Re-live the classics with Julia Child
+               Need a simple way to start your day?
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="7IZeh7w5ekY" />{" "}
+              <YouTube opts={youtubeOptions} videoId="xJrmUR7zvxo" />{" "}
               <a
                 href={
-                  "https://www.almazankitchen.com/bacon-eggs-pan-pie/"
+                  "https://youtu.be/xJrmUR7zvxo"
                 }
               >
-                Feeling adventurous? Go bushcrafting with Almazan Kitchen
+                The art of loving food
               </a>
             </p>
           </SwiperSlide>

@@ -38,7 +38,7 @@ export default function Nutrition() {
       >
         {" "}
         <h2
-          className={"text-white mx-auto mt-32 text-5xl"}
+          className={"animate-fade-in-down text-white mx-auto mt-32 text-5xl"}
           style={{ textShadow: "0 0 1rem Black" }}
         >
           Nutrition Corner

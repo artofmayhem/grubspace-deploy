@@ -67,7 +67,7 @@ export default function Nav() {
         ref={(el) => (nav = el)}
       >
         <div className={'flex flex-row'}>
-          <Button onClick={handleDrawerOpen}>
+          <Button className={'animate-pulse'} onClick={handleDrawerOpen}>
             <MenuIcon className={" ml-10"} />
           </Button>
 

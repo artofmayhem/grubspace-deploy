@@ -67,7 +67,7 @@ export default function Cocktail() {
       >
         {" "}
         <h1
-          className={"text-white mt-20 mx-auto text-7xl "}
+          className={"animate-fade-in-down text-white mt-20 mx-auto text-7xl "}
           style={{ textShadow: "1rem 1rem 2rem black" }}
         >
           Wine Source
@@ -79,7 +79,7 @@ export default function Cocktail() {
         }
       >
         <div className={"align-center bg-gray-900 bg-opacity-90"} >
-          <h5 className={" text-white text-4xl bg-gray-800 w-5/6 mx-auto my-10 py-32 px-10 "}>
+          <h5 className={"animate-fade-in-left text-white text-4xl bg-gray-800 w-5/6 mx-auto my-10 py-32 px-10 "}>
             Let Spoonacular help you find the right wine for your occasion
             today!
           </h5>

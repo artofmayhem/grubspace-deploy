@@ -70,7 +70,7 @@ const Recipe = (props) => {
     return (
       <div
         className={
-          "flex flex-row flex-wrap justify-center align-start w-screen h-screen py-10 bg-gray-600"
+          "animate-fade-in-up flex flex-row flex-wrap justify-center align-start w-screen h-screen py-10 bg-gray-600"
         }
       >
         <h5 className={"text-yellow-600"}>

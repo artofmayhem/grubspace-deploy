@@ -51,7 +51,7 @@ export default function Chef() {
           "chef-container bg-black  w-screen flex flex-col justify-center align-center"
         }
       >
-        <h2 className={"text-white mx-auto -mt-10 text-5xl"}>The Chef Spot</h2>
+        <h2 className={"animate-fade-in-down text-white mx-auto -mt-10 text-5xl"}>The Chef Spot</h2>
       </div>
       <div
         className={
@@ -66,11 +66,11 @@ export default function Chef() {
             <img
               src={CookingShow1Img}
               alt="Staff One"
-              className="w-auto h-auto border-2"
+              className="animate-fade-in-up w-auto h-auto border-2"
               style={{ minWidth: 375, boxShadow: "1rem 1rem 2.55rem black" }}
             />
           </div>
-          <div className="flex flex-col flex-wrap flex-center my-24 text-center">
+          <div className="animate-fade-in-right flex flex-col flex-wrap flex-center my-24 text-center">
             <h5 className={"text-xl mb-4"} style={{ width: 350 }}>
               You've reached the <strong>Chef Spot</strong>! It is this place
               that you will find videos to be inspired by or learn how to make
@@ -93,7 +93,7 @@ export default function Chef() {
             <h2 className={"mx-auto my-auto py-10 text-5xl"}>Food Fun Facts!</h2>
             <button
               className={
-                "px-20 py-6 bg-gray-400 h-20 text-white text-2xl mx-auto"
+                "animate-fade-in-down px-20 py-6 bg-gray-400 h-20 text-white text-2xl mx-auto"
               }
               onClick={handleSubmit}
             >

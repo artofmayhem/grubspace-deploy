@@ -48,7 +48,7 @@ const Recipes = (props) => {
         className={"recipes-container bg-black w-screen"}
         style={{ height: "39rem" }}
       >
-        <h2 className={"animate-fade-in-down mt-64 text-white text-8xl"}>Recipes</h2>
+        <h2 className={"animate-fade-in-down mt-64 text-white text-6xl"}>Recipes</h2>
       </div>
       <form
         className={"bg-gray-800 justify-center p-10 border-b-2"}

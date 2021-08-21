@@ -185,7 +185,7 @@ export default function Chef() {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
             className={"py-10 bg-yellow-600 border-2 text-white"}
-            style={{ maxWidth: "90vw", minWidth: "350px" }}
+            style={{ maxWidth: "90vw", minWidth: "350px", height: "auto" }}
           >
             <SwiperSlide>
               <p className={"text-2xl"}>

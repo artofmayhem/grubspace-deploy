@@ -86,7 +86,7 @@ export default function Nutrition() {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
           className={"animate-fade-in-left py-10 white text-gray-800"}
-          style={{ maxWidth: "98vw", minWidth: "350px" }}
+          style={{ maxWidth: "98vw", height: 'auto', minWidth: "350px" }}
         >
           <SwiperSlide className={""}>
             <YouTube opts={youtubeOptions} videoId="vmdITEguAnE" />{" "}

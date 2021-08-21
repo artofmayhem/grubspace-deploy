@@ -96,7 +96,9 @@ export default function Nav() {
               </a>
             </Button>
             <Button>
+              <a href={"https://tonymiller.vercel.app"}>
               <AccountCircleIcon />
+              </a>
             </Button>
           </div>
         </div>

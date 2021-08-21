@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="footer bg-gray-800 h-auto px-6  flex flex-row flex-wrap justify-between">
-      <div className="flex flex-col my-auto pl-4 border-r-2 h-48 px-10 ">
+      <div className="flex flex-col my-auto pl-4 border-r-2 h-48 px-10 pt-8 ">
         <Link to="/">
           <h1 className={" mt-6 text-4xl text-white"}>Grubspace</h1>
         </Link>

@@ -308,7 +308,7 @@ export default function Nutrition() {
           </h2>
           <form
             className={
-              "flex flex-col bg-yellow-600 border-2 justify-center my-10 m-auto px-48 py-20"
+              "flex flex-col bg-yellow-600 border-2 justify-center my-10 m-auto  py-20"
             }
             style={{ maxWidth: "50vw", minWidth: "375px" }}
           >

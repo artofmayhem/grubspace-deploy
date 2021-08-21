@@ -41,14 +41,10 @@ export default function Nav() {
     //set up the animation
     timeline
       .from(nav, 1.75, {
-        opacity: 0,
         y: -100,
-        backgroundColor: "#222",
       })
       .to(nav, 1.75, {
-        opacity: 1,
         y: 0,
-        backgroundColor: "white",
       });
   }, []); // eslint-disable-line
 
@@ -63,20 +59,22 @@ export default function Nav() {
     <>
       <AppBar
         color="primary"
+        position="static"
         style={{
           height: "auto",
           backgroundColor: "#FAFAFA",
           width: "100vw",
+          boxShadow: "0 0 1rem white"
         }}
         ref={(el) => (nav = el)}
       >
         <div className={"flex flex-row flex-wrap justify-between align-center"}>
           <div className={"flex flex-row my-6 ml-6 text-black text-4xl w-48"}>
             <Button className={"animate-pulse"} onClick={handleDrawerOpen}>
-              <MenuIcon className={" ml-10 mx-10"} />
+              <MenuIcon className={" mx-10"} />
             </Button>
             <Link to="/">
-              <h1>Grubspace</h1>
+              <h1 className={'ml-8'}>Grubspace</h1>
             </Link>
           </div>
           <div className={"my-6 -mr-10 text-black text-4xl w-96"}>
@@ -87,17 +85,17 @@ export default function Nav() {
             </Button>
             <Button>
               <a href={"https://www.instagram.com/amalgamatrix_nation/"}>
-              <InstagramIcon />
+                <InstagramIcon />
               </a>
             </Button>
             <Button>
               <a href={"https://twitter.com/tmillhawaii"}>
-              <TwitterIcon />
+                <TwitterIcon />
               </a>
             </Button>
             <Button>
               <a href={"https://tonymiller.vercel.app"}>
-              <AccountCircleIcon />
+                <AccountCircleIcon />
               </a>
             </Button>
           </div>

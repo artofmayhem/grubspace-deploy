@@ -23,6 +23,10 @@ import RecipesThree from "./recipes-3.jpg";
 import RecipesFour from "./recipes-4.jpg";
 import RecipesFive from "./recipes-5.jpg";
 import RecipesSix from "./recipes-6.jpeg";
+import Nutrition1 from "./nutrition-1.jpg";
+import Nutrition2 from "./nutrition-2.jpg";
+import Nutrition3 from "./nutrition-3.jpg";
+import Nutrition4 from "./nutrition-4.jpg";
 
 export { 
     Grubspace as Logo,
@@ -50,4 +54,8 @@ export {
     RecipesFour as RecipesFourImg,
     RecipesFive as RecipesFiveImg,
     RecipesSix as RecipesSixImg,
+    Nutrition1 as Nutrition1Img,
+    Nutrition2 as Nutrition2Img,
+    Nutrition3 as Nutrition3Img,
+    Nutrition4 as Nutrition4Img,
 };

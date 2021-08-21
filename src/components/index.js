@@ -8,6 +8,7 @@ import Recipes from "./Recipes";
 import Cocktail from "./Cocktail";
 import Nutrition from "./Nutrition";
 import RecipeCards from "./RecipeCards";
+import MealPlanning from "./MealPlanning";
 import PairingResults from "./PairingResults";
 
 export {
@@ -20,5 +21,6 @@ export {
   Cocktail as AppCocktail,
   Nutrition as AppNutrition,
   RecipeCards as AppRecipeCards,
+  MealPlanning as AppMealPlanning,
   PairingResults as AppPairingResults
 };

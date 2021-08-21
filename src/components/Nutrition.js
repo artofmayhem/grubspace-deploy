@@ -12,6 +12,9 @@ import { TimelineLite } from "gsap/gsap-core";
 //import assets
 import { Nutrition3Img, Nutrition2Img, Nutrition4Img } from "../assets/index";
 
+//import components
+import {AppMealPlanning} from "../components/index";
+
 // Import Swiper styles
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
@@ -42,6 +45,7 @@ const initialFormValues = {
 
 export default function Nutrition() {
   const [formValues, setFormValues] = useState(initialFormValues);
+  const [mealData, setMealData] = useState([]);
   let splash = useRef(null);
   //instantiate timeline
   const timeline = new TimelineLite();
@@ -54,16 +58,16 @@ export default function Nutrition() {
     const lastImage = splash.lastElementChild;
 
     //console logs to ensure all elements needed are present
-    console.log(
-      "1. splash",
-      splash,
-      "2. firstImage",
-      firstImage,
-      "3. secondImage",
-      secondImage,
-      "4. lastImage",
-      lastImage
-    );
+    // console.log(
+    //   "1. splash",
+    //   splash,
+    //   "2. firstImage",
+    //   firstImage,
+    //   "3. secondImage",
+    //   secondImage,
+    //   "4. lastImage",
+    //   lastImage
+    // );
 
     timeline.from(firstImage, 1, {
       opacity: 0,
@@ -126,6 +130,7 @@ export default function Nutrition() {
       .request(options)
       .then(function (response) {
         console.log(response.data);
+        setMealData(response.data);
       })
       .catch(function (error) {
         console.error(error);
@@ -157,7 +162,12 @@ export default function Nutrition() {
         <p className={"animate-fade-in-right text-4xl text-white mt-32 mb-10"}>
           Healthy Living, Healthy Choices
         </p>
-        <p className={"animate-fade-in-right text-2xl bg-gray-500 text-white m-auto py-10 px-6 mt-6 mb-10"} style={{width: '100vw'}}>
+        <p
+          className={
+            "animate-fade-in-right text-2xl bg-gray-500 text-white m-auto py-10 px-6 mt-6 mb-10"
+          }
+          style={{ width: "100vw" }}
+        >
           Check out our selection of curated recipes to help you stay healthy
           and healthy.
         </p>
@@ -168,6 +178,7 @@ export default function Nutrition() {
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
+          device={{ios: true}}
           onSlideChange={() => console.log("slide change")}
           className={"animate-fade-in-left py-10 bg-white text-white"}
           style={{ maxWidth: "100vw", height: "auto", minWidth: "350px" }}
@@ -289,15 +300,22 @@ export default function Nutrition() {
         </div>
         <div
           className={
-            "flex flex-col justify-center bg-gray-600 text-white -mb-48"
+            "flex flex-col justify-center bg-gray-600 "
           }
         >
-          <h2 className={"text-4xl my-20"}>
+          <h2 className={"text-4xl text-white my-20"}>
             Get the most from your meals with our meal plan generator
           </h2>
-          <form className={"flex flex-col bg-yellow-600 border-2 justify-center my-10 m-auto px-48 py-20"} style={{maxWidth: '50vw', minWidth: '375px'}}>
-            <h3 className={'text-3xl mb-8'}>Input your specifications and let us do the rest</h3>
-            <p className={"text-xl mb-4 mx-6"}> Timeframe </p>
+          <form
+            className={
+              "flex flex-col bg-yellow-600 border-2 justify-center my-10 m-auto px-48 py-20"
+            }
+            style={{ maxWidth: "50vw", minWidth: "375px" }}
+          >
+            <h3 className={"text-3xl text-white mb-8"}>
+              Input your specifications and let us do the rest
+            </h3>
+            <p className={"text-xl mb-4 text-white mx-6"}> Timeframe </p>
             <input
               name={"timeFrame"}
               className={
@@ -309,7 +327,7 @@ export default function Nutrition() {
               onChange={handleChange}
               placeholder="Day or Week"
             />{" "}
-            <p className={"text-xl mt-6 mb-4"}>Target Calories </p>
+            <p className={"text-xl mt-6 text-white mb-4"}>Target Calories </p>
             <input
               name={"targetCalories"}
               className={
@@ -321,7 +339,7 @@ export default function Nutrition() {
               onChange={handleChange}
               placeholder="2000 a day recommended"
             />{" "}
-            <p className={"text-xl mt-6 mb-4"}>Diet</p>
+            <p className={"text-xl mt-6 text-white mb-4"}>Diet</p>
             <select
               name={"diet"}
               className={
@@ -342,7 +360,7 @@ export default function Nutrition() {
               <option value="Whole30">Whole30</option>
               <option value="Omnivore">Omnivore</option>
             </select>
-            <p className={"text-xl mt-6 mb-4"}>Exclude </p>
+            <p className={"text-xl mt-6 text-white mb-4"}>Exclude </p>
             <input
               name={"exclude"}
               className={
@@ -367,6 +385,10 @@ export default function Nutrition() {
             </button>{" "}
           </form>
         </div>
+
+        <AppMealPlanning data={mealData} />
+
+
       </div>
     </React.Fragment>
   );

@@ -61,7 +61,7 @@ const Recipes = (props) => {
         <input
           name={"searchBar"}
           className={
-            "animate-fade-in-1 border-solid border-2 border-white p-4 w-60 text-center  mb-20 mt-10 mr-5"
+            "animate-fade-in-1 border-solid border-2 border-white p-4 w-60 text-center  mb-20 mt-10 m-auto"
           }
           type="text"
           value={searchValues}

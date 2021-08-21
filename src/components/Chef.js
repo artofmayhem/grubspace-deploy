@@ -104,7 +104,7 @@ export default function Chef() {
             className="flex flex-row flex-wrap justify-evenly bg-gray-800 border-4 text-center"
             style={{ width: 375 }}
           >
-            <h2 className={"mx-auto my-auto py-10 text-5xl"}>
+            <h2 className={"mx-auto my-auto py-10 text-yellow-600 text-5xl"}>
               Food Fun Facts!
             </h2>
             <button
@@ -115,7 +115,7 @@ export default function Chef() {
             >
               Get a Fun Fact!
             </button>
-            <h4 className={"text-lg p-4"}>
+            <h4 className={"text-lg p-8"}>
               Randomly generated fun facts at the touch of a button
             </h4>
           </div>
@@ -124,10 +124,11 @@ export default function Chef() {
             style={{ width: 350 }}
           >
             <p
-              className={"my-auto py-20 px-8 bg-yellow-600 text-xl"}
+              className={"my-auto py-20 px-8 bg-yellow-600 border-4 border-white text-xl"}
               style={{
                 boxShadow: "0 1rem 2rem black",
                 minWidth: 350,
+                height: 450,
                 width: 640,
               }}
             >
@@ -169,7 +170,7 @@ export default function Chef() {
         </div>
         <div className="h-auto w-screen flex flex-col flex-wrap justify-center pt-16 pb-48 bg-gray-600">
           <div className={"flex flex-col justify-center text-5xl mt-10  text-white"}>
-            <h3>Video Gallery</h3>
+            <h3 className={'text-yellow-600 text-7xl'}>Video Gallery</h3>
             <h5 className={"text-2xl pt-6"}>Find some inspiration for your next meal with some of the best in the game</h5>
           </div>
           <hr
@@ -184,8 +185,8 @@ export default function Chef() {
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
-            className={"py-10 bg-yellow-600 border-2 text-white"}
-            style={{ maxWidth: "90vw", minWidth: "350px", height: "auto" }}
+            className={"py-10 bg-gray-800 border-2 border-yellow-600 text-white"}
+            style={{ maxWidth: "95vw", minWidth: "350px", height: "auto" }}
           >
             <SwiperSlide>
               <p className={"text-2xl"}>
@@ -305,6 +306,7 @@ export default function Chef() {
                 </a>
               </p>
             </SwiperSlide>
+            <SwiperSlide> </SwiperSlide>
             ...
           </Swiper>
         </div>

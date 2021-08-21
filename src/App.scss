@@ -4,11 +4,12 @@
   font-style: normal;
   font-weight: 500;
   height: auto;
+  width: auto;
 }
 
 html {
-  box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: hidden; 
+  width: 100vw
 }
 
 .recipes {
@@ -18,31 +19,30 @@ html {
 }
 
 h1 {
-  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-family: "Verlag A", "Verlag B";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 h2 {
-  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-family: "Verlag A", "Verlag B";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 800;
   text-shadow: 0 0 2.5rem black;
 }
 
 h3 {
-  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-family: "Verlag A", "Verlag B";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   text-shadow: 0 0 2.5rem black;
 }
 
 h4, h5, h6, p {
-  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-family: "Verlag A", "Verlag B";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
 }
-
 .hero {
   visibility: hidden;
 }
@@ -57,6 +57,7 @@ h4, h5, h6, p {
   background-size: cover;
   background-position: center center;
   height: 34rem;
+  width: 100vw
 }
 
 .about-container {
@@ -64,6 +65,7 @@ h4, h5, h6, p {
   background-size: cover;
   background-position: 25% 25%;
   height: 39rem;
+  width: 100vw
 }
 
 .chef-container {
@@ -71,6 +73,7 @@ h4, h5, h6, p {
   background-size: cover;
   background-position: center center;
   height: 39rem;
+  width: 100vw
 }
 
 
@@ -79,6 +82,7 @@ h4, h5, h6, p {
   background-size: cover;
   background-position: 25% 25%;
   height: 34rem;
+  width: 100vw
 }
 
 .cocktail-container {
@@ -86,13 +90,14 @@ h4, h5, h6, p {
   background-size: cover;
   background-position: center 5%;
   height: 39rem;
+  width: 100vw
 }
 
 .content-wine {
   background-image: url('./assets/sunset.jpg');
   background-size: cover;
   background-position: center center;
-  
+  width: 100vw
 }
 
 .progress {
@@ -104,6 +109,7 @@ height: 64vh;
 background-image: url('./assets/wines.jpg');
 background-size: cover;
 background-position: center center;
+width: 100vw
 }
 @media screen and (max-width: 400px) {
   .mobile-hide {

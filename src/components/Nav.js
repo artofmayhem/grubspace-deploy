@@ -8,11 +8,15 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
-import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
-import LocalBarIcon from '@material-ui/icons/LocalBar';
-import LocalDiningIcon from '@material-ui/icons/LocalDining';
-import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
+import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
+import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
+import LocalBarIcon from "@material-ui/icons/LocalBar";
+import LocalDiningIcon from "@material-ui/icons/LocalDining";
+import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import TwitterIcon from "@material-ui/icons/Twitter";
 import React, { useState, useEffect, useRef } from "react";
 import { TimelineLite } from "gsap";
 import { Link } from "react-router-dom";
@@ -35,18 +39,18 @@ export default function Nav() {
 
   useEffect(() => {
     //set up the animation
-    timeline.from(nav, 1.75, {
-      opacity: 0,
-      y: -100,
-      backgroundColor: '#222',
-    })
+    timeline
+      .from(nav, 1.75, {
+        opacity: 0,
+        y: -100,
+        backgroundColor: "#222",
+      })
       .to(nav, 1.75, {
         opacity: 1,
         y: 0,
-        backgroundColor: 'white'
-      })
-  }, []);// eslint-disable-line
-
+        backgroundColor: "white",
+      });
+  }, []); // eslint-disable-line
 
   const handleDrawerOpen = () => {
     setState({ left: true });
@@ -66,14 +70,35 @@ export default function Nav() {
         }}
         ref={(el) => (nav = el)}
       >
-        <div className={'flex flex-row'}>
-          <Button className={'animate-pulse'} onClick={handleDrawerOpen}>
-            <MenuIcon className={" ml-10"} />
-          </Button>
-
-          <Link to="/">
-            <h1 className={" my-6 ml-6 text-black text-4xl"}>Grubspace</h1>
-          </Link>
+        <div className={"flex flex-row flex-wrap justify-between align-center"}>
+          <div className={"flex flex-row my-6 ml-6 text-black text-4xl w-48"}>
+            <Button className={"animate-pulse"} onClick={handleDrawerOpen}>
+              <MenuIcon className={" ml-10 mx-10"} />
+            </Button>
+            <Link to="/">
+              <h1>Grubspace</h1>
+            </Link>
+          </div>
+          <div className={"my-6 -mr-10 text-black text-4xl w-96"}>
+            <Button>
+              <a href={"https://www.facebook.com/Grubspace-174436934701864/"}>
+                <FacebookIcon className={""} />
+              </a>
+            </Button>
+            <Button>
+              <a href={"https://www.instagram.com/amalgamatrix_nation/"}>
+              <InstagramIcon />
+              </a>
+            </Button>
+            <Button>
+              <a href={"https://twitter.com/tmillhawaii"}>
+              <TwitterIcon />
+              </a>
+            </Button>
+            <Button>
+              <AccountCircleIcon />
+            </Button>
+          </div>
         </div>
       </AppBar>
       <Drawer
@@ -87,7 +112,7 @@ export default function Nav() {
         <List className={classes.list}>
           <ListItem button>
             <ListItemIcon>
-            <EmojiPeopleIcon />
+              <EmojiPeopleIcon />
             </ListItemIcon>
             <Link to={"about"} onClick={handleDrawerClose}>
               <ListItemText primary="About" />
@@ -95,7 +120,7 @@ export default function Nav() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-             <LibraryBooksIcon />
+              <LibraryBooksIcon />
             </ListItemIcon>
             <Link to={"chef"} onClick={handleDrawerClose}>
               <ListItemText primary="The Chef Spot" />
@@ -103,7 +128,7 @@ export default function Nav() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-             <LocalDiningIcon />
+              <LocalDiningIcon />
             </ListItemIcon>
             <Link to={"recipes"} onClick={handleDrawerClose}>
               <ListItemText primary="Recipe Box" />
@@ -111,7 +136,7 @@ export default function Nav() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-            <LocalGroceryStoreIcon />
+              <LocalGroceryStoreIcon />
             </ListItemIcon>
             <Link to={"nutrition"} onClick={handleDrawerClose}>
               <ListItemText primary="Nutrition Corner" />
@@ -119,7 +144,7 @@ export default function Nav() {
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-            <LocalBarIcon/>
+              <LocalBarIcon />
             </ListItemIcon>
             <Link to={"cocktails"} onClick={handleDrawerClose}>
               <ListItemText primary="Wine Source" />

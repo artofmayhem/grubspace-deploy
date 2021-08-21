@@ -74,7 +74,9 @@ export default function Nutrition() {
         }
         style={{ height: "100%", maxWidth: "100vw" }}
       >
-        <p className={'animate-fade-in-right text-4xl text-gray-600 my-10'}>Healthy Living, Healthy Choices</p>
+        <p className={"animate-fade-in-right text-4xl text-gray-600 my-10"}>
+          Healthy Living, Healthy Choices
+        </p>
         <Swiper
           spaceBetween={300}
           slidesPerView={3}
@@ -86,114 +88,81 @@ export default function Nutrition() {
           className={"animate-fade-in-left py-10 white text-gray-800"}
           style={{ maxWidth: "98vw", minWidth: "350px" }}
         >
-          <SwiperSlide>
+          <SwiperSlide className={""}>
+            <YouTube opts={youtubeOptions} videoId="vmdITEguAnE" />{" "}
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="vmdITEguAnE" />{" "}
               <a href={"https://mailchi.mp/downshiftology/meal-prep/"}>
                 Meal prep guide here
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
+            <YouTube
+              name={"weissman"}
+              opts={youtubeOptions}
+              videoId="Acs7ZnIdo4o"
+            />{" "}
             <p className={"text-2xl"}>
-              <YouTube
-                name={"weissman"}
-                opts={youtubeOptions}
-                videoId="Acs7ZnIdo4o"
-              />{" "}
-              <a
-                href={
-                  "https://www.youtube.com/watch?v=Acs7ZnIdo4o"
-                }
-              >
+              <a href={"https://www.youtube.com/watch?v=Acs7ZnIdo4o"}>
                 Click here for the recipe
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
+            <YouTube opts={youtubeOptions} videoId="bC0JJlBQK6M" />{" "}
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="bC0JJlBQK6M" />{" "}
-              <a
-                href={
-                  "https://www.ruled.me/"
-                }
-              >
-                Elevate your keto game here
-              </a>
+              <a href={"https://www.ruled.me/"}>Elevate your keto game here</a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
+            <YouTube opts={youtubeOptions} videoId="0L6YCy_kDiM" />{" "}
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="0L6YCy_kDiM" />{" "}
-              <a
-                href={
-                  "https://www.youtube.com/watch?v=0L6YCy_kDiM"
-                }
-              >
+              <a href={"https://www.youtube.com/watch?v=0L6YCy_kDiM"}>
                 Get the most from your veggies
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
+            <YouTube opts={youtubeOptions} videoId="9QJC2e2Vnvk" />{" "}
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="9QJC2e2Vnvk" />{" "}
-              <a
-                href={
-                  "https://youtu.be/9QJC2e2Vnvk"
-                }
-              >
-               Start your health journey here!
+              <a href={"https://youtu.be/9QJC2e2Vnvk"}>
+                Start your health journey here!
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
+            <YouTube opts={youtubeOptions} videoId="MIF4Imp92OM" />{" "}
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="MIF4Imp92OM" />{" "}
-              <a
-                href={
-                  "https://youtu.be/MIF4Imp92OM"
-                }
-              >
+              <a href={"https://youtu.be/MIF4Imp92OM"}>
                 Sharpen your sushi game
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
+            <YouTube opts={youtubeOptions} videoId="4kLpo6TjTPU" />{" "}
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="4kLpo6TjTPU" />{" "}
-              <a
-                href={
-                  "https://www.youtube.com/watch?v=4kLpo6TjTPU"
-                }
-              >
+              <a href={"https://www.youtube.com/watch?v=4kLpo6TjTPU"}>
                 Healthy, easy, and delicious
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
+            <YouTube opts={youtubeOptions} videoId="Lkl9_3-jX6c" />{" "}
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="Lkl9_3-jX6c" />{" "}
-              <a
-                href={
-                  "https://downshiftology.com/recipes/overnight-oats/"
-                }
-              >
-               Need a simple way to start your day?
+              <a href={"https://downshiftology.com/recipes/overnight-oats/"}>
+                Need a simple way to start your day?
               </a>
             </p>
           </SwiperSlide>
           <SwiperSlide>
+            <YouTube opts={youtubeOptions} videoId="xJrmUR7zvxo" />{" "}
             <p className={"text-2xl"}>
-              <YouTube opts={youtubeOptions} videoId="xJrmUR7zvxo" />{" "}
-              <a
-                href={
-                  "https://youtu.be/xJrmUR7zvxo"
-                }
-              >
+              <a href={"https://youtu.be/xJrmUR7zvxo"}>
                 The art of loving food
               </a>
             </p>
           </SwiperSlide>
+          <SwiperSlide/>
           ...
         </Swiper>
       </div>

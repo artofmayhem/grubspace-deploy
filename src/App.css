@@ -44,6 +44,12 @@ h3 {
   text-shadow: 0 0 2.5rem black;
 }
 
+h4, h5, h6, p {
+  font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
+  font-style: normal;
+  font-weight: 500;
+}
+
 .hero {
   visibility: hidden;
 }

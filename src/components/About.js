@@ -12,9 +12,8 @@ import {
   TeamThreeImg,
 } from "../assets/index";
 import ScrollToTop from "react-scroll-to-top";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function About() {
   //instantiate variables for intro and splash
@@ -22,24 +21,21 @@ export default function About() {
   let splash = useRef(null);
   //instantiate timeline
   const timeline = new TimelineLite();
-  AOS.init()
-
+  AOS.init();
 
   //animation options
   const animationOptions = {
     pinkImage: {
-    duration: 3,
-    opacity: 0,
+      duration: 3,
+      opacity: 0,
     },
     intro: {
       scale: 0,
       opacity: 0,
       ease: Power3.easeOut,
     },
-  }
+  };
 
- 
-  
   // useEffect is a React Hook that runs animations when the component mounts
   useEffect(() => {
     // getting all elements in splash for animation
@@ -56,11 +52,11 @@ export default function About() {
       "3. secondImage",
       secondImage,
       "4. lastImage",
-      lastImage,
+      lastImage
     );
-  // getPinkImage.addEventListener("wheel", () => {
-  //     timeline.to(getPinkImage, 2, animationOptions.pinkImage);
-  //   });
+    // getPinkImage.addEventListener("wheel", () => {
+    //     timeline.to(getPinkImage, 2, animationOptions.pinkImage);
+    //   });
     // adds animations to the timeline
     timeline.from(intro, 1.5, animationOptions.intro);
 
@@ -74,29 +70,28 @@ export default function About() {
           opacity: 1,
           y: 0,
         });
-      }
+      },
     });
-    timeline.from(secondImage, .75, {
+    timeline.from(secondImage, 0.75, {
       opacity: 0,
       y: 100,
       onComplete: () => {
-        timeline.to(secondImage, .75, {
+        timeline.to(secondImage, 0.75, {
           opacity: 1,
           y: 0,
         });
-      }
+      },
     });
-    timeline.from(lastImage, .75, {
+    timeline.from(lastImage, 0.75, {
       opacity: 0,
       y: 100,
       onComplete: () => {
-        timeline.to(lastImage, .75, {
+        timeline.to(lastImage, 0.75, {
           opacity: 1,
           y: 0,
         });
-      }
+      },
     });
-
   }, []); // eslint-disable-line
 
   return (
@@ -124,19 +119,20 @@ export default function About() {
         }
       >
         <div
-          className="h-auto flex flex-row flex-wrap justify-evenly py-8 text-white bg-gray-600"
+          className="hover02 h-auto flex flex-row flex-wrap justify-evenly py-8 text-white bg-gray-600"
           ref={(el) => (splash = el)}
         >
           <div
             className="flex flex-row flex-wrap flex-center my-20 text-center"
             style={{ width: 350 }}
           >
+            <figure>
             <img
               src={StaffOneImg}
               style={{ boxShadow: "0 1rem 2rem black" }}
               alt="Staff One"
               className="w-auto h-auto"
-            />
+            /></figure>
           </div>
           <div
             className="flex flex-row flex-wrap flex-center text-justify"
@@ -159,12 +155,14 @@ export default function About() {
             className="flex flex-row flex-wrap flex-center my-20 text-center"
             style={{ width: 350 }}
           >
+            <figure>
             <img
               src={StaffSixImg}
               alt="Staff One"
               style={{ boxShadow: "0 1rem 2rem black" }}
               className="w-auto h-auto"
             />
+            </figure>
           </div>
         </div>
         <div className="h-auto flex flex-row flex-wrap justify-evenly pt-16 bg-white">
@@ -172,11 +170,10 @@ export default function About() {
             className="flex flex-row flex-wrap justify-center mt-24 mb-20 "
             style={{ width: "50%" }}
           >
-
             <img
               src={StaffTwoImg}
               alt="Staff One"
-              id={'pink-image'}
+              id={"pink-image"}
               className="animate-staff-two w-auto h-auto border-2"
               style={{ minWidth: 375, boxShadow: "1rem 1rem 2.55rem #e75480" }}
             />
@@ -263,7 +260,7 @@ export default function About() {
             <h3 className={"text-5xl bg-gray-600 w-screen py-10"}>
               Our Street Team
             </h3>
-            <div className="flex flex-row flex-wrap justify-evenly align-center">
+            <div className="hover08 flex flex-row flex-wrap justify-evenly align-center my-24">
               <div
                 className="flex flex-col flex-wrap flex-center justify-center align-center text-center h-auto"
                 style={{ width: 350 }}
@@ -271,13 +268,14 @@ export default function About() {
                 <h3 className={"text-2xl my-16"} htmlFor={"Gwendolyn Johnson"}>
                   Gwendolyn Johnson
                 </h3>
-                <img
-                  name={"Gwendolyn Johnson"}
-                  src={TeamOneImg}
-                  alt="Staff One"
-                  style={{ boxShadow: "0 1rem 2rem black mt-32" }}
-                  className="w-auto h-auto"
-                />
+                <figure>
+                  <img
+                    name={"Gwendolyn Johnson"}
+                    src={TeamOneImg}
+                    alt="Staff One"
+                    style={{ boxShadow: "0 1rem 2rem black", height: "30rem" }}
+                  />
+                </figure>
               </div>
               <div
                 className="flex flex-col flex-wrap flex-center justify-center align-center text-center h-auto"
@@ -286,13 +284,14 @@ export default function About() {
                 <h3 className={"text-2xl my-16"} htmlFor={"Ahmed Khan"}>
                   Ahmed Khan
                 </h3>
-                <img
-                  name={"Ahmed Khan"}
-                  src={TeamThreeImg}
-                  alt="Ahmed Khan"
-                  style={{ boxShadow: "0 1rem 2rem black mt-32" }}
-                  className="w-auto h-auto"
-                />
+                <figure>
+                  <img
+                    name={"Ahmed Khan"}
+                    src={TeamThreeImg}
+                    alt="Ahmed Khan"
+                    style={{ boxShadow: "0 1rem 2rem black", height: "30rem" }}
+                  />
+                </figure>
               </div>
               <div
                 className="flex flex-col flex-wrap flex-center justify-center align-center text-center h-auto"
@@ -301,13 +300,14 @@ export default function About() {
                 <h3 className={"text-2xl my-16"} htmlFor={"Noriko Sumida"}>
                   Noriko Sumida
                 </h3>
-                <img
-                  name={"Noriko Sumida"}
-                  src={TeamTwoImg}
-                  alt="Staff One"
-                  style={{ boxShadow: "0 1rem 2rem black mt-32" }}
-                  className="w-auto h-auto"
-                />
+                <figure>
+                  <img
+                    name={"Noriko Sumida"}
+                    src={TeamTwoImg}
+                    alt="Staff One"
+                    style={{ boxShadow: "0 1rem 2rem black", height: "30rem" }}
+                  />
+                </figure>
               </div>
             </div>
           </div>

@@ -243,6 +243,7 @@ background: rgba(0, 0, 0, 0.8);
 }
 
 //photo effects
+/*Zoom #1 Animation*/
 .hover01 figure img {
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -252,4 +253,27 @@ background: rgba(0, 0, 0, 0.8);
 .hover01 figure:hover img {
 	-webkit-transform: scale(1.3);
 	transform: scale(1.3);
+}
+
+/* Zoom In #2 Animation*/
+.hover02 figure img {
+	width: 300px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover02 figure:hover img {
+	width: 350px;
+}
+
+/* Gray Scale Animation*/
+.hover08 figure img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover08 figure:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
 }

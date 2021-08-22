@@ -171,15 +171,18 @@ export default function Nutrition() {
           and healthy.
         </p>
 
-        <div className={'flex flex-row flex-wrap justify-center mx-auto'} style={{width: 375}}>
-          <ul className="slides" >
+        <div
+          className={"flex flex-row flex-wrap justify-center mx-auto"}
+          style={{ width: 375 }}
+        >
+          <ul className="slides">
             <input type="radio" name="radio-btn" id="img-1" defaultChecked />
             <li className="slide-container">
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="vmdITEguAnE" />{" "}
                 <a href={"https://mailchi.mp/downshiftology/meal-prep/"}>
-                Meal prep guide here
-              </a>
+                  Meal prep guide here
+                </a>
               </div>
               <div className="nav">
                 <label htmlFor="img-10" className="prev">
@@ -199,11 +202,11 @@ export default function Nutrition() {
                   opts={youtubeOptions}
                   videoId="Acs7ZnIdo4o"
                 />{" "}
-                  <p className={"text-2xl"}>
-              <a href={"https://www.youtube.com/watch?v=Acs7ZnIdo4o"}>
-                Click here for the recipe
-              </a>
-            </p>
+                <p className={"text-2xl"}>
+                  <a href={"https://www.youtube.com/watch?v=Acs7ZnIdo4o"}>
+                    Click here for the recipe
+                  </a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-1" className="prev">
@@ -218,10 +221,12 @@ export default function Nutrition() {
             <input type="radio" name="radio-btn" id="img-3" />
             <li className="slide-container">
               <div className="slide">
-              <YouTube opts={youtubeOptions} videoId="bC0JJlBQK6M" />{" "}
-              <p className={"text-2xl"}>
-              <a href={"https://www.ruled.me/"}>Elevate your keto game here</a>
-            </p>
+                <YouTube opts={youtubeOptions} videoId="bC0JJlBQK6M" />{" "}
+                <p className={"text-2xl"}>
+                  <a href={"https://www.ruled.me/"}>
+                    Elevate your keto game here
+                  </a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-2" className="prev">
@@ -236,10 +241,10 @@ export default function Nutrition() {
             <input type="radio" name="radio-btn" id="img-4" />
             <li className="slide-container">
               <div className="slide">
-              <YouTube opts={youtubeOptions} videoId="41Wu4pBtSvA" />{" "}
-            <p className={"text-2xl"}>
-              <a href={"https://youtu.be/teOmeFZZJ5U"}>Meal prep hacks</a>
-            </p>
+                <YouTube opts={youtubeOptions} videoId="41Wu4pBtSvA" />{" "}
+                <p className={"text-2xl"}>
+                  <a href={"https://youtu.be/teOmeFZZJ5U"}>Meal prep hacks</a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-3" className="prev">
@@ -254,12 +259,12 @@ export default function Nutrition() {
             <input type="radio" name="radio-btn" id="img-5" />
             <li className="slide-container">
               <div className="slide">
-              <YouTube opts={youtubeOptions} videoId="0L6YCy_kDiM" />{" "}
-            <p className={"text-2xl"}>
-              <a href={"https://www.youtube.com/watch?v=0L6YCy_kDiM"}>
-                Get the most from your veggies
-              </a>
-            </p>
+                <YouTube opts={youtubeOptions} videoId="0L6YCy_kDiM" />{" "}
+                <p className={"text-2xl"}>
+                  <a href={"https://www.youtube.com/watch?v=0L6YCy_kDiM"}>
+                    Get the most from your veggies
+                  </a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-4" className="prev">
@@ -274,12 +279,12 @@ export default function Nutrition() {
             <input type="radio" name="radio-btn" id="img-6" />
             <li className="slide-container">
               <div className="slide">
-              <YouTube opts={youtubeOptions} videoId="9QJC2e2Vnvk" />{" "}
-            <p className={"text-2xl"}>
-              <a href={"https://youtu.be/9QJC2e2Vnvk"}>
-                Start your health journey here!
-              </a>
-            </p>
+                <YouTube opts={youtubeOptions} videoId="9QJC2e2Vnvk" />{" "}
+                <p className={"text-2xl"}>
+                  <a href={"https://youtu.be/9QJC2e2Vnvk"}>
+                    Start your health journey here!
+                  </a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-5" className="prev">
@@ -290,16 +295,16 @@ export default function Nutrition() {
                 </label>
               </div>
             </li>
-          {/* make three more slides */}
+            {/* make three more slides */}
             <input type="radio" name="radio-btn" id="img-7" />
             <li className="slide-container">
               <div className="slide">
-               <YouTube opts={youtubeOptions} videoId="MIF4Imp92OM" />{" "}
-            <p className={"text-2xl"}>
-              <a href={"https://youtu.be/MIF4Imp92OM"}>
-                Sharpen your sushi game
-              </a>
-            </p>
+                <YouTube opts={youtubeOptions} videoId="MIF4Imp92OM" />{" "}
+                <p className={"text-2xl"}>
+                  <a href={"https://youtu.be/MIF4Imp92OM"}>
+                    Sharpen your sushi game
+                  </a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-6" className="prev">
@@ -313,12 +318,12 @@ export default function Nutrition() {
             <input type="radio" name="radio-btn" id="img-8" />
             <li className="slide-container">
               <div className="slide">
-              <YouTube opts={youtubeOptions} videoId="4kLpo6TjTPU" />{" "}
-            <p className={"text-2xl"}>
-              <a href={"https://www.youtube.com/watch?v=4kLpo6TjTPU"}>
-                Healthy, easy, and delicious
-              </a>
-            </p>
+                <YouTube opts={youtubeOptions} videoId="4kLpo6TjTPU" />{" "}
+                <p className={"text-2xl"}>
+                  <a href={"https://www.youtube.com/watch?v=4kLpo6TjTPU"}>
+                    Healthy, easy, and delicious
+                  </a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-7" className="prev">
@@ -332,12 +337,14 @@ export default function Nutrition() {
             <input type="radio" name="radio-btn" id="img-9" />
             <li className="slide-container">
               <div className="slide">
-              <YouTube opts={youtubeOptions} videoId="Lkl9_3-jX6c" />{" "}
-            <p className={"text-2xl"}>
-              <a href={"https://downshiftology.com/recipes/overnight-oats/"}>
-                Need a simple way to start your day?
-              </a>
-            </p>
+                <YouTube opts={youtubeOptions} videoId="Lkl9_3-jX6c" />{" "}
+                <p className={"text-2xl"}>
+                  <a
+                    href={"https://downshiftology.com/recipes/overnight-oats/"}
+                  >
+                    Need a simple way to start your day?
+                  </a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-8" className="prev">
@@ -351,12 +358,12 @@ export default function Nutrition() {
             <input type="radio" name="radio-btn" id="img-10" />
             <li className="slide-container">
               <div className="slide">
-              <YouTube opts={youtubeOptions} videoId="xJrmUR7zvxo" />{" "}
-            <p className={"text-2xl"}>
-              <a href={"https://youtu.be/xJrmUR7zvxo"}>
-                The art of loving food
-              </a>
-            </p>
+                <YouTube opts={youtubeOptions} videoId="xJrmUR7zvxo" />{" "}
+                <p className={"text-2xl"}>
+                  <a href={"https://youtu.be/xJrmUR7zvxo"}>
+                    The art of loving food
+                  </a>
+                </p>
               </div>
               <div className="nav">
                 <label htmlFor="img-9" className="prev">
@@ -378,46 +385,59 @@ export default function Nutrition() {
               <label htmlFor="img-7" className="nav-dot" id="img-dot-7"></label>
               <label htmlFor="img-8" className="nav-dot" id="img-dot-8"></label>
               <label htmlFor="img-9" className="nav-dot" id="img-dot-9"></label>
-              <label htmlFor="img-10" className="nav-dot" id="img-dot-10"></label>
+              <label
+                htmlFor="img-10"
+                className="nav-dot"
+                id="img-dot-10"
+              ></label>
             </li>
           </ul>
         </div>
         <div
-          className="h-auto flex flex-row flex-wrap justify-evenly py-8 mt-32 text-white bg-white"
+          className=" hover01 h-auto flex flex-row flex-wrap justify-evenly py-8 mt-32 text-white bg-white"
           ref={(el) => (splash = el)}
         >
           <div
             className="flex flex-row flex-wrap flex-center my-20 text-center"
             style={{ width: 350 }}
           >
-            <img
-              src={Nutrition4Img}
-              style={{ boxShadow: "0 1rem 2rem black" }}
-              alt="Staff One"
-              className="w-auto h-auto"
-            />
+            <figure>
+              <img
+                src={Nutrition4Img}
+                style={{ boxShadow: "0 1rem 2rem black" }}
+                alt="Staff One"
+                className="h-96"
+              />
+            </figure>
+            <span>Live</span>
           </div>
           <div
             className="flex flex-row flex-wrap flex-center my-20 text-justify"
             style={{ width: 350 }}
           >
-            <img
-              src={Nutrition3Img}
-              style={{ boxShadow: "0 1rem 2rem black" }}
-              alt="Staff One"
-              className="w-auto h-auto"
-            />
+            <figure>
+              <img
+                src={Nutrition3Img}
+                style={{ boxShadow: "0 1rem 2rem black" }}
+                alt="Staff One"
+                className="h-96"
+              />
+            </figure>
+            <span>Life</span>
           </div>
           <div
             className="flex flex-row flex-wrap flex-center my-20 text-center"
             style={{ width: 350 }}
           >
-            <img
-              src={Nutrition2Img}
-              alt="Staff One"
-              style={{ boxShadow: "0 1rem 2rem black" }}
-              className="w-auto h-auto"
-            />
+            <figure>
+              <img
+                src={Nutrition2Img}
+                alt="Staff One"
+                style={{ boxShadow: "0 1rem 2rem black" }}
+                className="h-96"
+              />
+            </figure>
+            <span>Love</span>
           </div>
         </div>
         <div className={"flex flex-col justify-center bg-gray-600 "}>

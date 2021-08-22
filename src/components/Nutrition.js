@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ScrollToTop from "react-scroll-to-top";
 // import Swiper core and required modules
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import YouTube from "react-youtube";
 
 //animation imports
@@ -13,20 +13,19 @@ import { TimelineLite } from "gsap/gsap-core";
 import { Nutrition3Img, Nutrition2Img, Nutrition4Img } from "../assets/index";
 
 //import components
-import {AppMealPlanning} from "../components/index";
+import { AppMealPlanning } from "../components/index";
 
-// Import Swiper styles
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
-import "swiper/components/pagination/pagination.scss";
-import "swiper/components/scrollbar/scrollbar.scss";
+// // Import Swiper styles
+// import "swiper/swiper.scss";
+// import "swiper/components/navigation/navigation.scss";
+// import "swiper/components/pagination/pagination.scss";
+// import "swiper/components/scrollbar/scrollbar.scss";
 
-// install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+// // install Swiper modules
+// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const youtubeOptions = {
-  width: 640,
-  height: 360,
+  width: 375,
   playerVars: {
     rel: 0,
     showinfo: 0,
@@ -171,95 +170,218 @@ export default function Nutrition() {
           Check out our selection of curated recipes to help you stay healthy
           and healthy.
         </p>
-        <Swiper
-          spaceBetween={300}
-          slidesPerView={3}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          device={{ios: true}}
-          onSlideChange={() => console.log("slide change")}
-          className={"animate-fade-in-left py-10 bg-white text-white"}
-          style={{ maxWidth: "100vw", height: "auto", minWidth: "350px" }}
-        >
-          <SwiperSlide className={""}>
-            <YouTube opts={youtubeOptions} videoId="vmdITEguAnE" />{" "}
-            <p className={"text-2xl"}>
-              <a href={"https://mailchi.mp/downshiftology/meal-prep/"}>
+
+        <div className={'flex justify-center mx-auto'} style={{width: 375}}>
+          <ul className="slides" >
+            <input type="radio" name="radio-btn" id="img-1" defaultChecked />
+            <li className="slide-container">
+              <div className="slide">
+                <YouTube opts={youtubeOptions} videoId="vmdITEguAnE" />{" "}
+                <a href={"https://mailchi.mp/downshiftology/meal-prep/"}>
                 Meal prep guide here
               </a>
-            </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <YouTube
-              name={"weissman"}
-              opts={youtubeOptions}
-              videoId="Acs7ZnIdo4o"
-            />{" "}
-            <p className={"text-2xl"}>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-10" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-2" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-2" />
+            <li className="slide-container">
+              <div className="slide">
+                <YouTube
+                  name={"weissman"}
+                  opts={youtubeOptions}
+                  videoId="Acs7ZnIdo4o"
+                />{" "}
+                  <p className={"text-2xl"}>
               <a href={"https://www.youtube.com/watch?v=Acs7ZnIdo4o"}>
                 Click here for the recipe
               </a>
             </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <YouTube opts={youtubeOptions} videoId="bC0JJlBQK6M" />{" "}
-            <p className={"text-2xl"}>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-1" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-3" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-3" />
+            <li className="slide-container">
+              <div className="slide">
+              <YouTube opts={youtubeOptions} videoId="bC0JJlBQK6M" />{" "}
+              <p className={"text-2xl"}>
               <a href={"https://www.ruled.me/"}>Elevate your keto game here</a>
             </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <YouTube opts={youtubeOptions} videoId="0L6YCy_kDiM" />{" "}
+              </div>
+              <div className="nav">
+                <label htmlFor="img-2" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-4" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-4" />
+            <li className="slide-container">
+              <div className="slide">
+              <YouTube opts={youtubeOptions} videoId="41Wu4pBtSvA" />{" "}
+            <p className={"text-2xl"}>
+              <a href={"https://youtu.be/teOmeFZZJ5U"}>Meal prep hacks</a>
+            </p>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-3" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-5" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-5" />
+            <li className="slide-container">
+              <div className="slide">
+              <YouTube opts={youtubeOptions} videoId="0L6YCy_kDiM" />{" "}
             <p className={"text-2xl"}>
               <a href={"https://www.youtube.com/watch?v=0L6YCy_kDiM"}>
                 Get the most from your veggies
               </a>
             </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <YouTube opts={youtubeOptions} videoId="9QJC2e2Vnvk" />{" "}
+              </div>
+              <div className="nav">
+                <label htmlFor="img-4" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-6" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-6" />
+            <li className="slide-container">
+              <div className="slide">
+              <YouTube opts={youtubeOptions} videoId="9QJC2e2Vnvk" />{" "}
             <p className={"text-2xl"}>
               <a href={"https://youtu.be/9QJC2e2Vnvk"}>
                 Start your health journey here!
               </a>
             </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <YouTube opts={youtubeOptions} videoId="MIF4Imp92OM" />{" "}
+              </div>
+              <div className="nav">
+                <label htmlFor="img-5" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-7" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+          {/* make three more slides */}
+            <input type="radio" name="radio-btn" id="img-7" />
+            <li className="slide-container">
+              <div className="slide">
+               <YouTube opts={youtubeOptions} videoId="MIF4Imp92OM" />{" "}
             <p className={"text-2xl"}>
               <a href={"https://youtu.be/MIF4Imp92OM"}>
                 Sharpen your sushi game
               </a>
             </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <YouTube opts={youtubeOptions} videoId="4kLpo6TjTPU" />{" "}
+              </div>
+              <div className="nav">
+                <label htmlFor="img-6" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-8" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-btn" id="img-8" />
+            <li className="slide-container">
+              <div className="slide">
+              <YouTube opts={youtubeOptions} videoId="4kLpo6TjTPU" />{" "}
             <p className={"text-2xl"}>
               <a href={"https://www.youtube.com/watch?v=4kLpo6TjTPU"}>
                 Healthy, easy, and delicious
               </a>
             </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <YouTube opts={youtubeOptions} videoId="Lkl9_3-jX6c" />{" "}
+              </div>
+              <div className="nav">
+                <label htmlFor="img-7" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-9" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-btn" id="img-9" />
+            <li className="slide-container">
+              <div className="slide">
+              <YouTube opts={youtubeOptions} videoId="Lkl9_3-jX6c" />{" "}
             <p className={"text-2xl"}>
               <a href={"https://downshiftology.com/recipes/overnight-oats/"}>
                 Need a simple way to start your day?
               </a>
             </p>
-          </SwiperSlide>
-          <SwiperSlide>
-            <YouTube opts={youtubeOptions} videoId="xJrmUR7zvxo" />{" "}
+              </div>
+              <div className="nav">
+                <label htmlFor="img-8" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-10" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-btn" id="img-10" />
+            <li className="slide-container">
+              <div className="slide">
+              <YouTube opts={youtubeOptions} videoId="xJrmUR7zvxo" />{" "}
             <p className={"text-2xl"}>
               <a href={"https://youtu.be/xJrmUR7zvxo"}>
                 The art of loving food
               </a>
             </p>
-          </SwiperSlide>
-          <SwiperSlide />
-          ...
-        </Swiper>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-9" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-1" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <li className="nav-dots">
+              <label htmlFor="img-1" className="nav-dot" id="img-dot-1"></label>
+              <label htmlFor="img-2" className="nav-dot" id="img-dot-2"></label>
+              <label htmlFor="img-3" className="nav-dot" id="img-dot-3"></label>
+              <label htmlFor="img-4" className="nav-dot" id="img-dot-4"></label>
+              <label htmlFor="img-5" className="nav-dot" id="img-dot-5"></label>
+              <label htmlFor="img-6" className="nav-dot" id="img-dot-6"></label>
+              <label htmlFor="img-7" className="nav-dot" id="img-dot-7"></label>
+              <label htmlFor="img-8" className="nav-dot" id="img-dot-8"></label>
+              <label htmlFor="img-9" className="nav-dot" id="img-dot-9"></label>
+              <label htmlFor="img-10" className="nav-dot" id="img-dot-10"></label>
+            </li>
+          </ul>
+        </div>
         <div
           className="h-auto flex flex-row flex-wrap justify-evenly py-8 mt-32 text-white bg-white"
           ref={(el) => (splash = el)}
@@ -298,11 +420,7 @@ export default function Nutrition() {
             />
           </div>
         </div>
-        <div
-          className={
-            "flex flex-col justify-center bg-gray-600 "
-          }
-        >
+        <div className={"flex flex-col justify-center bg-gray-600 "}>
           <h2 className={"text-4xl text-white my-20"}>
             Get the most from your meals with our meal plan generator
           </h2>
@@ -387,8 +505,6 @@ export default function Nutrition() {
         </div>
 
         <AppMealPlanning data={mealData} />
-
-
       </div>
     </React.Fragment>
   );

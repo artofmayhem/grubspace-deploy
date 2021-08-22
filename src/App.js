@@ -3,6 +3,7 @@ import "tailwindcss/dist/tailwind.css";
 import React from "react";
 import { AppNav, AppHome, AppAbout, AppRecipes, AppChef, AppNutrition, AppCocktail, AppFooter } from "./components/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+//import {ScrollTrigger} from "react-router-scroll-4";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <div className="App">
         <AppNav />
       </div>
+    
       <Switch>
         <Route exact path={"/"} component={AppHome} />
         <Route path={"/about"} component={AppAbout} />

@@ -171,7 +171,7 @@ export default function Nutrition() {
           and healthy.
         </p>
 
-        <div className={'flex justify-center mx-auto'} style={{width: 375}}>
+        <div className={'flex flex-row flex-wrap justify-center mx-auto'} style={{width: 375}}>
           <ul className="slides" >
             <input type="radio" name="radio-btn" id="img-1" defaultChecked />
             <li className="slide-container">

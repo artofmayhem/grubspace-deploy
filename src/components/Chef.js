@@ -29,7 +29,7 @@ export default function Chef() {
     },
   };
   const youtubeOptions = {
-    width: 640,
+    width: 375,
     height: 360,
     playerVars: {
       rel: 0,
@@ -177,28 +177,33 @@ export default function Chef() {
             className="my-16 self-center"
             style={{ minWidth: 300, width: "60vw" }}
           />
-          <Swiper
-            spaceBetween={300}
-            slidesPerView={3}
-            navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-            className={"py-10 bg-gray-800 border-2 border-yellow-600 text-white"}
-            style={{ maxWidth: "95vw", minWidth: "350px", height: "auto" }}
-          >
-            <SwiperSlide>
+           <div className={'flex flex-row flex-wrap justify-center text-white mx-auto'} style={{width: 375}}>
+          <ul className="slides" >
+            <input type="radio" name="radio-btn" id="img-1" defaultChecked />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="E1z55dYHv8c" />{" "}
                 <a
                   href={"https://basicswithbabish.co/basicsepisodes/date-night"}
                 >
-                  Click here for the best of Basics With Babish
+                  Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-10" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-2" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-2" />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube
                   name={"weissman"}
@@ -210,11 +215,23 @@ export default function Chef() {
                     "https://www.joshuaweissman.com/post/2-dollar-sandwich-but-cheaper"
                   }
                 >
-                  Click here for Joshua Weissman's recipe
+                  Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-1" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-3" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-3" />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="-65DoHCZGdQ" />{" "}
                 <a
@@ -222,11 +239,23 @@ export default function Chef() {
                     "https://www.youtube.com/channel/UCUqHjTLwXaCjYIxK7XaD16A"
                   }
                 >
-                  Explore the tantalizing flavors of Nikisha Riley
+                 Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-2" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-4" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-4" />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="mCJUcJJUmvg" />{" "}
                 <a
@@ -234,11 +263,23 @@ export default function Chef() {
                     "https://www.joshuaweissman.com/post/2-dollar-sandwich-but-cheaper"
                   }
                 >
-                  Get Creative with Chef Meach of Tastemade
+                Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-3" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-5" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-5" />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="BMgLRD2v5w0" />{" "}
                 <a
@@ -246,11 +287,23 @@ export default function Chef() {
                     "https://www.joshuaweissman.com/post/2-dollar-sandwich-but-cheaper"
                   }
                 >
-                  Experience the flavors and charm of Kenji Lopez-Alt
+                  Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-4" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-6" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-6" />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="UbNiP8ilvCc" />{" "}
                 <a
@@ -258,23 +311,46 @@ export default function Chef() {
                     "https://www.youtube.com/channel/UCSX8k4RapYLGEO5G_y_M37Q"
                   }
                 >
-                  Try something new with the ladies of Natural Life TV Cooking
+                  Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
-              <p className={"text-2xl"}>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-5" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-7" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+          {/* make three more slides */}
+            <input type="radio" name="radio-btn" id="img-7" />
+            <li className="slide-container">
+              <div className="slide">
+               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="E8b7PwchlIg" />{" "}
                 <a
                   href={
                     "https://kentrollins.com/homemade-candied-jalapeno-bacon/"
                   }
                 >
-                  Experience the open trails with Cowboy Kent Rollins
+                  Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-6" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-8" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-btn" id="img-8" />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="nW_Tpken5cg" />{" "}
                 <a
@@ -282,11 +358,22 @@ export default function Chef() {
                     "https://www.youtube.com/channel/UCSX8k4RapYLGEO5G_y_M37Q"
                   }
                 >
-                  Re-live the classics with Julia Child
+                 Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-7" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-9" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-btn" id="img-9" />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="bF9zOykErJ4" />{" "}
                 <a
@@ -294,21 +381,53 @@ export default function Chef() {
                     "https://www.youtube.com/watch?v=bF9zOykErJ4"
                   }
                 >
-                  Romantic Evening? Try this
+                  Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-8" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-10" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-btn" id="img-10" />
+            <li className="slide-container">
+              <div className="slide">
               <p className={"text-2xl"}>
                 <YouTube opts={youtubeOptions} videoId="7IZeh7w5ekY" />{" "}
                 <a href={"https://www.almazankitchen.com/bacon-eggs-pan-pie/"}>
-                  Feeling adventurous? Go bushcrafting with Almazan Kitchen
+                  Recipe
                 </a>
               </p>
-            </SwiperSlide>
-            <SwiperSlide> </SwiperSlide>
-            ...
-          </Swiper>
+              </div>
+              <div className="nav">
+                <label htmlFor="img-9" className="prev">
+                  &#x2039;
+                </label>
+                <label htmlFor="img-1" className="next">
+                  &#x203a;
+                </label>
+              </div>
+            </li>
+
+            <li className="nav-dots">
+              <label htmlFor="img-1" className="nav-dot" id="img-dot-1"></label>
+              <label htmlFor="img-2" className="nav-dot" id="img-dot-2"></label>
+              <label htmlFor="img-3" className="nav-dot" id="img-dot-3"></label>
+              <label htmlFor="img-4" className="nav-dot" id="img-dot-4"></label>
+              <label htmlFor="img-5" className="nav-dot" id="img-dot-5"></label>
+              <label htmlFor="img-6" className="nav-dot" id="img-dot-6"></label>
+              <label htmlFor="img-7" className="nav-dot" id="img-dot-7"></label>
+              <label htmlFor="img-8" className="nav-dot" id="img-dot-8"></label>
+              <label htmlFor="img-9" className="nav-dot" id="img-dot-9"></label>
+              <label htmlFor="img-10" className="nav-dot" id="img-dot-10"></label>
+            </li>
+          </ul>
+        </div>
         </div>
       </div>
     </React.Fragment>

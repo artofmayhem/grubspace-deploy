@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import axios from "axios";
 import ScrollToTop from "react-scroll-to-top";
 import { CookingShow1Img, SurLaTableImg } from "../assets";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import YouTube from "react-youtube";
 // Import Swiper styles
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
-import "swiper/components/pagination/pagination.scss";
-import "swiper/components/scrollbar/scrollbar.scss";
+// import "swiper/swiper.scss";
+// import "swiper/components/navigation/navigation.scss";
+// import "swiper/components/pagination/pagination.scss";
+// import "swiper/components/scrollbar/scrollbar.scss";
 
 const initialState =
   "Cherries, apricots, plums, pears, apples, quinces, peaches, strawberries, and blackberries are all part of the rose family. These types of fruits typically have flowers with five equal petals arranged around a central core. Unlike many other fruits, once picked, unripe raspberries do not ripen.";
 
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export default function Chef() {
   const [trivia, setTrivia] = useState(initialState);

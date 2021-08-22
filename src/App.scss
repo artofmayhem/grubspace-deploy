@@ -241,3 +241,15 @@ input#img-9:checked ~ .nav-dots label#img-dot-9,
 input#img-10:checked ~ .nav-dots label#img-dot-10 {
 background: rgba(0, 0, 0, 0.8);
 }
+
+//photo effects
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}

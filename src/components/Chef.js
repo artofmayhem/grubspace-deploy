@@ -252,7 +252,7 @@ export default function Chef() {
                 </label>
               </div>
             </li>
-
+            
             <input type="radio" name="radio-btn" id="img-4" />
             <li className="slide-container">
               <div className="slide">
@@ -324,7 +324,7 @@ export default function Chef() {
                 </label>
               </div>
             </li>
-          {/* make three more slides */}
+         
             <input type="radio" name="radio-btn" id="img-7" />
             <li className="slide-container">
               <div className="slide">

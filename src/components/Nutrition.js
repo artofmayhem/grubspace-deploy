@@ -394,50 +394,50 @@ export default function Nutrition() {
           </ul>
         </div>
         <div
-          className=" hover01 h-auto flex flex-row flex-wrap justify-evenly py-8 mt-32 text-white bg-white"
+          className=" hover02 column flex flex-row flex-wrap justify-evenly py-8 mt-32 text-white bg-white"
           ref={(el) => (splash = el)}
         >
           <div
-            className="flex flex-row flex-wrap flex-center my-20 text-center"
+            className="flex flex-row flex-wrap justify-center my-20 text-center"
             style={{ width: 350 }}
           >
             <figure>
               <img
                 src={Nutrition4Img}
                 style={{ boxShadow: "0 1rem 2rem black" }}
-                alt="Staff One"
+                alt="Staff four"
                 className="h-96"
               />
             </figure>
-            <span>Live</span>
+            {/* <span>Live</span> */}
           </div>
           <div
-            className="flex flex-row flex-wrap flex-center my-20 text-justify"
+            className="flex flex-row flex-wrap justify-center my-20 text-center"
             style={{ width: 350 }}
           >
             <figure>
               <img
                 src={Nutrition3Img}
                 style={{ boxShadow: "0 1rem 2rem black" }}
-                alt="Staff One"
+                alt="Staff three"
                 className="h-96"
               />
             </figure>
-            <span>Life</span>
+            {/* <span>Life</span> */}
           </div>
           <div
-            className="flex flex-row flex-wrap flex-center my-20 text-center"
+            className="flex flex-row flex-wrap justify-center my-20 text-center"
             style={{ width: 350 }}
           >
             <figure>
               <img
                 src={Nutrition2Img}
-                alt="Staff One"
+                alt="Staff twp"
                 style={{ boxShadow: "0 1rem 2rem black" }}
                 className="h-96"
               />
             </figure>
-            <span>Love</span>
+            {/* <span>Love</span> */}
           </div>
         </div>
         <div className={"flex flex-col justify-center bg-gray-600 "}>

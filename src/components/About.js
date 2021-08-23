@@ -119,11 +119,11 @@ export default function About() {
         }
       >
         <div
-          className="hover02 h-auto flex flex-row flex-wrap justify-evenly py-8 text-white bg-gray-600"
+          className="hover02 column  flex flex-row flex-wrap justify-evenly py-8 text-white bg-gray-600"
           ref={(el) => (splash = el)}
         >
           <div
-            className="flex flex-row flex-wrap flex-center my-20 text-center"
+            className="flex flex-row flex-wrap justify-center my-20 text-center"
             style={{ width: 350 }}
           >
             <figure>
@@ -135,7 +135,7 @@ export default function About() {
             /></figure>
           </div>
           <div
-            className="flex flex-row flex-wrap flex-center text-justify"
+            className="flex flex-row flex-wrap justify-center text-justify"
             style={{ width: 350 }}
           >
             <p
@@ -152,7 +152,7 @@ export default function About() {
             </p>
           </div>
           <div
-            className="flex flex-row flex-wrap flex-center my-20 text-center"
+            className="flex flex-row flex-wrap justify-center my-20 text-center"
             style={{ width: 350 }}
           >
             <figure>

@@ -450,7 +450,7 @@ export default function Nutrition() {
             }
             style={{ maxWidth: "50vw", minWidth: "375px" }}
           >
-            <h3 className={"text-3xl text-white mb-8"}>
+            <h3 className={"text-3xl text-white mb-8 px-10"}>
               Input your specifications and let us do the rest
             </h3>
             <p className={"text-xl mb-4 text-white mx-6"}> Timeframe </p>

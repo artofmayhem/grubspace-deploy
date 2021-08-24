@@ -412,7 +412,7 @@ export default function Nutrition() {
             {/* <span>Live</span> */}
           </div>
           <div
-            className="flex flex-row flex-wrap justify-center my-auto text-center"
+            className="flex flex-row flex-wrap justify-center my-14 text-center"
             style={{ width: 350 }}
           >
             <figure>

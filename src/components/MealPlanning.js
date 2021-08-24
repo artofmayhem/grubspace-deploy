@@ -9,11 +9,11 @@ import Typography from "@material-ui/core/Typography";
 import { Button } from "@material-ui/core";
 import ShareIcon from "@material-ui/icons/Share";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import CardMedia from "@material-ui/core/CardMedia";
 
 const useStyles = makeStyles({
   root: {
-    width: 350,
-    minWidth: 350,
+    width: 375,
     height: 475,
     padding: "5vh 0",
     margin: "4vh 5vh",
@@ -79,25 +79,28 @@ export default function MealPlanning(props) {
             data.meals.map((meal, idx) => {
               return (
                 <div>
-                  <Card key={idx} className={classes.root}>
-                    <CardActionArea className={classes.action}>
+                  <Card key={idx} className={classes.root} style={{backgroundColor: '#4B5563', boxShadow: '0 0 2rem black'}}>
+                   
+                    <CardActionArea className={classes.action} style={{backgroundColor: '#9CA3AF'}}> 
+                    <CardMedia className={'bg-white py-10 text-black text-2xl'}>
                       <a href={meal.sourceUrl}>
                         <h4>{meal.title}</h4>
-                      </a>
+                      </a>  </CardMedia>
                       <CardContent>
+                    
                         <CardContent
                           className={"flex flex-row flex-wrap justify-between"}
                         >
                           <Typography
                             variant="body2"
-                            color="primary"
+ 
                             component="p"
                           >
                             Servings: {meal.servings}
                           </Typography>
                           <Typography
                             variant="body2"
-                            color="primary"
+
                             component="p"
                           >
                             {convertMinToHoursAndMin(meal.readyInMinutes)}
@@ -106,16 +109,16 @@ export default function MealPlanning(props) {
                       </CardContent>
                     </CardActionArea>
                     <CardActions className={"flex justify-center"}>
-                      <Button className="btn btn-primary btn-block text-">
-                        <a href={meal.sourceUrl}>View Recipe</a>
+                      <Button className="btn btn-primary btn-block">
+                        <a className={'text-white'} href={meal.sourceUrl}>View Recipe</a>
                       </Button>
 
                       <Button
                         size="small"
-                        color="primary"
+                        className={'text-white'}
                         onClick={handleLikeButton}
                       >
-                        Like
+                        <p className={'text-white'}>Like</p>
                         {like === false ? (
                           <ThumbUpIcon
                             color={"disabled"}
@@ -123,13 +126,14 @@ export default function MealPlanning(props) {
                           />
                         ) : (
                           <ThumbUpIcon
-                            color={"primary"}
+
                             className="-my-24 ml-2"
                           />
                         )}
                       </Button>
-                      <Button size="small" color="primary">
+                      <Button size="small" >
                         <a
+                          className={'text-white'}
                           href={`mailto:?subject=You have to see this recipe&body=Check out this recipe ${meal.sourceUrl}`}
                         >
                           Share

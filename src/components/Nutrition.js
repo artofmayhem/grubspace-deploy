@@ -394,11 +394,11 @@ export default function Nutrition() {
           </ul>
         </div>
         <div
-          className=" hover02 column flex flex-row flex-wrap justify-evenly py-8 mt-32 text-white bg-white"
+          className=" hover01 column flex flex-row flex-wrap justify-evenly py-20 mt-32 text-white bg-white"
           ref={(el) => (splash = el)}
         >
           <div
-            className="flex flex-row flex-wrap justify-center my-20 text-center"
+            className="flex flex-row flex-wrap justify-center my-auto text-center"
             style={{ width: 350 }}
           >
             <figure>
@@ -412,7 +412,7 @@ export default function Nutrition() {
             {/* <span>Live</span> */}
           </div>
           <div
-            className="flex flex-row flex-wrap justify-center my-20 text-center"
+            className="flex flex-row flex-wrap justify-center my-auto text-center"
             style={{ width: 350 }}
           >
             <figure>
@@ -426,7 +426,7 @@ export default function Nutrition() {
             {/* <span>Life</span> */}
           </div>
           <div
-            className="flex flex-row flex-wrap justify-center my-20 text-center"
+            className="flex flex-row flex-wrap justify-center my-auto text-center"
             style={{ width: 350 }}
           >
             <figure>

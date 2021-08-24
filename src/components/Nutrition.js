@@ -418,7 +418,7 @@ export default function Nutrition() {
             <figure>
               <img
                 src={Nutrition3Img}
-                style={{ boxShadow: "0 1rem 2rem black" }}
+                style={{ boxShadow: "0 1rem 2rem black", height: '28.1rem' }}
                 alt="Staff three"
                 className="h-96"
               />

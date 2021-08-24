@@ -27,6 +27,9 @@ import Nutrition1 from "./nutrition-1.jpg";
 import Nutrition2 from "./nutrition-2.jpg";
 import Nutrition3 from "./nutrition-3.jpg";
 import Nutrition4 from "./nutrition-4.jpg";
+import About from "./about.jpg";
+import Chef from "./chef.jpg";
+import Cocktail from "../components/Cocktail";
 
 export { 
     Grubspace as Logo,
@@ -58,4 +61,7 @@ export {
     Nutrition2 as Nutrition2Img,
     Nutrition3 as Nutrition3Img,
     Nutrition4 as Nutrition4Img,
+    About as AboutImg,
+    Chef as ChefImg,
+    Cocktail as CocktailImg
 };

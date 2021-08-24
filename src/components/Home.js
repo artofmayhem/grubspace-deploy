@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { TweenMax, Power3, TimelineLite } from "gsap";
 
 
+
 export default function Home() {
   //set up variables to handle animation
   let app = useRef(null);
@@ -12,6 +13,7 @@ export default function Home() {
   //instantiate the timeline
   const timeline = new TimelineLite();
 
+  
 
   useEffect(() => {
     //set up variables
@@ -19,7 +21,7 @@ export default function Home() {
     const copyElement1 = copy.firstElementChild;
     const copyElement2 = copy.lastElementChild;
 
-    TweenMax.to(app, 0, {css: { visibility: "visible" },});
+    TweenMax.to(app, 0, { css: { visibility: "visible" } });
     timeline.from(copyElement1, 1.5, {
       scaleX: 0,
       ease: Power3.easeOut,
@@ -28,8 +30,8 @@ export default function Home() {
           scaleX: 1,
           ease: Power3.easeOut,
         });
-      }
-    })
+      },
+    });
     timeline.from(copyElement2, 1.5, {
       scaleX: 0,
       ease: Power3.easeOut,
@@ -38,44 +40,49 @@ export default function Home() {
           scaleX: 1,
           ease: Power3.easeOut,
         });
-      }
-    })
+      },
+    });
 
     //make sure to console log to ensure it is working
     console.log("1: app", app, "2: copy", copy);
-    console.log("1: copyElement1", copyElement1, "2: copyElement2", copyElement2);
+    console.log(
+      "1: copyElement1",
+      copyElement1,
+      "2: copyElement2",
+      copyElement2
+    );
   }, []); // eslint-disable-line
 
   return (
-    <div className="hero" ref={(el) => (app = el)}>
-      <div
-        className={
-          "home h-screen w-screen flex flex-col justify-center align-center"
-        }
-        ref={(el) => (copy = el)}
-      >
-        <div className={"flex flex-col justify-center align-center"}>
-          <h1 className={"text-white mx-auto mt-24 text-6xl"}>Grubspace</h1>
-          <h3 className={"text-white my-8 mx-auto text-2xl"}>
-            Choose from thousands of recipes
-          </h3>
-        </div>
-        <div className="flex flex-col justify-center align-center">
-        <Link
-          className={"text-yellow-500 my-8 mx-auto text-2xl"}
-          to={"recipes"}
+      <div className="hero" ref={(el) => (app = el)}>
+        <div
+          className={
+            "home h-screen w-screen flex flex-col justify-center align-center"
+          }
+          ref={(el) => (copy = el)}
         >
-          <h2>Get started today</h2>
-        </Link>
-        <p className={"text-gray-500 my-8 mx-auto text-2xl"}>
-          Powered by Spoonacular
-        </p>
+          <div className={"flex flex-col justify-center align-center"}>
+            <h1 className={"text-white mx-auto mt-24 text-6xl"}>Grubspace</h1>
+            <h3 className={"text-white my-8 mx-auto text-2xl"}>
+              Choose from thousands of recipes
+            </h3>
+          </div>
+          <div className="flex flex-col justify-center align-center">
+            <Link
+              className={"text-yellow-500 my-8 mx-auto text-2xl"}
+              to={"recipes"}
+            >
+              <h2>Get started today</h2>
+            </Link>
+            <p className={"text-gray-500 my-8 mx-auto text-2xl"}>
+              Powered by Spoonacular
+            </p>
+          </div>
         </div>
-      </div>
+        
     </div>
   );
 }
-
 
 // import React from 'react';
 // import { Slide } from 'react-slideshow-image';

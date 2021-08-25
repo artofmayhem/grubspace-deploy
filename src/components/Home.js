@@ -62,7 +62,7 @@ export default function Home() {
           ref={(el) => (copy = el)}
         >
           <div className={"flex flex-col justify-center align-center"}>
-            <h1 className={"text-white mx-auto mt-24 text-6xl"}>Grubspace</h1>
+            <span className={"text-white mx-auto mt-24 text-6xl"}>Grubspace</span>
             <h3 className={"text-white my-8 mx-auto text-2xl"}>
               Choose from thousands of recipes
             </h3>

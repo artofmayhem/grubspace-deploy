@@ -35,6 +35,7 @@ export default function About() {
       ease: Power3.easeOut,
     },
   };
+  
 
   // useEffect is a React Hook that runs animations when the component mounts
   useEffect(() => {

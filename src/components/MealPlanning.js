@@ -71,38 +71,45 @@ export default function MealPlanning(props) {
   } else {
     return (
       <div className="flex flex-col justify-center py-20">
-           <div className={'flex justify-center text-5xl py-32 text-white'}>
-           <h3> Your Daily Meal Plan</h3>
+        <div className={"flex justify-center text-5xl py-32 text-white"}>
+          <h3> Your Daily Meal Plan</h3>
         </div>
-        <div className={'flex flex-row flex-wrap justify-center mb-20'}>
+        <div className={"flex flex-row flex-wrap justify-center mb-20"}>
           {data.meals &&
             data.meals.map((meal, idx) => {
               return (
                 <div>
-                  <Card key={idx} className={classes.root} style={{backgroundColor: '#4B5563', boxShadow: '0 0 2rem black'}}>
-                   
-                    <CardActionArea className={classes.action} style={{backgroundColor: '#9CA3AF'}}> 
-                    <CardMedia className={'bg-white py-10 text-black text-2xl'}>
-                      <a href={meal.sourceUrl}>
-                        <h4>{meal.title}</h4>
-                      </a>  </CardMedia>
+                  <Card
+                    key={idx}
+                    className={classes.root}
+                    style={{
+                      backgroundColor: "#4B5563",
+                      boxShadow: "0 0 2rem black",
+                    }}
+                  >
+                    <CardActionArea
+                      className={classes.action}
+                      style={{ backgroundColor: "#9CA3AF" }}
+                    >
+                      <CardMedia
+                        className={"bg-white py-10 text-black text-2xl"}
+                      >
+                        <a
+                          href={meal.sourceUrl}
+                          target={"_blank"}
+                          rel={"noreferrer"}
+                        >
+                          <h4>{meal.title}</h4>
+                        </a>{" "}
+                      </CardMedia>
                       <CardContent>
-                    
                         <CardContent
                           className={"flex flex-row flex-wrap justify-between"}
                         >
-                          <Typography
-                            variant="body2"
- 
-                            component="p"
-                          >
+                          <Typography variant="body2" component="p">
                             Servings: {meal.servings}
                           </Typography>
-                          <Typography
-                            variant="body2"
-
-                            component="p"
-                          >
+                          <Typography variant="body2" component="p">
                             {convertMinToHoursAndMin(meal.readyInMinutes)}
                           </Typography>
                         </CardContent>
@@ -110,30 +117,36 @@ export default function MealPlanning(props) {
                     </CardActionArea>
                     <CardActions className={"flex justify-center"}>
                       <Button className="btn btn-primary btn-block">
-                        <a className={'text-white'} href={meal.sourceUrl}>View Recipe</a>
+                        <a
+                          className={"text-white"}
+                          href={meal.sourceUrl}
+                          target={"_blank"}
+                          rel={"noreferrer"}
+                        >
+                          View Recipe
+                        </a>
                       </Button>
 
                       <Button
                         size="small"
-                        className={'text-white'}
+                        className={"text-white"}
                         onClick={handleLikeButton}
                       >
-                        <p className={'text-white'}>Like</p>
+                        <p className={"text-white"}>Like</p>
                         {like === false ? (
                           <ThumbUpIcon
                             color={"disabled"}
                             className="-my-24 ml-2"
                           />
                         ) : (
-                          <ThumbUpIcon
-
-                            className="-my-24 ml-2"
-                          />
+                          <ThumbUpIcon className="-my-24 ml-2" />
                         )}
                       </Button>
-                      <Button size="small" >
+                      <Button size="small">
                         <a
-                          className={'text-white'}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={"text-white"}
                           href={`mailto:?subject=You have to see this recipe&body=Check out this recipe ${meal.sourceUrl}`}
                         >
                           Share
@@ -146,21 +159,15 @@ export default function MealPlanning(props) {
               );
             })}
         </div>
-       <div className={'bg-gray-500 text-white text-2xl py-10'}>
-           <h4 className={'mt-4 mb-8'}>Nutritional Values</h4>
-           <p className={'my-1'}>
-              Calories: {data.nutrients.calories}
-           </p>
-           <p className={'my-1'}>
-              Carbohydrates: {data.nutrients.carbohydrates} g
-           </p>
-           <p className={'my-1'}>
-              Fat: {data.nutrients.fat} g
-           </p>
-           <p className={'my-1'}>
-              Protein: {data.nutrients.protein} g
-           </p>
-       </div>
+        <div className={"bg-gray-500 text-white text-2xl py-10"}>
+          <h4 className={"mt-4 mb-8"}>Nutritional Values</h4>
+          <p className={"my-1"}>Calories: {data.nutrients.calories}</p>
+          <p className={"my-1"}>
+            Carbohydrates: {data.nutrients.carbohydrates} g
+          </p>
+          <p className={"my-1"}>Fat: {data.nutrients.fat} g</p>
+          <p className={"my-1"}>Protein: {data.nutrients.protein} g</p>
+        </div>
       </div>
     );
   }

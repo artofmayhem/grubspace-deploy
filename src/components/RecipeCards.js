@@ -94,13 +94,19 @@ const Recipe = (props) => {
                   <CardActionArea className={classes.action}>
                     <a href={recipe.sourceUrl}>
                       <CardMedia
+                        target="_blank"
+                        rel="noreferrer"
                         className={classes.media}
                         image={`${baseUri}${recipe.image}`}
                         title={recipe.title}
                       />
                     </a>
                     <CardContent>
-                      <a href={recipe.sourceUrl}>
+                      <a
+                        href={recipe.sourceUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <Typography gutterBottom variant="h5" component="h2">
                           {recipe.title}
                         </Typography>
@@ -127,7 +133,13 @@ const Recipe = (props) => {
                   </CardActionArea>
                   <CardActions className={"flex justify-center"}>
                     <Button className="btn btn-primary btn-block text-">
-                      <a href={recipe.sourceUrl}>View Recipe</a>
+                      <a
+                        href={recipe.sourceUrl}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        View Recipe
+                      </a>
                     </Button>
 
                     <Button
@@ -149,7 +161,9 @@ const Recipe = (props) => {
                       )}
                     </Button>
                     <Button size="small" color="primary">
-                      <a href={`mailto:?subject=You have to see this recipe&body=Check out this recipe ${recipe.sourceUrl}`}>
+                      <a
+                        href={`mailto:?subject=You have to see this recipe&body=Check out this recipe ${recipe.sourceUrl}`}
+                      >
                         Share
                         <ShareIcon className={"ml-2"} />
                       </a>

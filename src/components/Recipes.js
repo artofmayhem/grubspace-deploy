@@ -48,14 +48,20 @@ const Recipes = (props) => {
         className={"recipes-container bg-black w-screen"}
         style={{ height: "39rem" }}
       >
-        <h2 className={"animate-fade-in-down mt-64 text-white text-6xl"}>Recipes</h2>
+        <h2 className={"animate-fade-in-down mt-64 text-white text-6xl"}>
+          Recipes
+        </h2>
       </div>
       <form
         className={"bg-gray-800 justify-center p-10 border-b-2"}
         style={{ height: "auto" }}
         onSubmit={handleSubmit}
       >
-        <h3 className={"animate-fade-in-1 mx-auto mt-3 text-white text-3xl mt-20 "}>
+        <h3
+          className={
+            "animate-fade-in-1 mx-auto mt-3 text-white text-3xl mt-20 "
+          }
+        >
           Thousands of ideas await
         </h3>
         <input
@@ -71,7 +77,9 @@ const Recipes = (props) => {
         />{" "}
         <button
           type="submit"
-          className={"animate-fade-in-2 border-2 bg-gray-400 text-white px-10 py-4 m-1.5 w-60"}
+          className={
+            "animate-fade-in-2 border-2 bg-gray-400 text-white px-10 py-4 m-1.5 w-60"
+          }
           onClick={handleSubmit}
         >
           Enter

@@ -18,10 +18,10 @@ html {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 h1 {
@@ -44,7 +44,10 @@ h3 {
   text-shadow: 0 0 2.5rem black;
 }
 
-h4, h5, h6, p {
+h4,
+h5,
+h6,
+p {
   font-family: "Verlag A", "Verlag B";
   font-style: normal;
   font-weight: 400;
@@ -162,7 +165,7 @@ h4, h5, h6, p {
   display: block;
   position: absolute;
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
 }
@@ -183,7 +186,7 @@ h4, h5, h6, p {
   cursor: pointer;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
-  color: #FFF;
+  color: #fff;
   font-size: 156pt;
   text-align: center;
   line-height: 380px;
@@ -207,7 +210,7 @@ h4, h5, h6, p {
 input:checked + .slide-container .slide {
   opacity: 1;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
@@ -291,4 +294,3 @@ input#img-10:checked ~ .nav-dots label#img-dot-10 {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
-

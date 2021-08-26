@@ -180,7 +180,11 @@ export default function Nutrition() {
             <li className="slide-container">
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="vmdITEguAnE" />{" "}
-                <a href={"https://mailchi.mp/downshiftology/meal-prep/"}>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={"https://mailchi.mp/downshiftology/meal-prep/"}
+                >
                   Meal prep guide here
                 </a>
               </div>
@@ -203,7 +207,11 @@ export default function Nutrition() {
                   videoId="Acs7ZnIdo4o"
                 />{" "}
                 <p className={"text-2xl"}>
-                  <a href={"https://www.youtube.com/watch?v=Acs7ZnIdo4o"}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={"https://www.youtube.com/watch?v=Acs7ZnIdo4o"}
+                  >
                     Click here for the recipe
                   </a>
                 </p>
@@ -223,7 +231,11 @@ export default function Nutrition() {
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="bC0JJlBQK6M" />{" "}
                 <p className={"text-2xl"}>
-                  <a href={"https://www.ruled.me/"}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={"https://www.ruled.me/"}
+                  >
                     Elevate your keto game here
                   </a>
                 </p>
@@ -243,7 +255,13 @@ export default function Nutrition() {
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="41Wu4pBtSvA" />{" "}
                 <p className={"text-2xl"}>
-                  <a href={"https://youtu.be/teOmeFZZJ5U"}>Meal prep hacks</a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={"https://youtu.be/teOmeFZZJ5U"}
+                  >
+                    Meal prep hacks
+                  </a>
                 </p>
               </div>
               <div className="nav">
@@ -261,7 +279,11 @@ export default function Nutrition() {
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="0L6YCy_kDiM" />{" "}
                 <p className={"text-2xl"}>
-                  <a href={"https://www.youtube.com/watch?v=0L6YCy_kDiM"}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={"https://www.youtube.com/watch?v=0L6YCy_kDiM"}
+                  >
                     Get the most from your veggies
                   </a>
                 </p>
@@ -281,7 +303,11 @@ export default function Nutrition() {
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="9QJC2e2Vnvk" />{" "}
                 <p className={"text-2xl"}>
-                  <a href={"https://youtu.be/9QJC2e2Vnvk"}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={"https://youtu.be/9QJC2e2Vnvk"}
+                  >
                     Start your health journey here!
                   </a>
                 </p>
@@ -301,7 +327,11 @@ export default function Nutrition() {
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="MIF4Imp92OM" />{" "}
                 <p className={"text-2xl"}>
-                  <a href={"https://youtu.be/MIF4Imp92OM"}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={"https://youtu.be/MIF4Imp92OM"}
+                  >
                     Sharpen your sushi game
                   </a>
                 </p>
@@ -320,7 +350,11 @@ export default function Nutrition() {
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="4kLpo6TjTPU" />{" "}
                 <p className={"text-2xl"}>
-                  <a href={"https://www.youtube.com/watch?v=4kLpo6TjTPU"}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={"https://www.youtube.com/watch?v=4kLpo6TjTPU"}
+                  >
                     Healthy, easy, and delicious
                   </a>
                 </p>
@@ -340,6 +374,8 @@ export default function Nutrition() {
                 <YouTube opts={youtubeOptions} videoId="Lkl9_3-jX6c" />{" "}
                 <p className={"text-2xl"}>
                   <a
+                    target="_blank"
+                    rel="noreferrer"
                     href={"https://downshiftology.com/recipes/overnight-oats/"}
                   >
                     Need a simple way to start your day?
@@ -360,7 +396,11 @@ export default function Nutrition() {
               <div className="slide">
                 <YouTube opts={youtubeOptions} videoId="xJrmUR7zvxo" />{" "}
                 <p className={"text-2xl"}>
-                  <a href={"https://youtu.be/xJrmUR7zvxo"}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={"https://youtu.be/xJrmUR7zvxo"}
+                  >
                     The art of loving food
                   </a>
                 </p>
@@ -418,7 +458,7 @@ export default function Nutrition() {
             <figure>
               <img
                 src={Nutrition3Img}
-                style={{ boxShadow: "0 1rem 2rem black", height: '28.1rem' }}
+                style={{ boxShadow: "0 1rem 2rem black", height: "28.1rem" }}
                 alt="Staff three"
                 className="h-96"
               />

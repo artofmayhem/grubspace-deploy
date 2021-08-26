@@ -79,22 +79,34 @@ export default function Nav() {
           </div>
           <div className={"my-6 -mr-10 text-black text-4xl w-96"}>
             <Button>
-              <a href={"https://www.facebook.com/Grubspace-174436934701864/"}>
+              <a 
+              target="_blank"
+              rel="noreferrer"
+              href={"https://www.facebook.com/Grubspace-174436934701864/"}>
                 <FacebookIcon className={""} />
               </a>
             </Button>
             <Button>
-              <a href={"https://www.instagram.com/amalgamatrix_nation/"}>
+              <a 
+              target="_blank"
+              rel="noreferrer"
+              href={"https://www.instagram.com/amalgamatrix_nation/"}>
                 <InstagramIcon />
               </a>
             </Button>
             <Button>
-              <a href={"https://twitter.com/tmillhawaii"}>
+              <a 
+              target="_blank"
+              rel="noreferrer"
+              href={"https://twitter.com/tmillhawaii"}>
                 <TwitterIcon />
               </a>
             </Button>
             <Button>
-              <a href={"https://tonymiller.vercel.app"}>
+              <a 
+              target="_blank"
+              rel="noreferrer"
+              href={"https://tonymiller.vercel.app"}>
                 <AccountCircleIcon />
               </a>
             </Button>

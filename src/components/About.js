@@ -35,7 +35,6 @@ export default function About() {
       ease: Power3.easeOut,
     },
   };
-  
 
   // useEffect is a React Hook that runs animations when the component mounts
   useEffect(() => {
@@ -120,7 +119,7 @@ export default function About() {
         }
       >
         <div
-          className="hover02 column  flex flex-row flex-wrap justify-evenly py-8 text-white bg-gray-600"
+          className="hover02 column  flex flex-row flex-wrap justify-evenly py-20 text-white bg-gray-600"
           ref={(el) => (splash = el)}
         >
           <div
@@ -128,12 +127,13 @@ export default function About() {
             style={{ width: 350 }}
           >
             <figure>
-            <img
-              src={StaffOneImg}
-              style={{ boxShadow: "0 1rem 2rem black" }}
-              alt="Staff One"
-              className="w-auto h-auto"
-            /></figure>
+              <img
+                src={StaffOneImg}
+                style={{ boxShadow: "0 1rem 2rem black" }}
+                alt="Staff One"
+                className="w-auto h-auto"
+              />
+            </figure>
           </div>
           <div
             className="flex flex-row flex-wrap justify-center text-justify"
@@ -157,12 +157,12 @@ export default function About() {
             style={{ width: 350 }}
           >
             <figure>
-            <img
-              src={StaffSixImg}
-              alt="Staff One"
-              style={{ boxShadow: "0 1rem 2rem black" }}
-              className="w-auto h-auto"
-            />
+              <img
+                src={StaffSixImg}
+                alt="Staff One"
+                style={{ boxShadow: "0 1rem 2rem black" }}
+                className="w-auto h-auto"
+              />
             </figure>
           </div>
         </div>

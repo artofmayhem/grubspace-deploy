@@ -1,10 +1,19 @@
 import "./App.css";
 import "tailwindcss/dist/tailwind.css";
 import React from "react";
-import { AppNav, AppHome, AppAbout, AppRecipes, AppChef, AppNutrition, AppCocktail, AppFooter } from "./components/index";
+import {
+  AppNav,
+  AppHome,
+  AppAbout,
+  AppRecipes,
+  AppChef,
+  AppNutrition,
+  AppCocktail,
+  AppFooter,
+  // AppPrivateRoute as PrivateRoute,
+} from "./components/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import {ScrollTrigger} from "react-router-scroll-4";
-
 
 function App() {
   return (
@@ -12,19 +21,18 @@ function App() {
       <div className="App">
         <AppNav />
       </div>
-    
+
       <Switch>
         <Route exact path={"/"} component={AppHome} />
         <Route path={"/about"} component={AppAbout} />
         <Route path={"/chef"} component={AppChef} />
-        <Route path={"/recipes"} component={AppRecipes} />
-        <Route path={'/nutrition'} component={AppNutrition}/>
-        <Route path={'/cocktails'} component={AppCocktail}/>
+        <Route exact path={"/protected/recipes"} component={AppRecipes} />
+        <Route exact path={"/protected/nutrition"} component={AppNutrition} />
+        <Route exact path={"/protected/cocktails"} component={AppCocktail} />
       </Switch>
-      <div className={'flex flex-col h-auto'}>
-          <AppFooter/>
+      <div className={"flex flex-col h-auto"}>
+        <AppFooter />
       </div>
-    
     </Router>
   );
 }

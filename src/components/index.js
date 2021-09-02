@@ -9,6 +9,7 @@ import Cocktail from "./Cocktail";
 import Nutrition from "./Nutrition";
 import RecipeCards from "./RecipeCards";
 import MealPlanning from "./MealPlanning";
+import PrivateRoute from "./PrivateRoute";
 import PairingResults from "./PairingResults";
 
 export {
@@ -21,6 +22,7 @@ export {
   Cocktail as AppCocktail,
   Nutrition as AppNutrition,
   RecipeCards as AppRecipeCards,
+  PrivateRoute as AppPrivateRoute,
   MealPlanning as AppMealPlanning,
   PairingResults as AppPairingResults
 };

@@ -71,7 +71,7 @@ export default function Nav() {
         <div className={"flex flex-row flex-wrap justify-between align-center"}>
           <div className={"flex flex-row my-6 ml-6 text-black text-4xl w-48"}>
             <Button className={"animate-pulse"} onClick={handleDrawerOpen}>
-              <MenuIcon className={" mx-16"} />
+              <MenuIcon className={" mx-10"} />
             </Button>
             <Link to="/">
               <h1 className={'ml-8'}>Grubspace</h1>

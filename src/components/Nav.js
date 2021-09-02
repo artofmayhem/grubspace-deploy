@@ -144,7 +144,7 @@ export default function Nav() {
             <ListItemIcon>
               <LocalDiningIcon />
             </ListItemIcon>
-            <Link to={"protected/recipes"} onClick={handleDrawerClose}>
+            <Link to={"recipes"} onClick={handleDrawerClose}>
               <ListItemText primary="Recipe Box" />
             </Link>
           </ListItem>
@@ -152,7 +152,7 @@ export default function Nav() {
             <ListItemIcon>
               <LocalGroceryStoreIcon />
             </ListItemIcon>
-            <Link to={"protected/nutrition"} onClick={handleDrawerClose}>
+            <Link to={"nutrition"} onClick={handleDrawerClose}>
               <ListItemText primary="Nutrition Corner" />
             </Link>
           </ListItem>
@@ -160,7 +160,7 @@ export default function Nav() {
             <ListItemIcon>
               <LocalBarIcon />
             </ListItemIcon>
-            <Link to={"protected/cocktails"} onClick={handleDrawerClose}>
+            <Link to={"cocktails"} onClick={handleDrawerClose}>
               <ListItemText primary="Wine Source" />
             </Link>
           </ListItem>

@@ -26,9 +26,9 @@ function App() {
         <Route exact path={"/"} component={AppHome} />
         <Route path={"/about"} component={AppAbout} />
         <Route path={"/chef"} component={AppChef} />
-        <Route exact path={"/protected/recipes"} component={AppRecipes} />
-        <Route exact path={"/protected/nutrition"} component={AppNutrition} />
-        <Route exact path={"/protected/cocktails"} component={AppCocktail} />
+        <Route exact path={"/recipes"} component={AppRecipes} />
+        <Route exact path={"/nutrition"} component={AppNutrition} />
+        <Route exact path={"/cocktails"} component={AppCocktail} />
       </Switch>
       <div className={"flex flex-col h-auto"}>
         <AppFooter />

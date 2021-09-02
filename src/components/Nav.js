@@ -71,7 +71,7 @@ export default function Nav() {
         <div className={"flex flex-row flex-wrap justify-between align-center"}>
           <div className={"flex flex-row my-6 ml-6 text-black text-4xl w-48"}>
             <Button className={"animate-pulse"} onClick={handleDrawerOpen}>
-              <MenuIcon className={" mx-10"} />
+              <MenuIcon className={" mx-16"} />
             </Button>
             <Link to="/">
               <h1 className={'ml-8'}>Grubspace</h1>
@@ -104,10 +104,12 @@ export default function Nav() {
             </Button>
             <Button>
               <a 
+              className={"text-black mr-10"}
+              style={{ fontSize: "10px" }}
               target="_blank"
               rel="noreferrer"
               href={"https://tonymiller.vercel.app"}>
-                <AccountCircleIcon />
+                <AccountCircleIcon className={'mr-2'}/>Login
               </a>
             </Button>
           </div>
@@ -142,7 +144,7 @@ export default function Nav() {
             <ListItemIcon>
               <LocalDiningIcon />
             </ListItemIcon>
-            <Link to={"recipes"} onClick={handleDrawerClose}>
+            <Link to={"protected/recipes"} onClick={handleDrawerClose}>
               <ListItemText primary="Recipe Box" />
             </Link>
           </ListItem>
@@ -150,7 +152,7 @@ export default function Nav() {
             <ListItemIcon>
               <LocalGroceryStoreIcon />
             </ListItemIcon>
-            <Link to={"nutrition"} onClick={handleDrawerClose}>
+            <Link to={"protected/nutrition"} onClick={handleDrawerClose}>
               <ListItemText primary="Nutrition Corner" />
             </Link>
           </ListItem>
@@ -158,7 +160,7 @@ export default function Nav() {
             <ListItemIcon>
               <LocalBarIcon />
             </ListItemIcon>
-            <Link to={"cocktails"} onClick={handleDrawerClose}>
+            <Link to={"protected/cocktails"} onClick={handleDrawerClose}>
               <ListItemText primary="Wine Source" />
             </Link>
           </ListItem>

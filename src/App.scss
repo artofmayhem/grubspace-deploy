@@ -341,4 +341,37 @@ background: rgba(0, 0, 0, 0.8);
   background-color: #6a0dad;
 }
 
+.login {
+  background: url(images/kiwi.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 75%;
+  opacity: 0.8; 
+  min-width: 60vw;
+  min-height: 100vh;
+}
+
+.signup {
+  margin: auto auto;
+  padding: 10rem;
+  min-width: auto;
+  background: url('./images/kiwi.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 50%;
+  opacity: 0.9;
+  color: white;
+  text-align: center;
+}
+
+.logout {
+  background: url(./images/familyDinner.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 80%;
+}
+
 

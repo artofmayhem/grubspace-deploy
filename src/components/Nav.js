@@ -14,6 +14,7 @@ import LocalBarIcon from "@material-ui/icons/LocalBar";
 import LocalDiningIcon from "@material-ui/icons/LocalDining";
 import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import StopIcon from '@material-ui/icons/Stop';
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -103,14 +104,12 @@ export default function Nav() {
               </a>
             </Button>
             <Button>
-              <a 
+              <Link 
               className={"text-black mr-10"}
               style={{ fontSize: "10px" }}
-              target="_blank"
-              rel="noreferrer"
-              href={"https://tonymiller.vercel.app"}>
+             to={'login'}>
                 <AccountCircleIcon className={'mr-2'}/>Login
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -163,6 +162,22 @@ export default function Nav() {
             <Link to={"cocktails"} onClick={handleDrawerClose}>
               <ListItemText primary="Wine Source" />
             </Link>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+                <AccountCircleIcon />
+            </ListItemIcon>
+          <Link to={"login"} onClick={handleDrawerClose}>
+             <ListItemText primary="Login" />
+              </Link>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+                <StopIcon />
+            </ListItemIcon>
+          <Link to={"logout"} onClick={handleDrawerClose}>
+             <ListItemText primary="Logout" />
+              </Link>
           </ListItem>
         </List>
       </Drawer>

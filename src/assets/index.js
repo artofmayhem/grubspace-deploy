@@ -32,6 +32,8 @@ import Chef from "./chef.jpg";
 import Cocktail from "./cocktail.jpg";
 import Team from "./team.jpg";
 import FamilyDinner from "./familyDinner.jpg";
+import Kiwi from "./kiwi.jpg";
+import Family from "./family.jpg";
 
 export { 
     Grubspace as Logo,
@@ -67,5 +69,7 @@ export {
     Chef as ChefImg,
     Cocktail,
     Team,
-    FamilyDinner
+    FamilyDinner,
+    Kiwi,
+    Family
 };

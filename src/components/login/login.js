@@ -12,7 +12,6 @@ import * as yup from "yup";
 
 import { FamilyDinner } from "../../assets/index";
 
-
 const LoginForm = () => {
   const history = useHistory();
 
@@ -122,19 +121,26 @@ const LoginForm = () => {
 
   return (
     <Parallax bgImage={FamilyDinner} strength={500}>
-      <div className={'flex flex-col justify-center items-center'} style={{ height: "75vh" }}>
+      <div
+        className={"flex flex-col justify-center items-center"}
+        style={{ height: "75vh" }}
+      >
         <Form onSubmit={onSubmit}>
-          <h2 className={'text-white text-4xl'} style={{textShadow: '0 0 1rem black'}}>{login ? "Login" : "Sign Up"}</h2>
+          <h2
+            className={"text-white text-4xl"}
+            style={{ textShadow: "0 0 1rem black", fontWeight: 400 }}
+          >
+            {login ? "Login" : "Sign Up"}
+          </h2>
           <TextField
             required
             type="text"
             name="username"
             value={user.username}
             onChange={handleChange}
-          
             label="username"
             margin="dense"
-            style={{width: 300,}}
+            style={{ width: 300 }}
           />
           {!login ? (
             <TextField
@@ -146,7 +152,7 @@ const LoginForm = () => {
               // variant="outlined"
               label="email"
               margin="dense"
-              style={{width: 300}}
+              style={{ width: 300 }}
             />
           ) : (
             <></>
@@ -157,27 +163,42 @@ const LoginForm = () => {
             type="password"
             value={user.password}
             onChange={handleChange}
-
             label="password"
             margin="dense"
-            style={{width: 300}}
+            style={{ width: 300 }}
           />
           <h6 style={{ textAlign: "center", color: "red" }}>{backendError}</h6>
-          <Button
+          <button
             disabled={disabled}
             type="submit"
-            variant="contained"
-            color="primary"
-            style={{ color: "white", width: 300, borderRadius: 50 }}
+            style={{
+              color: "white",
+              border: "1px solid white",
+              width: 300,
+              height: 40,
+              marginTop: 20,
+              background: "#444",
+              borderRadius: 50,
+              fontWeight: "bold",
+            }}
           >
             {login ? "Login" : "Sign Up"}
-          </Button>
-          {fetching ? <LinearProgress color="secondary" /> : <></>}
+          </button>
+          {fetching ? <LinearProgress color="primary" /> : <></>}
         </Form>
         <Button
           size="small"
           variant="contained"
-          style={{ width: 300, height: 50, borderRadius: 50, marginTop: 50, background: 'white', fontWeight: 'bold' }}
+          style={{
+            width: 300,
+            height: 50,
+            borderRadius: 50,
+            marginTop: 50,
+            background: "#444",
+            color: "white",
+            fontWeight: "bold",
+            border: "1px solid white",
+          }}
           onClick={() => setLogin(!login)}
         >
           {login ? "Go to Sign Up" : "Go to Log In"}

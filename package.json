@@ -17,6 +17,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-multi-carousel": "^2.6.5",
+    "react-parallax": "^3.3.0",
     "react-redux": "^7.2.4",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
@@ -25,7 +26,9 @@
     "react-youtube": "^7.13.1",
     "redux-thunk": "^2.3.0",
     "sass": "^1.35.1",
-    "web-vitals": "^1.1.2"
+    "styled-components": "^5.3.1",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "craco start",

@@ -13,8 +13,6 @@ export default function Home() {
   //instantiate the timeline
   const timeline = new TimelineLite();
 
-  
-
   useEffect(() => {
     //set up variables
     // ref={el => app = el} //set ref to app

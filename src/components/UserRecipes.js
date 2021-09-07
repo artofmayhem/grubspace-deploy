@@ -173,17 +173,22 @@ const UserRecipes = (props) => {
       </div>
       <div
         className={
-          "bg-gray-800 text-white text-center flex flex-row flex-wrap items-center justify-center py-20"
+          "bg-gray-800 text-white text-center flex flex-row flex-wrap items-start justify-center py-20"
         }
         name="outerDivContainer"
       >
-        <div className="flex justify-center items-center flex-col border-r-2 py-32 px-10">
-          <div
-            className="flex justify-center flex-col"
-            style={{
+        <div className="flex justify-center items-center flex-col border-r-2 py-32 px-10"   style={{
               margin: "5vh auto",
               minWidth: 375,
-              width: "46vw",
+              width: "50vw",
+              textSelf: "center",
+            }}>
+          <div
+            className="flex justify-center text-center item-center flex-col"
+            style={{
+              margin: "5vh",
+              minWidth: 375,
+              width: "50vw",
               textSelf: "center",
             }}
           >
@@ -368,7 +373,7 @@ const UserRecipes = (props) => {
             className="flex justify-center flex-col"
             style={{
               opacity: "0.8",
-              width: "47vw",
+              width: "50vw",
               minWidth: 375,
               margin: "5vh auto",
               padding: "2vh 0",

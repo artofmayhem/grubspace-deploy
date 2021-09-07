@@ -34,7 +34,7 @@ function App() {
         <Route exact path={"/cocktails"} component={AppCocktail} />
         <Route exact path={"/login"} component={AppLogin} />
         <Route exact path={"/logout"} component={AppLogout} />
-        <PrivateRoute exact path={"/userrecipes"} component={UserRecipes}/>
+        <Route exact path={"/userrecipes"} component={UserRecipes}/>
       </Switch>
       <div className={"flex flex-col h-auto"}>
         <AppFooter />

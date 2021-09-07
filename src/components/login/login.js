@@ -125,7 +125,7 @@ const LoginForm = () => {
         });
     }
   };
-  // console.log("user data", userData );
+  console.log("user data", userData );
 
   return (
 

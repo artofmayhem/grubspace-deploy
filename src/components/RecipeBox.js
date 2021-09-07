@@ -21,7 +21,7 @@ export default function RecipeBox() {
   }, [ghost]);
 
   return (
-    <div>
+    <div className={'flex justify-center items-center px-5'} >
       {recipes.map((item, idx) => {
         return (
           <RecipeBoxCards

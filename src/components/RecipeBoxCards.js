@@ -11,71 +11,65 @@ export default function RecipeCards(props) {
     instructions,
     category_name,
   } = props;
-  // console.log(
-  //   recipe_name,
-  //   recipe_source,
-  //   submitted_by,
-  //   recipe_description,
-  //   image_source,
-  //   ingredients,
-  //   instructions,
-  //   category_name,
-  // )
+
   return (
     <div
       key="1"
       style={{
-        margin: "8vh auto",
-        backgroundColor: "#222",
+        margin: "3vh",
+        backgroundColor: "white",
+        color: 'black',
         opacity: "0.9",
-        maxWidth: "90%",
+        width: "47vw",
+        minWidth: 375,
         padding: "5vh 0",
         boxShadow: "0 0 2vh black",
+        fontSize: '1.2rem'
       }}
     >
-      <h4>{recipe_name}</h4>
-      <h6>"{recipe_description}"</h6>
+      <h4 className={'text-4xl'} >{recipe_name}</h4>
+      <h6 className={'text-xl'}>"{recipe_description}"</h6>
       <img
         src={image_source}
         alt={recipe_name}
         style={{
           maxWidth: "20vw",
-          margin: "5vh auto",
+          margin: "1rem auto",
           border: "2.5vh solid white",
-          boxShadow: "0 0 2vh #AAA",
         }}
       />
-      <h5>RECIPE SOURCE: {recipe_source}</h5>
-      <h6>SUBMITTED BY: {submitted_by}</h6>
-      <p>CATEGORY: {category_name}</p>
+      <h5><strong className={'mx-2'}>RECIPE SOURCE:</strong> {recipe_source}</h5>
+      <h6><strong className={'mx-2'}>SUBMITTED BY:</strong> {submitted_by}</h6>
+      <p><strong className={'mx-2'}>CATEGORY:</strong> {category_name}</p>
       <div
-        className="d-flex flex-row flex-wrap justify-content-center"
+        className="flex flex-row flex-wrap justify-center"
         style={{
-          margin: "5vh 1vw",
+          margin: "1vh 1vw",
           border: "1px solid white",
-          boxShadow: "0 0 2vh #333",
         }}
       >
-        <div className="d-flex flex-column justify-content-start flexible-stretch-boxes">
+        <div className="flex flex-col justify-center">
           {ingredients.map((item, idx) => {
             return (
-              <p style={{ padding: "3vh 0" }} key={idx}>
+              <p style={{ padding: "0.7em 0" }} key={idx}>
                 {item.quantity} {item.ingredient}
               </p>
             );
           })}
         </div>
         <div
-          className="d-flex flex-column justify-content-start flexible-stretch-boxes"
-          style={{ marginBottom: "3vh" }}
+          className="flex flex-row flex-wrap-reverse justify-start bg-gray-600 text-white py-10 px-6 text-center"
+          style={{ marginBottom: "1rem" }}
         >
+         
           {instructions.map((item, idx) => {
             return (
-              <p style={{ justifySelf: "stretch" }} key={idx}>
+              <p className={'text-xl'} style={{margin: '1rem auto' }} key={idx}>
                 {item.step_number}: {item.instruction}
               </p>
             );
-          })}
+          })} 
+          <h3 className={'text-3xl'} style={{margin: '10px auto'}}>-Instructions-</h3>
         </div>
       </div>
     </div>

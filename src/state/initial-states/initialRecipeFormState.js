@@ -4,7 +4,7 @@ const initialRecipeFormValues = {
   "recipe_source": "",
   "user_id": Date.now(),
   "image_source": "",
-  "category_id": null,
+  "category_id": 0,
   "ingredients": [],
   "instructions":[]
 }

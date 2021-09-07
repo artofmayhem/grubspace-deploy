@@ -17,7 +17,8 @@ const UserRecipes = (props) => {
   // const classes = useStyles();
   let history = useHistory();
   //const isDisabled = false;
-
+  const [localUser, setLocalUser] = useState(localStorage.getItem("user"));
+  // console.log("localUser from user recipes", Number( localUser ));
   const [recipe, setRecipe] = useState({});
   const [formValues, setFormValues] = useState(initialRecipeFormValues);
   //const [disabled, setDisabled] = useState(isDisabled);
@@ -36,7 +37,7 @@ const UserRecipes = (props) => {
         >
           <p>{`Ingredient: ${idx + 1}`}</p>
           <TextField
-            name="ingredient"
+            name="quantity"
             value={item.quantity}
             key={`quantity-${idx}`}
             placeholder="Quantity"
@@ -119,8 +120,9 @@ const UserRecipes = (props) => {
   //CHANGE HANDLERS
 
   const postNewRecipe = (newRecipe) => {
+    console.log("newRecipe", newRecipe);
     axiosWithAuth()
-      .post("/recipes", newRecipe)
+      .post("/recipes/my-list/:id", newRecipe)
       .then((res) => {
         setRecipe(res.data);
         console.log(recipe);
@@ -129,7 +131,7 @@ const UserRecipes = (props) => {
         history.push("/user_recipes");
       })
       .catch((error) => {
-        console.log(error);
+      console.log({error});
       });
   };
 
@@ -139,20 +141,20 @@ const UserRecipes = (props) => {
       ...prevFormValue,
       [name]: value,
     }));
-    console.log(formValues);
+    // console.log(formValues);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formValues);
+    // console.log(formValues);
 
     const newRecipe = {
       recipe_name: formValues.recipe_name,
       recipe_description: formValues.recipe_description,
       recipe_source: formValues.recipe_source,
-      user_id: 0,
+      user_id: Number(localUser),
       image_source: formValues.image_source,
-      category_id: formValues.category_id,
+      category_id: Number(formValues.category_id),
       ingredients: formValues.ingredients,
       instructions: formValues.instructions,
     };

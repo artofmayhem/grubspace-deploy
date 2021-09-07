@@ -205,7 +205,7 @@ const UserRecipes = (props) => {
               }
               style={{ width: "40vw" }}
             >
-            <h3 className={'text-3xl mb-4'} style={{width: '100%'}}>-Details-</h3>
+            <h3 className={'text-3xl mb-4'} style={{width: '47vw'}}>-Details-</h3>
               <TextField
                 type="text"
                 name="recipe_name"

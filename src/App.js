@@ -16,7 +16,7 @@ import {
   // AppPrivateRoute as PrivateRoute,
 } from "./components/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-//import {ScrollTrigger} from "react-router-scroll-4";
+
 
 function App() {
   return (

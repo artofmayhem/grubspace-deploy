@@ -29,8 +29,22 @@ const UserRecipes = (props) => {
   const addIngredientInputs = () => {
     return formValues.ingredients.map((item, idx) => {
       return (
-        <div className="flex flex-row flex-wrap justify-evenly" key={idx}>
-          <p>{`Ingredient ${idx + 1}`}</p>
+        <div
+          className="flex flex-row flex-wrap justify-evenly items-center "
+          key={idx}
+          style={{ width: "100%" }}
+        >
+          <p>{`Ingredient: ${idx + 1}`}</p>
+          <TextField
+            name="ingredient"
+            value={item.quantity}
+            key={`quantity-${idx}`}
+            placeholder="Quantity"
+            onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
+            margin="dense"
+            // className={classes.input}
+            style={{ margin: "auto 10px", width: "70px" }}
+          />
           <TextField
             name="ingredient"
             value={item.ingredient_name}
@@ -40,18 +54,8 @@ const UserRecipes = (props) => {
               updateIngredients(e, { idx, key: "ingredient_name" })
             }
             margin="dense"
-            className={classes.input}
-            style={{ margin: "auto", marginLeft: 20 }}
-          />
-          <TextField
-            name="ingredient"
-            value={item.quantity}
-            key={`quantity-${idx}`}
-            placeholder="Quantity"
-            onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
-            margin="dense"
-            className={classes.input}
-            style={{ margin: "auto 10px" }}
+            // className={classes.input}
+            style={{ margin: "auto", marginLeft: 20, width: "200px" }}
           />
         </div>
       );
@@ -80,15 +84,15 @@ const UserRecipes = (props) => {
   const createInstructionsInputs = () => {
     return formValues.instructions.map((item, idx) => {
       return (
-        <div className={'flex flex-row flex-wrap items-center'} key={idx}>
-          <p>{`Step ${idx + 1}`}</p>
+        <div className={"flex flex-row flex-wrap items-center"} key={idx}>
+          <p>{`Step: ${idx + 1}`}</p>
           <TextField
             value={formValues.instruction}
             placeholder={`Step ${idx + 1}`}
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
-            className={classes.input}
-            style={{width: 350, marginLeft: 20}}
+            // className={classes.input}
+            style={{ width: 300, marginLeft: 20 }}
           />
         </div>
       );
@@ -177,12 +181,15 @@ const UserRecipes = (props) => {
         }
         name="outerDivContainer"
       >
-        <div className="flex justify-center items-center flex-col border-r-2 py-32 px-10"   style={{
-              margin: "5vh auto",
-              minWidth: 375,
-              width: "50vw",
-              textSelf: "center",
-            }}>
+        <div
+          className="flex justify-center items-center flex-col border-r-2 py-32 px-10"
+          style={{
+            margin: "5vh auto",
+            minWidth: 375,
+            width: "50vw",
+            textSelf: "center",
+          }}
+        >
           <div
             className="flex justify-center text-center item-center flex-col"
             style={{
@@ -203,14 +210,16 @@ const UserRecipes = (props) => {
             className="flex items-center justify-center flex-col"
             id="recipeForm"
             onSubmit={handleSubmit}
-          >  
+          >
             <div
               className={
                 "flex flex-row flex-wrap justify-evenly bg-yellow-600 border-2 pb-16 pt-10 px-5"
               }
-              style={{ width: "47vw" }}
+              style={{ width: "47vw", minWidth: 375 }}
             >
-            <h3 className={'text-3xl mb-4'} style={{width: '40vw'}}>-Details-</h3>
+              <h3 className={"text-3xl mb-4"} style={{ width: "40vw", minWidth: 375 }}>
+                -Details-
+              </h3>
               <TextField
                 type="text"
                 name="recipe_name"
@@ -220,8 +229,9 @@ const UserRecipes = (props) => {
                 label="Recipe Name"
                 placeholder="Recipe Name"
                 margin="dense"
-                variant="outlined"
-                className={classes.input}
+                // variant="outlined"
+                // className={classes.input}
+                style={{width: 275 }}
               />
               <TextField
                 type="text"
@@ -232,8 +242,9 @@ const UserRecipes = (props) => {
                 label="Description"
                 placeholder="Description"
                 margin="dense"
-                variant="outlined"
-                className={classes.input}
+                // variant="outlined"
+                // className={classes.input}
+                style={{width: 275 }}
               />
               <TextField
                 type="text"
@@ -244,8 +255,9 @@ const UserRecipes = (props) => {
                 label="Image Source"
                 placeholder="Image Source"
                 margin="dense"
-                variant="outlined"
-                className={classes.input}
+                // variant="outlined"
+                // className={classes.input}
+                style={{width: 275 }}
               />
               <TextField
                 type="text"
@@ -256,14 +268,16 @@ const UserRecipes = (props) => {
                 label="Recipe Source"
                 placeholder="Recipe Name"
                 margin="dense"
-                variant="outlined"
-                className={classes.input}
+                // variant="outlined"
+                // className={classes.input}
+                style={{width: 275, color: 'white' }}
+                
               />
             </div>
             <div
               className="flex justify-center items-center flex-column"
               style={{
-                padding: "2vh 4vw",
+                padding: "3vh 4vw",
                 color: "white",
                 fontSize: "3.5vh",
                 margin: "2vh auto",
@@ -271,7 +285,7 @@ const UserRecipes = (props) => {
             >
               <label htmlFor="category_id">Meal Type</label>
             </div>
-            <select onChange={handleChange} name="category_id">
+            <select onChange={handleChange} name="category_id" className={'h-10 text-white bg-gray-600 text-xl'}>
               <option>---Select category---</option>
               <option value="">--Meal Period--</option>
               <option value={1}>Breakfast</option>
@@ -305,8 +319,8 @@ const UserRecipes = (props) => {
               }}
             >
               <div
-                className="flex flex-col justify-start items-center bg-yellow-600"
-                style={{ border: ".5px solid white" }}
+                className="flex flex-col justify-center items-center bg-yellow-600 "
+                style={{ border: ".5px solid white", width: "100%" }}
               >
                 <label
                   className={"text-3xl"}
@@ -315,7 +329,7 @@ const UserRecipes = (props) => {
                 >
                   -Ingredients-
                 </label>
-                {addIngredientInputs()}
+                <div>{addIngredientInputs()}</div>
                 <button
                   onClick={addIngredient}
                   type="submit"
@@ -337,7 +351,7 @@ const UserRecipes = (props) => {
                 >
                   -Instructions-
                 </label>
-                {createInstructionsInputs()}
+                <div>{createInstructionsInputs()}</div>
                 <button
                   onClick={addStep}
                   type="submit"

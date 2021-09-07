@@ -208,9 +208,9 @@ const UserRecipes = (props) => {
               className={
                 "flex flex-row flex-wrap justify-evenly bg-yellow-600 border-2 pb-16 pt-10 px-5"
               }
-              style={{ width: "40vw" }}
+              style={{ width: "47vw" }}
             >
-            <h3 className={'text-3xl mb-4'} style={{width: '47vw'}}>-Details-</h3>
+            <h3 className={'text-3xl mb-4'} style={{width: '40vw'}}>-Details-</h3>
               <TextField
                 type="text"
                 name="recipe_name"

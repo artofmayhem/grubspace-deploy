@@ -200,7 +200,7 @@ const UserRecipes = (props) => {
               textSelf: "center",
             }}
           >
-            <h4 className="self-center text-5xl">
+            <h4 className="self-center text-4xl px-10">
               Welcome to your recipe box!
             </h4>
             <h5 className="py-6 text-2xl">

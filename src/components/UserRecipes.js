@@ -368,7 +368,7 @@ const UserRecipes = (props) => {
             className="flex justify-center flex-col"
             style={{
               opacity: "0.8",
-              width: "50vw",
+              width: "47vw",
               minWidth: 375,
               margin: "5vh auto",
               padding: "2vh 0",

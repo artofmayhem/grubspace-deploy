@@ -163,6 +163,14 @@ export default function Nav() {
               <ListItemText primary="Wine Source" />
             </Link>
           </ListItem>
+          <ListItem className={'mt-20'} button>
+            <ListItemIcon>
+              <LocalDiningIcon />
+            </ListItemIcon>
+            <Link to={"userrecipes"} onClick={handleDrawerClose}>
+              <ListItemText primary="User Vault" />
+            </Link>
+          </ListItem>
           <ListItem button>
             <ListItemIcon>
                 <AccountCircleIcon />

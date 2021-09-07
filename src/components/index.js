@@ -13,6 +13,9 @@ import RecipeCards from "./RecipeCards";
 import MealPlanning from "./MealPlanning";
 import PrivateRoute from "./PrivateRoute";
 import PairingResults from "./PairingResults";
+import UserRecipes from "./UserRecipes";
+import RecipeBoxCards from "./RecipeBoxCards";
+import RecipeBox from "./RecipeBox";
 
 
 export {
@@ -29,5 +32,8 @@ export {
   RecipeCards as AppRecipeCards,
   PrivateRoute as AppPrivateRoute,
   MealPlanning as AppMealPlanning,
-  PairingResults as AppPairingResults
+  PairingResults as AppPairingResults,
+  RecipeBoxCards,
+  UserRecipes,
+  RecipeBox
 };

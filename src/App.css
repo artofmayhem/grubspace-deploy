@@ -69,6 +69,22 @@ p {
   width: 100vw;
 }
 
+.login-container {
+  background-image: url('./assets/churros.jpg');
+  background-size: cover;
+  background-position: 25% 25%;
+  height: 39rem;
+  width: 100vw
+}
+
+.vault-container {
+  background-image: url('./assets/bread.jpg');
+  background-size: cover;
+  background-position: 25% 25%;
+  height: 39rem;
+  width: 100vw
+}
+
 .about-container {
   background-image: url("./assets/about.jpg");
   background-size: cover;

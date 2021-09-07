@@ -13,7 +13,7 @@ import {
   AppLogin,
   AppLogout,
   UserRecipes,
-  AppPrivateRoute as PrivateRoute,
+  // AppPrivateRoute as PrivateRoute,
 } from "./components/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 

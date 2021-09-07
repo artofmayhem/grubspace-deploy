@@ -17,7 +17,7 @@ const UserRecipes = (props) => {
   // const classes = useStyles();
   let history = useHistory();
   //const isDisabled = false;
-  const [localUser, setLocalUser] = useState(localStorage.getItem("user"));
+  const [localUser, setLocalUser] = useState();
   // console.log("localUser from user recipes", Number( localUser ));
   const [recipe, setRecipe] = useState({});
   const [formValues, setFormValues] = useState(initialRecipeFormValues);
@@ -44,7 +44,12 @@ const UserRecipes = (props) => {
             onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
             margin="dense"
             // className={classes.input}
-            style={{ margin: "auto 10px", width: "5vw", minWidth: 60, padding: '0.8rem 0' }}
+            style={{
+              margin: "auto 10px",
+              width: "5vw",
+              minWidth: 60,
+              padding: "0.8rem 0",
+            }}
           />
           <TextField
             name="ingredient"
@@ -56,7 +61,13 @@ const UserRecipes = (props) => {
             }
             margin="dense"
             // className={classes.input}
-            style={{ margin: "auto", marginLeft: 20, width: "15vw", minWidth: 150, padding: '0.8rem 0 ' }}
+            style={{
+              margin: "auto",
+              marginLeft: 20,
+              width: "15vw",
+              minWidth: 150,
+              padding: "0.8rem 0 ",
+            }}
           />
         </div>
       );
@@ -93,7 +104,12 @@ const UserRecipes = (props) => {
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
             // className={classes.input}
-            style={{ minWidth: 250, width: '30vw', marginLeft: 20, padding: '0.8rem 0 ' }}
+            style={{
+              minWidth: 250,
+              width: "30vw",
+              marginLeft: 20,
+              padding: "0.8rem 0 ",
+            }}
           />
         </div>
       );
@@ -119,10 +135,12 @@ const UserRecipes = (props) => {
 
   //CHANGE HANDLERS
 
-  const postNewRecipe = (newRecipe) => {
+  const postNewRecipe = (req, newRecipe) => {
+    console.log('1 from userRecipes req:',req, 'user passed into endpoint', localUser);
+    setLocalUser(localStorage.getItem("user"))
     console.log("newRecipe", newRecipe);
     axiosWithAuth()
-      .post("/recipes/my-list/:id", newRecipe)
+      .post(`/recipes/my-list/:${localUser}`, newRecipe)
       .then((res) => {
         setRecipe(res.data);
         console.log(recipe);
@@ -131,7 +149,7 @@ const UserRecipes = (props) => {
         history.push("/user_recipes");
       })
       .catch((error) => {
-      console.log({error});
+        console.log({ error });
       });
   };
 
@@ -173,7 +191,7 @@ const UserRecipes = (props) => {
       >
         <h2
           className={"animate-fade-in-down text-white mx-auto -mt-10 text-5xl"}
-          style={{textShadow: '0px 0px 1rem #000'}}
+          style={{ textShadow: "0px 0px 1rem #000" }}
         >
           Recipe Vault
         </h2>
@@ -220,7 +238,10 @@ const UserRecipes = (props) => {
               }
               style={{ width: "47vw", minWidth: 375 }}
             >
-              <h3 className={"text-3xl mb-4"} style={{ width: "40vw", minWidth: 375 }}>
+              <h3
+                className={"text-3xl mb-4"}
+                style={{ width: "40vw", minWidth: 375 }}
+              >
                 -Details-
               </h3>
               <TextField
@@ -234,7 +255,7 @@ const UserRecipes = (props) => {
                 margin="dense"
                 // variant="outlined"
                 // className={classes.input}
-                style={{width: 275 }}
+                style={{ width: 275 }}
               />
               <TextField
                 type="text"
@@ -247,7 +268,7 @@ const UserRecipes = (props) => {
                 margin="dense"
                 // variant="outlined"
                 // className={classes.input}
-                style={{width: 275 }}
+                style={{ width: 275 }}
               />
               <TextField
                 type="text"
@@ -260,7 +281,7 @@ const UserRecipes = (props) => {
                 margin="dense"
                 // variant="outlined"
                 // className={classes.input}
-                style={{width: 275 }}
+                style={{ width: 275 }}
               />
               <TextField
                 type="text"
@@ -273,8 +294,7 @@ const UserRecipes = (props) => {
                 margin="dense"
                 // variant="outlined"
                 // className={classes.input}
-                style={{width: 275, color: 'white' }}
-                
+                style={{ width: 275, color: "white" }}
               />
             </div>
             <div
@@ -288,7 +308,11 @@ const UserRecipes = (props) => {
             >
               <label htmlFor="category_id">Meal Type</label>
             </div>
-            <select onChange={handleChange} name="category_id" className={'h-10 text-white bg-gray-600 text-xl'}>
+            <select
+              onChange={handleChange}
+              name="category_id"
+              className={"h-10 text-white bg-gray-600 text-xl"}
+            >
               <option>---Select category---</option>
               <option value="">--Meal Period--</option>
               <option value={1}>Breakfast</option>
@@ -387,7 +411,7 @@ const UserRecipes = (props) => {
           }}
         >
           <div
-            className="flex justify-center flex-col"
+            className="flex justify-center items-center flex-col"
             style={{
               opacity: "0.8",
               width: "50vw",

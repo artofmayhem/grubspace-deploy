@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Button, TextField } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 import useStyles from "../styles/styles";
 import axiosWithAuth from "../api/api";
 import { RecipeBox } from "./index";

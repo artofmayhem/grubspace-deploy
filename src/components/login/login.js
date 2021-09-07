@@ -15,13 +15,13 @@ import * as yup from "yup";
 
 const LoginForm = () => {
   const history = useHistory();
-
   const [user, setUser] = useState(initialCredentials);
   const [login, setLogin] = useState(true);
   const [fetching, setFetching] = useState(false);
   const [formErrors, setErrors] = useState(initialFormErrors);
   const [disabled, setDisabled] = useState(true);
   const [backendError, setBackendError] = useState();
+  const [userData, setUserData] = useState();
 
   //helper functions
 
@@ -30,7 +30,7 @@ const LoginForm = () => {
     //allows react to keep the event object to play nicely with the async
     e.persist();
     if (login) {
-      console.log(loginSchema, "login");
+      // console.log(loginSchema, "login");
       yup
         .reach(loginSchema, e.target.name)
         .validate(e.target.name)
@@ -47,7 +47,7 @@ const LoginForm = () => {
           console.log({ error });
         });
     } else {
-      console.log(signUpSchema, "signup");
+      // console.log(signUpSchema, "signup");
       yup
         .reach(signUpSchema, e.target.name)
 
@@ -85,27 +85,30 @@ const LoginForm = () => {
 
     setFetching(true);
     if (login) {
-      console.log("user", user);
+      console.log("user from login", user);
       axios
-      .post("https://sauti-market-bw.herokuapp.com/api/auth/login", user)
-        .then(({ data }) => {
-          localStorage.setItem("token", data.token);
-          localStorage.setItem("user", JSON.stringify(data.user));
+      .post("https://secret-family-recipes-101.herokuapp.com/api/users/login", user)
+        .then((res) => {
+          localStorage.setItem("token", res.data.token);
+          localStorage.setItem("user", res.data.user_id);
+          setUserData(res.data);
+          console.log("1. user data", res.data);
           setUser(initialCredentials);
           history.push("/userrecipes");
-          setFetching(false);
+          setFetching(false)
         })
         .catch((err) => {
           alert(
             "Please Provide a Valid Username, and Password Combination or Start A New Account By Clicking The Sign-up Button"
           );
-          const backError = err.response.data.message;
+          const backError = err;
           setBackendError(backError);
-          console.log(backError, "sign in error from the api");
+        console.log({err}, "sign in error from the api");
         });
     } else {
+      console.log("user from register", user);
       axios
-      .post("https://sauti-market-bw.herokuapp.com/api/auth/register", user)
+      .post("https://secret-family-recipes-101.herokuapp.com/api/users/register", user)
         .then(({ data }) => {
           alert("Account Created! Please Login to Continue");
           setLogin(true);
@@ -117,11 +120,12 @@ const LoginForm = () => {
             "Please Provide a Valid Username, Email, and Password (6-15 characters long) to Create an Account"
           );
           const backError = err.response.data.message;
-          setBackendError(backError);
-          console.log(backError, "sign in error from the api");
+          setBackendError(err);
+          console.log("sign in error from the api", backendError, backError, {err} );
         });
     }
   };
+  // console.log("user data", userData );
 
   return (
 
@@ -139,8 +143,8 @@ const LoginForm = () => {
           <TextField
             required
             type="text"
-            name="username"
-            value={user.username}
+            name="user_username"
+            value={user.user_username}
             onChange={handleChange}
             variant='outlined'
             label="username"
@@ -150,9 +154,9 @@ const LoginForm = () => {
           {!login ? (
             <TextField
               required
-              name="email"
+              name="user_email"
               type="email"
-              value={user.email}
+              value={user.user_email}
               onChange={handleChange}
               variant="outlined"
               label="email"
@@ -164,16 +168,16 @@ const LoginForm = () => {
           )}
           <TextField
             required
-            name="password"
+            name="user_password"
             type="password"
-            value={user.password}
+            value={user.user_password}
             onChange={handleChange}
             variant="outlined"
             label="password"
             margin="dense"
             style={{ width: 300, border: '1px solid white', backgroundColor: '#777' }}
           />
-          <h6 style={{ textAlign: "center", color: "red" }}>{backendError}</h6>
+          {/* <h6 style={{ textAlign: "center", color: "red" }}>{backendError}</h6> */}
           <button
             disabled={disabled}
             type="submit"

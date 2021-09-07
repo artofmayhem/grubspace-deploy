@@ -158,7 +158,7 @@ const UserRecipes = (props) => {
     };
 
     postNewRecipe(newRecipe);
-    alert("Your Recipe Has Been Added To YOur Recipe Box");
+    alert("This Recipe Has Been Added To Your Recipe Box");
     setFormValues(initialRecipeFormValues);
   };
 

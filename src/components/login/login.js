@@ -94,6 +94,7 @@ const LoginForm = () => {
           setUserData(res.data);
           console.log("1. user data", res.data);
           setUser(initialCredentials);
+          alert(`You have successfully logged in, ${res.data.user_username}`);
           history.push("/userrecipes");
           setFetching(false)
         })

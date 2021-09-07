@@ -85,6 +85,7 @@ const LoginForm = () => {
 
     setFetching(true);
     if (login) {
+      console.log("user", user);
       axios
       .post("https://sauti-market-bw.herokuapp.com/api/auth/login", user)
         .then(({ data }) => {

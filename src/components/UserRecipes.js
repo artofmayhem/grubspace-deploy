@@ -37,7 +37,7 @@ const UserRecipes = (props) => {
         >
           <p>{`Ingredient: ${idx + 1}`}</p>
           <TextField
-            name="ingredient"
+            name="quantity"
             value={item.quantity}
             key={`quantity-${idx}`}
             placeholder="Quantity"
@@ -131,7 +131,7 @@ const UserRecipes = (props) => {
         history.push("/user_recipes");
       })
       .catch((error) => {
-        console.log(error);
+      console.log({error});
       });
   };
 

@@ -1,4 +1,4 @@
-export const initialRecipeFormValues = {
+const initialRecipeFormValues = {
   "recipe_name": "",
   "recipe_description": "",
   "recipe_source": "",
@@ -8,3 +8,5 @@ export const initialRecipeFormValues = {
   "ingredients": [],
   "instructions":[]
 }
+
+export default initialRecipeFormValues;

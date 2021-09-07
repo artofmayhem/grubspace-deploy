@@ -12,7 +12,8 @@ import {
   AppFooter,
   AppLogin,
   AppLogout,
-  AppPrivateRoute as PrivateRoute,
+  UserRecipes,
+  // AppPrivateRoute as PrivateRoute,
 } from "./components/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import {ScrollTrigger} from "react-router-scroll-4";
@@ -28,11 +29,12 @@ function App() {
         <Route exact path={"/"} component={AppHome} />
         <Route path={"/about"} component={AppAbout} />
         <Route path={"/chef"} component={AppChef} />
-        <PrivateRoute exact path={"/recipes"} component={AppRecipes} />
+        <Route exact path={"/recipes"} component={AppRecipes} />
         <Route exact path={"/nutrition"} component={AppNutrition} />
         <Route exact path={"/cocktails"} component={AppCocktail} />
         <Route exact path={"/login"} component={AppLogin} />
         <Route exact path={"/logout"} component={AppLogout} />
+        <Route exact path={"/userrecipes"} component={UserRecipes}/>
       </Switch>
       <div className={"flex flex-col h-auto"}>
         <AppFooter />

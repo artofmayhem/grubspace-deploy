@@ -89,7 +89,7 @@ const LoginForm = () => {
           localStorage.setItem("token", data.token);
           localStorage.setItem("user", JSON.stringify(data.user));
           setUser(initialCredentials);
-          history.push("/recipes");
+          history.push("/userrecipes");
           setFetching(false);
         })
         .catch((err) => {

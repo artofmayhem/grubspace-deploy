@@ -30,6 +30,7 @@ const UserRecipes = (props) => {
     return formValues.ingredients.map((item, idx) => {
       return (
         <div className="flex flex-row flex-wrap justify-evenly" key={idx}>
+          <p>{`Ingredient ${idx + 1}`}</p>
           <TextField
             name="ingredient"
             value={item.ingredient_name}
@@ -40,7 +41,7 @@ const UserRecipes = (props) => {
             }
             margin="dense"
             className={classes.input}
-            style={{ margin: "auto 5px" }}
+            style={{ margin: "auto", marginLeft: 20 }}
           />
           <TextField
             name="ingredient"
@@ -50,7 +51,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
             margin="dense"
             className={classes.input}
-            style={{ margin: "auto 5px" }}
+            style={{ margin: "auto 10px" }}
           />
         </div>
       );
@@ -79,13 +80,15 @@ const UserRecipes = (props) => {
   const createInstructionsInputs = () => {
     return formValues.instructions.map((item, idx) => {
       return (
-        <div key={idx}>
+        <div className={'flex flex-row flex-wrap items-center'} key={idx}>
+          <p>{`Step ${idx + 1}`}</p>
           <TextField
             value={formValues.instruction}
             placeholder={`Step ${idx + 1}`}
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
             className={classes.input}
+            style={{width: 350, marginLeft: 20}}
           />
         </div>
       );

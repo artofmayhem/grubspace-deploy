@@ -8,10 +8,10 @@ import signUpSchema from "./signUpSchema";
 import loginSchema from "./loginSchema";
 import initialFormErrors from "../../state/initial-states/initialFormErrors";
 import initialCredentials from "../../state/initial-states/initialCredentials";
-import { Parallax } from "react-parallax";
+// import { Parallax } from "react-parallax";
 import * as yup from "yup";
 
-import { FamilyDinner } from "../../assets/index";
+// import { FamilyDinner } from "../../assets/index";
 
 const LoginForm = () => {
   const history = useHistory();
@@ -124,14 +124,14 @@ const LoginForm = () => {
   };
 
   return (
-    <Parallax bgImage={FamilyDinner} strength={500}>
+
       <div
-        className={"flex flex-col justify-center items-center"}
-        style={{ height: "75vh" }}
+        className={" login-container flex flex-col justify-center items-center py-10"}
+        style={{ height: "75vh", width: '100vw'}}
       >
-        <Form onSubmit={onSubmit}>
+        <Form onSubmit={onSubmit} style={{backgroundColor: '#222', opacity: 0.9, color: 'white', width: '35vw', minWidth: 370}}>
           <h2
-            className={"text-white text-4xl"}
+            className={"text-white text-4xl "}
             style={{ textShadow: "0 0 1rem black", fontWeight: 400 }}
           >
             {login ? "Login" : "Sign Up"}
@@ -142,9 +142,10 @@ const LoginForm = () => {
             name="username"
             value={user.username}
             onChange={handleChange}
+            variant='outlined'
             label="username"
             margin="dense"
-            style={{ width: 300 }}
+            style={{ width: 300, border: '1px solid white', backgroundColor: '#777'  }}
           />
           {!login ? (
             <TextField
@@ -153,10 +154,10 @@ const LoginForm = () => {
               type="email"
               value={user.email}
               onChange={handleChange}
-              // variant="outlined"
+              variant="outlined"
               label="email"
               margin="dense"
-              style={{ width: 300 }}
+              style={{ width: 300, border: '1px solid white', backgroundColor: '#777' }}
             />
           ) : (
             <></>
@@ -167,9 +168,10 @@ const LoginForm = () => {
             type="password"
             value={user.password}
             onChange={handleChange}
+            variant="outlined"
             label="password"
             margin="dense"
-            style={{ width: 300 }}
+            style={{ width: 300, border: '1px solid white', backgroundColor: '#777' }}
           />
           <h6 style={{ textAlign: "center", color: "red" }}>{backendError}</h6>
           <button
@@ -208,7 +210,6 @@ const LoginForm = () => {
           {login ? "Go to Sign Up" : "Go to Log In"}
         </Button>
       </div>
-    </Parallax>
   );
 };
 

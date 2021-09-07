@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { TextField } from "@material-ui/core";
-import useStyles from "../styles/styles";
+// import useStyles from "../styles/styles";
 import axiosWithAuth from "../api/api";
 import { RecipeBox } from "./index";
 import {
@@ -14,7 +14,7 @@ import {
 import initialRecipeFormValues from "../state/initial-states/initialRecipeFormState";
 
 const UserRecipes = (props) => {
-  const classes = useStyles();
+  // const classes = useStyles();
   let history = useHistory();
   //const isDisabled = false;
 
@@ -43,7 +43,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
             margin="dense"
             // className={classes.input}
-            style={{ margin: "auto 10px", width: "70px" }}
+            style={{ margin: "auto 10px", width: "5vw", minWidth: 60, padding: '0.8rem 0' }}
           />
           <TextField
             name="ingredient"
@@ -55,7 +55,7 @@ const UserRecipes = (props) => {
             }
             margin="dense"
             // className={classes.input}
-            style={{ margin: "auto", marginLeft: 20, width: "200px" }}
+            style={{ margin: "auto", marginLeft: 20, width: "15vw", minWidth: 150, padding: '0.8rem 0 ' }}
           />
         </div>
       );
@@ -92,7 +92,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
             // className={classes.input}
-            style={{ width: 300, marginLeft: 20 }}
+            style={{ minWidth: 250, width: '30vw', marginLeft: 20, padding: '0.8rem 0 ' }}
           />
         </div>
       );
@@ -166,11 +166,12 @@ const UserRecipes = (props) => {
     <>
       <div
         className={
-          "recipes-container bg-black  w-screen flex flex-col justify-center align-center"
+          "vault-container bg-black  w-screen flex flex-col justify-center align-center"
         }
       >
         <h2
           className={"animate-fade-in-down text-white mx-auto -mt-10 text-5xl"}
+          style={{textShadow: '0px 0px 1rem #000'}}
         >
           Recipe Vault
         </h2>
@@ -182,7 +183,7 @@ const UserRecipes = (props) => {
         name="outerDivContainer"
       >
         <div
-          className="flex justify-center items-center flex-col border-r-2 py-32 px-10"
+          className="flex justify-center items-center flex-col border-r-2 py-0 px-10"
           style={{
             margin: "5vh auto",
             minWidth: 375,
@@ -199,7 +200,7 @@ const UserRecipes = (props) => {
               textSelf: "center",
             }}
           >
-            <h4 className="self-center text-5xl">
+            <h4 className="self-center text-4xl px-10">
               Welcome to your recipe box!
             </h4>
             <h5 className="py-6 text-2xl">
@@ -389,8 +390,7 @@ const UserRecipes = (props) => {
               opacity: "0.8",
               width: "50vw",
               minWidth: 375,
-              margin: "5vh auto",
-              padding: "2vh 0",
+              padding: "1vh 0",
             }}
           >
             <h5 className="text-5xl mt-24">Recipe Box</h5>

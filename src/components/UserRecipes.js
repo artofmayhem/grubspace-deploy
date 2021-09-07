@@ -198,13 +198,14 @@ const UserRecipes = (props) => {
             className="flex items-center justify-center flex-col"
             id="recipeForm"
             onSubmit={handleSubmit}
-          >
+          >  
             <div
               className={
-                "flex flex-row flex-wrap justify-evenly bg-yellow-600 border-2 py-16 px-5"
+                "flex flex-row flex-wrap justify-evenly bg-yellow-600 border-2 pb-16 pt-10 px-5"
               }
               style={{ width: "40vw" }}
             >
+            <h3 className={'text-3xl mb-4'} style={{width: '100%'}}>-Details-</h3>
               <TextField
                 type="text"
                 name="recipe_name"

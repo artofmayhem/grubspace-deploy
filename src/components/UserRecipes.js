@@ -92,7 +92,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
             // className={classes.input}
-            style={{ width: 250, marginLeft: 20, padding: '0.8rem 0 ' }}
+            style={{ minWidth: 250, width: '30vw', marginLeft: 20, padding: '0.8rem 0 ' }}
           />
         </div>
       );

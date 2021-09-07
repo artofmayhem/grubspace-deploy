@@ -15,10 +15,10 @@ export default function RecipeCards(props) {
   return (
     <div
       key="1"
+      className={'bg-gray-500'}
       style={{
         margin: "3vh",
-        backgroundColor: "white",
-        color: 'black',
+        color: 'white',
         opacity: "0.9",
         width: "47vw",
         minWidth: 375,
@@ -45,7 +45,6 @@ export default function RecipeCards(props) {
         className="flex flex-row flex-wrap justify-center"
         style={{
           margin: "1vh 1vw",
-          border: "1px solid white",
         }}
       >
         <div className="flex flex-col justify-center">
@@ -59,7 +58,7 @@ export default function RecipeCards(props) {
         </div>
         <div
           className="flex flex-row flex-wrap-reverse justify-start bg-gray-600 text-white py-10 px-6 text-center"
-          style={{ marginBottom: "1rem" }}
+          style={{ marginBottom: "1rem", border: '3px solid white' }}
         >
          
           {instructions.map((item, idx) => {

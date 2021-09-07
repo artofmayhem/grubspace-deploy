@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Button, LinearProgress, TextField } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import API from "../../api/api";
+// import API from "../../api/api";
+import axios from "axios";
 import signUpSchema from "./signUpSchema";
 import loginSchema from "./loginSchema";
 import initialFormErrors from "../../state/initial-states/initialFormErrors";
@@ -84,7 +85,8 @@ const LoginForm = () => {
 
     setFetching(true);
     if (login) {
-      API.post("", user)
+      axios
+      .post("https://sauti-market-bw.herokuapp.com/api/auth/login", user)
         .then(({ data }) => {
           localStorage.setItem("token", data.token);
           localStorage.setItem("user", JSON.stringify(data.user));
@@ -101,7 +103,8 @@ const LoginForm = () => {
           console.log(backError, "sign in error from the api");
         });
     } else {
-      API.post("", user)
+      axios
+      .post("https://sauti-market-bw.herokuapp.com/api/auth/register", user)
         .then(({ data }) => {
           alert("Account Created! Please Login to Continue");
           setLogin(true);

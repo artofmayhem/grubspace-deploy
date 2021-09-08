@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { TextField } from "@material-ui/core";
-// import useStyles from "../styles/styles";
 import axiosWithAuth from "../api/api";
 import { RecipeBox } from "./index";
 import {
@@ -37,23 +35,20 @@ const UserRecipes = (props) => {
           key={idx}
           style={{ width: "100%" }}
         >
-          <p>{`Ingredient: ${idx + 1}`}</p>
-          <TextField
+          <p className={'mx-2'}>{`Ingredient: ${idx + 1}`}</p>
+          <input
             name="quantity"
             value={item.quantity}
             key={`quantity-${idx}`}
             placeholder="Quantity"
             onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
             margin="dense"
-            // className={classes.input}
-            style={{
-              margin: "auto 10px",
-              width: "5vw",
-              minWidth: 60,
-              padding: "0.8rem 0",
-            }}
+            className={
+              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-1 my-1 text-center text-black"
+            }
+            style={{ boxShadow: "0 0 1.5rem #444" }}
           />
-          <TextField
+          <input
             name="ingredient"
             value={item.ingredient_name}
             key={idx}
@@ -62,14 +57,10 @@ const UserRecipes = (props) => {
               updateIngredients(e, { idx, key: "ingredient_name" })
             }
             margin="dense"
-            // className={classes.input}
-            style={{
-              margin: "auto",
-              marginLeft: 20,
-              width: "15vw",
-              minWidth: 150,
-              padding: "0.8rem 0 ",
-            }}
+            className={
+              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-1 my-1 text-center text-black"
+            }
+            style={{ boxShadow: "0 0 1.5rem #444" }}
           />
         </div>
       );
@@ -99,19 +90,16 @@ const UserRecipes = (props) => {
     return formValues.instructions.map((item, idx) => {
       return (
         <div className={"flex flex-row flex-wrap items-center"} key={idx}>
-          <p>{`Step: ${idx + 1}`}</p>
-          <TextField
+          <p className={'mx-2'}>{`Step: ${idx + 1}`}</p>
+          <input
             value={formValues.instruction}
             placeholder={`Step ${idx + 1}`}
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
-            // className={classes.input}
-            style={{
-              minWidth: 250,
-              width: "30vw",
-              marginLeft: 20,
-              padding: "0.8rem 0 ",
-            }}
+            className={
+              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+            }
+            style={{ boxShadow: "0 0 1.5rem #444" }}
           />
         </div>
       );
@@ -138,9 +126,9 @@ const UserRecipes = (props) => {
   //CHANGE HANDLERS
 
   const postNewRecipe = (req, newRecipe) => {
-    console.log('1 from userRecipes req:',req, 'user passed into endpoint', localUser);
+   
     setLocalUser(localStorage.getItem("user"))
-    console.log("newRecipe", newRecipe);
+    console.log('1 from userRecipes req:',req, 'user passed into endpoint', localUser);
     axiosWithAuth()
       .post(`/recipes/my-list/:${localUser}`, newRecipe)
       .then((res) => {
@@ -244,7 +232,7 @@ const UserRecipes = (props) => {
               >
                 -Details-
               </h3>
-              <TextField
+              <input
                 type="text"
                 name="recipe_name"
                 id="recipe_name"
@@ -253,11 +241,12 @@ const UserRecipes = (props) => {
                 label="Recipe Name"
                 placeholder="Recipe Name"
                 margin="dense"
-                // variant="outlined"
-                // className={classes.input}
-                style={{ width: 275 }}
+                className={
+                  "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+                }
+                style={{ boxShadow: "0 0 1.5rem #444" }}
               />
-              <TextField
+              <input
                 type="text"
                 name="recipe_description"
                 id="recipe_description"
@@ -266,11 +255,12 @@ const UserRecipes = (props) => {
                 label="Description"
                 placeholder="Description"
                 margin="dense"
-                // variant="outlined"
-                // className={classes.input}
-                style={{ width: 275 }}
+                  className={
+                  "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+                }
+                style={{ boxShadow: "0 0 1.5rem #444" }}
               />
-              <TextField
+              <input
                 type="text"
                 name="image_source"
                 id="image_source"
@@ -279,11 +269,12 @@ const UserRecipes = (props) => {
                 label="Image Source"
                 placeholder="Image Source"
                 margin="dense"
-                // variant="outlined"
-                // className={classes.input}
-                style={{ width: 275 }}
+                className={
+                  "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+                }
+                style={{ boxShadow: "0 0 1.5rem #444" }}
               />
-              <TextField
+              <input
                 type="text"
                 name="recipe_source"
                 id="recipe_source"
@@ -292,9 +283,10 @@ const UserRecipes = (props) => {
                 label="Recipe Source"
                 placeholder="Recipe Name"
                 margin="dense"
-                // variant="outlined"
-                // className={classes.input}
-                style={{ width: 275, color: "white" }}
+                className={
+                  "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+                }
+                style={{ boxShadow: "0 0 1.5rem #444" }}
               />
             </div>
             <div

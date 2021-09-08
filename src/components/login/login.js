@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Button, LinearProgress, TextField } from "@material-ui/core";
+import { LinearProgress } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 // import API from "../../api/api";
 import axios from "axios";
@@ -128,7 +128,7 @@ const LoginForm = () => {
         });
     }
   };
-  // console.log("user data", userData );
+  console.log("user data", userData );
 
   return (
 
@@ -138,84 +138,78 @@ const LoginForm = () => {
       >
         <Form onSubmit={onSubmit} style={{backgroundColor: '#222', opacity: 0.9, color: 'white', width: '35vw', minWidth: 370}}>
           <h2
-            className={"text-white text-4xl "}
+            className={"text-white text-4xl mb-4 "}
             style={{ textShadow: "0 0 1rem black", fontWeight: 400 }}
           >
             {login ? "Login" : "Sign Up"}
           </h2>
-          <TextField
-            required
-            type="text"
+          <h6 className={'my-1'}>User Name</h6>
+          <input
+              className={
+                "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+              }
+              type="text"
             name="user_username"
             value={user.user_username}
             onChange={handleChange}
-            variant='outlined'
             label="username"
-            margin="dense"
-            style={{ width: 300, border: '1px solid white', backgroundColor: '#777'  }}
-          />
-          {!login ? (
-            <TextField
-              required
-              name="user_email"
-              type="email"
-              value={user.user_email}
-              onChange={handleChange}
-              variant="outlined"
-              label="email"
-              margin="dense"
-              style={{ width: 300, border: '1px solid white', backgroundColor: '#777' }}
+              style={{ boxShadow: "0 0 1.5rem #444" }}
+            placeholder="User Name"
             />
+        
+          {!login ? (
+            <>
+            <h6 className={'my-1'}>Email</h6>
+            <input
+            className={
+              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+            }
+            name="user_email"
+            type="email"
+          value={user.user_email}
+          onChange={handleChange}
+          label="Email"
+            style={{ boxShadow: "0 0 1.5rem #444" }}
+          placeholder="User Email"
+          />
+          </>
           ) : (
             <></>
           )}
-          <TextField
-            required
+          <h6 className={'my-1'}>Password</h6>
+          <input
+            className={
+              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+            }
             name="user_password"
             type="password"
             value={user.user_password}
             onChange={handleChange}
-            variant="outlined"
+            placeholder="Password"
             label="password"
-            margin="dense"
-            style={{ width: 300, border: '1px solid white', backgroundColor: '#777' }}
+            style={{ boxShadow: "0 0 1.5rem #444" }}
           />
           {/* <h6 style={{ textAlign: "center", color: "red" }}>{backendError}</h6> */}
           <button
             disabled={disabled}
             type="submit"
-            style={{
-              color: "white",
-              border: "1px solid white",
-              width: 300,
-              height: 40,
-              marginTop: 20,
-              background: "#444",
-              borderRadius: 50,
-              fontWeight: "bold",
-            }}
+            className={
+              "animate-fade-in-2 border-2 bg-gray-400 text-white px-10 py-4 m-auto w-60"
+            }
           >
             {login ? "Login" : "Sign Up"}
           </button>
           {fetching ? <LinearProgress color="primary" /> : <></>}
         </Form>
-        <Button
-          size="small"
-          variant="contained"
-          style={{
-            width: 300,
-            height: 50,
-            borderRadius: 50,
-            marginTop: 50,
-            background: "#444",
-            color: "white",
-            fontWeight: "bold",
-            border: "1px solid white",
-          }}
+        <button
+
+          className={
+            "animate-fade-in-2 border-2 bg-gray-400 text-white px-10 py-4 my-6 w-60"
+          }
           onClick={() => setLogin(!login)}
         >
           {login ? "Go to Sign Up" : "Go to Log In"}
-        </Button>
+        </button>
       </div>
   );
 };

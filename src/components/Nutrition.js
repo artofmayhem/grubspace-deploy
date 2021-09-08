@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ScrollToTop from "react-scroll-to-top";
-// import Swiper core and required modules
-// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-// import { Swiper, SwiperSlide } from "swiper/react";
 import YouTube from "react-youtube";
 
 //animation imports
@@ -15,17 +12,9 @@ import { Nutrition3Img, Nutrition2Img, Nutrition4Img } from "../assets/index";
 //import components
 import { AppMealPlanning } from "../components/index";
 
-// // Import Swiper styles
-// import "swiper/swiper.scss";
-// import "swiper/components/navigation/navigation.scss";
-// import "swiper/components/pagination/pagination.scss";
-// import "swiper/components/scrollbar/scrollbar.scss";
-
-// // install Swiper modules
-// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
-
 const youtubeOptions = {
   width: 375,
+  height: 360,
   playerVars: {
     rel: 0,
     showinfo: 0,
@@ -173,7 +162,7 @@ export default function Nutrition() {
 
         <div
           className={"flex flex-row flex-wrap justify-center mx-auto"}
-          style={{ width: 375 }}
+          style={{ width: '100vw', minWidth: 375 }}
         >
           <ul className="slides">
             <input type="radio" name="radio-btn" id="img-1" defaultChecked />
@@ -493,8 +482,8 @@ export default function Nutrition() {
             <h3 className={"text-3xl text-white mb-8 px-10"}>
               Input your specifications and let us do the rest
             </h3>
-            <p className={"text-xl mb-4 text-white mx-6"}> Timeframe </p>
-            <input
+            {/* <p className={"text-xl mb-4 text-white mx-6"}> Timeframe </p> */}
+            {/* <input
               name={"timeFrame"}
               className={
                 "animate-fade-in-1 border-solid border-2 border-white p-4 w-60 mx-auto text-center"
@@ -504,7 +493,7 @@ export default function Nutrition() {
               style={{ boxShadow: "0 0 1.5rem #444" }}
               onChange={handleChange}
               placeholder="Day or Week"
-            />{" "}
+            />{" "} */}
             <p className={"text-xl mt-6 text-white mb-4"}>Target Calories </p>
             <input
               name={"targetCalories"}

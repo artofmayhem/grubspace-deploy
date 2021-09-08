@@ -77,6 +77,14 @@ p {
   width: 100vw
 }
 
+.logout-container {
+  background-image: url('./assets/spices.jpg');
+  background-size: cover;
+  background-position: 25% 25%;
+  height: 39rem;
+  width: 100vw
+}
+
 .vault-container {
   background-image: url('./assets/bread.jpg');
   background-size: cover;
@@ -175,8 +183,7 @@ p {
 .slide {
   top: 0;
   opacity: 0;
-  max-width: 640px;
-  min-width: 375px;
+  width: 375px;
   height: 420px;
   display: block;
   position: absolute;

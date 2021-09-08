@@ -33,7 +33,8 @@ export default function RecipeCards(props) {
         src={image_source}
         alt={recipe_name}
         style={{
-          maxWidth: "20vw",
+          width: "20vw",
+          minWidth: '375px',
           margin: "1rem auto",
           border: "2.5vh solid white",
         }}

@@ -44,7 +44,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
             margin="dense"
             className={
-              "animate-fade-in-1 border-solid border-2 border-white p-2 w-20 mx-1 my-1 text-center text-black"
+              "animate-fade-in-1 border-solid border-2 border-white p-2 w-16 mx-1 my-1 text-center text-black"
             }
             style={{ boxShadow: "0 0 1.5rem #444" }}
           />
@@ -97,7 +97,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
             className={
-              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+              "animate-fade-in-1 border-solid border-2 border-white p-2 w-72 mx-auto my-1 text-center text-black"
             }
             style={{ boxShadow: "0 0 1.5rem #444" }}
           />
@@ -344,11 +344,11 @@ const UserRecipes = (props) => {
                 <label
                   className={"text-3xl"}
                   htmlFor="ingredients"
-                  style={{ color: "white", margin: "25px" }}
+                  style={{ color: "white", margin: "25px 5px" }}
                 >
                   -Ingredients-
                 </label>
-                <div>{addIngredientInputs()}</div>
+                <div >{addIngredientInputs()}</div>
                 <button
                   onClick={addIngredient}
                   type="submit"

@@ -130,14 +130,14 @@ const LoginForm = () => {
   };
   console.log("user data", userData );
 
-  
+
   return (
 
       <div
         className={" login-container flex flex-col justify-center items-center py-10"}
         style={{ height: "75vh", width: '100vw'}}
       >
-        <Form onSubmit={onSubmit} style={{backgroundColor: '#222', opacity: 0.9, color: 'white', width: '35vw', minWidth: 370}}>
+        <Form onSubmit={onSubmit} style={{backgroundColor: '#222', opacity: 0.9, color: 'white', width: '35vw', minWidth: 370, margin: '5rem 0'}}>
           <h2
             className={"text-white text-4xl mb-4 "}
             style={{ textShadow: "0 0 1rem black", fontWeight: 400 }}

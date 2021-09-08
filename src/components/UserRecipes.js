@@ -28,6 +28,8 @@ const UserRecipes = (props) => {
   //FORM CONSTRUCTORS
 
   const addIngredientInputs = () => {
+    const username = localStorage.getItem("username");
+    console.log("username", username);
     return formValues.ingredients.map((item, idx) => {
       return (
         <div
@@ -220,12 +222,10 @@ const UserRecipes = (props) => {
               textSelf: "center",
             }}
           >
-            <h4 className="self-center text-4xl px-10">
-              Welcome to your recipe box!
-            </h4>
-            <h5 className="py-6 text-2xl">
+       
+            <h4 className="py-6 text-4xl px-10">
               Add your favorite recipes and get started collecting today.
-            </h5>
+            </h4>
           </div>
           <form
             className="flex items-center justify-center flex-col"

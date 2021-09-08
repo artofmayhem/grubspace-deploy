@@ -36,7 +36,7 @@ const LoginForm = () => {
         .validate(e.target.name)
         .then((valid) => {
           //logs validation truthiness
-          console.log(valid);
+          // console.log(valid);
           setErrors({
             ...formErrors,
             [e.target.name]: "",
@@ -54,7 +54,7 @@ const LoginForm = () => {
         .validate(e.target.name)
         .then((valid) => {
           //logs validation truthiness
-          console.log(valid);
+          // console.log(valid);
           setErrors({
             ...formErrors,
             [e.target.name]: "",
@@ -89,10 +89,13 @@ const LoginForm = () => {
       axios
       .post("https://secret-family-recipes-101.herokuapp.com/api/users/login", user)
         .then((res) => {
+          alert(`Welcome back, ${res.data.user_username}`);
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("user", res.data.user_id);
+          localStorage.setItem("username", res.data.user_username);
           setUserData(res.data);
-          console.log("1. user data", res.data);
+          // console.log("1. user data", res.data);
+          
           setUser(initialCredentials);
           history.push("/userrecipes");
           setFetching(false)
@@ -125,7 +128,7 @@ const LoginForm = () => {
         });
     }
   };
-  console.log("user data", userData );
+  // console.log("user data", userData );
 
   return (
 

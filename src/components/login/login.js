@@ -205,7 +205,7 @@ const LoginForm = () => {
         <button
 
           className={
-            "animate-fade-in-2 border-2 bg-gray-400 text-white px-10 py-4 my-6 w-60"
+            "animate-fade-in-2 border-2 bg-gray-400 text-white px-10 py-4 mt-6 mb-10 w-60"
           }
           onClick={() => setLogin(!login)}
         >

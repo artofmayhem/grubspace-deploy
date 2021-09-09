@@ -13,7 +13,7 @@ import {
   AppLogin,
   AppLogout,
   UserRecipes,
-  GamesPage,
+  GamePage,
   // AppPrivateRoute as PrivateRoute,
 } from "./components/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -36,7 +36,7 @@ function App() {
         <Route exact path={"/login"} component={AppLogin} />
         <Route exact path={"/logout"} component={AppLogout} />
         <Route exact path={"/userrecipes"} component={UserRecipes}/>
-        <Route exact path={"/foodgames"} component={GamesPage} />
+        <Route exact path={"/foodgames"} component={GamePage} />
       </Switch>
       <div className={"flex flex-col h-auto"}>
         <AppFooter />

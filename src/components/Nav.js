@@ -172,14 +172,14 @@ export default function Nav() {
               <ListItemText primary="User Vault" />
             </Link>
           </ListItem>
-          <ListItem button>
+          {/* <ListItem button>
             <ListItemIcon>
               <SportsEsportsIcon />
             </ListItemIcon>
             <Link to={"gamespage"} onClick={handleDrawerClose}>
               <ListItemText primary="Food Games" />
             </Link>
-          </ListItem>
+          </ListItem> */}
           <ListItem button>
             <ListItemIcon>
                 <AccountCircleIcon />

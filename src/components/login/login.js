@@ -135,7 +135,7 @@ const LoginForm = () => {
 
       <div
         className={" login-container flex flex-col justify-center items-center py-10 "}
-        style={{ height: "75vh", width: '100vw'}}
+        style={{ height: "100vh", width: '100vw'}}
       >
         <Form onSubmit={onSubmit} style={{backgroundColor: '#222', opacity: 0.9, color: 'white', width: '35vw', minWidth: 370, margin: '5rem 0'}}>
           <h2

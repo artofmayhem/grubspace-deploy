@@ -97,7 +97,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
             className={
-              "animate-fade-in-1 border-solid border-2 border-white p-2 w-72 mx-auto my-1 text-center text-black"
+              "animate-fade-in-up border-solid border-2 border-white p-2 w-72 mx-auto my-1 text-center text-black"
             }
             style={{ boxShadow: "0 0 1.5rem #444" }}
           />

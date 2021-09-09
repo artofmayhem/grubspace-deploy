@@ -176,8 +176,8 @@ export default function Nav() {
             <ListItemIcon>
               <SportsEsportsIcon />
             </ListItemIcon>
-            <Link to={"gamespage"} onClick={handleDrawerClose}>
-              <ListItemText primary="Food Games" />
+            <Link to={"arcade"} onClick={handleDrawerClose}>
+              <ListItemText primary="Arcade" />
             </Link>
           </ListItem>
           <ListItem button>

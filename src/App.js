@@ -36,7 +36,7 @@ function App() {
         <Route exact path={"/login"} component={AppLogin} />
         <Route exact path={"/logout"} component={AppLogout} />
         <Route exact path={"/userrecipes"} component={UserRecipes}/>
-        <Route exact path={"/foodgames"} component={GamePage} />
+        <Route exact path={"/arcade"} component={GamePage} />
       </Switch>
       <div className={"flex flex-col h-auto"}>
         <AppFooter />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axiosWithAuth from "../api/api";
 import { RecipeBox } from "./index";
+import ScrollToTop from "react-scroll-to-top";
 import {
   RecipesOneImg,
   RecipesTwoImg,
@@ -30,11 +31,13 @@ const UserRecipes = (props) => {
     console.log("username", username);
     return formValues.ingredients.map((item, idx) => {
       return (
+        
         <div
           className="flex flex-row flex-wrap justify-evenly items-center "
           key={idx}
           style={{ width: "100%" }}
         >
+       
           <p className={'mx-2'}>{`Ingredient: ${idx + 1}`}</p>
           <input
             name="quantity"
@@ -173,12 +176,14 @@ const UserRecipes = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>  
+    <ScrollToTop/> 
       <div
         className={
           "vault-container bg-black  w-screen flex flex-col justify-center align-center"
         }
       >
+          
         <h2
           className={"animate-fade-in-down text-white mx-auto -mt-10 text-5xl"}
           style={{ textShadow: "0px 0px 1rem #000" }}
@@ -424,7 +429,7 @@ const UserRecipes = (props) => {
         <img src={RecipesFourImg} alt="Recipes Four" className="h-80 p-2" />
         <img src={RecipesSixImg} alt="Recipes Six" className="h-80 p-2" />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

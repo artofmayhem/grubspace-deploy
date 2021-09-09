@@ -91,7 +91,7 @@ export default function GamePage() {
           <iframe
             src="https://scratch.mit.edu/projects/451241949/embed"
             allowtransparency="true"
-            style={{ boxShadow: "0 0 2rem limegreen", borderRadius: "25px" }}
+            // style={{ boxShadow: "0 0 2rem limegreen", borderRadius: "25px" }}
             title={"hungry hordes"}
             width="485"
             height="402"

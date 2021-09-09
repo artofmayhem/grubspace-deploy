@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "tailwindcss/dist/tailwind.css";
 import React from "react";
 import {

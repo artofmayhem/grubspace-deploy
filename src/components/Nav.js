@@ -14,6 +14,7 @@ import LocalBarIcon from "@material-ui/icons/LocalBar";
 import LocalDiningIcon from "@material-ui/icons/LocalDining";
 import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import StopIcon from '@material-ui/icons/Stop';
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -169,6 +170,14 @@ export default function Nav() {
             </ListItemIcon>
             <Link to={"userrecipes"} onClick={handleDrawerClose}>
               <ListItemText primary="User Vault" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <SportsEsportsIcon />
+            </ListItemIcon>
+            <Link to={"arcade"} onClick={handleDrawerClose}>
+              <ListItemText primary="Arcade" />
             </Link>
           </ListItem>
           <ListItem button>

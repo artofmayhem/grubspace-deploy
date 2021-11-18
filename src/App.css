@@ -70,27 +70,34 @@ p {
 }
 
 .login-container {
-  background-image: url('./assets/churros.jpg');
+  background-image: url("./assets/churros.jpg");
   background-size: cover;
   background-position: 25% 25%;
   height: 39rem;
-  width: 100vw
+  width: 100vw;
 }
 
 .logout-container {
-  background-image: url('./assets/spices.jpg');
+  background-image: url("./assets/logout.jpg");
   background-size: cover;
   background-position: 25% 25%;
   height: 39rem;
-  width: 100vw
+  width: 100vw;
+}
+
+.arcade-container {
+  background-image: url("./assets/8bit.png");
+  background-position: 25% 25%;
+  height: 39rem;
+  width: 100vw;
 }
 
 .vault-container {
-  background-image: url('./assets/bread.jpg');
+  background-image: url("./assets/bread.jpg");
   background-size: cover;
   background-position: 25% 25%;
   height: 39rem;
-  width: 100vw
+  width: 100vw;
 }
 
 .about-container {
@@ -317,3 +324,4 @@ input#img-10:checked ~ .nav-dots label#img-dot-10 {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
+/*# sourceMappingURL=App.css.map */

@@ -102,13 +102,14 @@ const LoginForm = (props) => {
   };
   // console.log("user data", userData );
 
+
   return (
 
       <div
-        className={" login-container flex flex-col justify-center items-center py-10"}
-        style={{ height: "75vh", width: '100vw'}}
+        className={" login-container flex flex-col justify-center items-center py-10 "}
+        style={{ height: "100vh", width: '100vw'}}
       >
-        <Form onSubmit={onSubmit} style={{backgroundColor: '#222', opacity: 0.9, color: 'white', width: '35vw', minWidth: 370}}>
+        <Form onSubmit={onSubmit} style={{backgroundColor: '#222', opacity: 0.9, color: 'white', width: '35vw', minWidth: 370, margin: '5rem 0'}}>
           <h2
             className={"text-white text-4xl mb-4 "}
             style={{ textShadow: "0 0 1rem black", fontWeight: 400 }}
@@ -176,7 +177,7 @@ const LoginForm = (props) => {
         <button
 
           className={
-            "animate-fade-in-2 border-2 bg-gray-400 text-white px-10 py-4 my-6 w-60"
+            "animate-fade-in-2 border-2 bg-gray-400 text-white px-10 py-4 mt-6 mb-10 w-60"
           }
           onClick={() => setLogin(!login)}
         >

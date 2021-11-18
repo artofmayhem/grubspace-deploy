@@ -14,14 +14,15 @@ const Logout = () => {
       "logout-container bg-black h-screen w-screen flex justify-center items-center"
     }>
     <div
-      className="d-flex flex-col justify-between items-center bg-black -mt-20"
+      className="d-flex flex-col justify-between items-center bg-black mt-10"
       style={{
         border: '5px solid',
         color: "white",
         textAlign: "center",
         padding: "2vh 3vw",
         opacity: "0.7",
-        width: '40%'
+        width: '40%',
+        minWidth: 370
       }}
     >
       <Link

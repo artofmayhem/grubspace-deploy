@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axiosWithAuth from "../api/api";
 import { RecipeBox } from "./index";
+import ScrollToTop from "react-scroll-to-top";
 import {
   RecipesOneImg,
   RecipesTwoImg,
@@ -30,11 +31,13 @@ const UserRecipes = (props) => {
     console.log("username", username);
     return formValues.ingredients.map((item, idx) => {
       return (
+        
         <div
           className="flex flex-row flex-wrap justify-evenly items-center "
           key={idx}
           style={{ width: "100%" }}
         >
+       
           <p className={'mx-2'}>{`Ingredient: ${idx + 1}`}</p>
           <input
             name="quantity"
@@ -44,7 +47,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
             margin="dense"
             className={
-              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-1 my-1 text-center text-black"
+              "animate-fade-in-up border-solid border-2 border-white p-2 w-16 mx-1 my-1 text-center text-black"
             }
             style={{ boxShadow: "0 0 1.5rem #444" }}
           />
@@ -58,7 +61,7 @@ const UserRecipes = (props) => {
             }
             margin="dense"
             className={
-              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-1 my-1 text-center text-black"
+              "animate-fade-in-up border-solid border-2 border-white p-2 w-48 mx-1 my-1 text-center text-black"
             }
             style={{ boxShadow: "0 0 1.5rem #444" }}
           />
@@ -97,7 +100,7 @@ const UserRecipes = (props) => {
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
             className={
-              "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+              "animate-fade-in-up border-solid border-2 border-white p-2 w-72 mx-auto my-1 text-center text-black"
             }
             style={{ boxShadow: "0 0 1.5rem #444" }}
           />
@@ -173,12 +176,14 @@ const UserRecipes = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>  
+    <ScrollToTop/> 
       <div
         className={
           "vault-container bg-black  w-screen flex flex-col justify-center align-center"
         }
       >
+          
         <h2
           className={"animate-fade-in-down text-white mx-auto -mt-10 text-5xl"}
           style={{ textShadow: "0px 0px 1rem #000" }}
@@ -344,11 +349,11 @@ const UserRecipes = (props) => {
                 <label
                   className={"text-3xl"}
                   htmlFor="ingredients"
-                  style={{ color: "white", margin: "25px" }}
+                  style={{ color: "white", margin: "25px 5px" }}
                 >
                   -Ingredients-
                 </label>
-                <div>{addIngredientInputs()}</div>
+                <div >{addIngredientInputs()}</div>
                 <button
                   onClick={addIngredient}
                   type="submit"
@@ -424,7 +429,7 @@ const UserRecipes = (props) => {
         <img src={RecipesFourImg} alt="Recipes Four" className="h-80 p-2" />
         <img src={RecipesSixImg} alt="Recipes Six" className="h-80 p-2" />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

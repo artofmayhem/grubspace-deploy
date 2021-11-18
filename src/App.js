@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "tailwindcss/dist/tailwind.css";
 import React,{useEffect} from "react";
 import {
@@ -13,6 +13,7 @@ import {
   AppLogin,
   AppLogout,
   UserRecipes,
+  GamePage,
   // AppPrivateRoute as PrivateRoute,
 } from "./components/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -43,6 +44,7 @@ function App(props) {
         <Route exact path={"/logout"} component={AppLogout} />
         {/* redux */}
         <Route exact path={"/userrecipes"} component={UserRecipes}/>
+        <Route exact path={"/arcade"} component={GamePage} />
       </Switch>
       <div className={"flex flex-col h-auto"}>
         <AppFooter />

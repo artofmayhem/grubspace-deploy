@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Parallax } from "react-parallax";
-import {Family} from '../../assets/index'
+
 
 const Logout = () => {
   let history = useHistory();
@@ -12,8 +11,8 @@ const Logout = () => {
   };
 
   return (
-    <Parallax bgImage={Family} strength={500}>
-      <div className={'flex flex-col justify-center items-center'} style={{ height: "100vh" }}>
+
+      <div className={'logout-container flex flex-col justify-center items-center'} style={{ height: "100vh" }}>
     <div
       className="d-flex flex-col justify-between items-center bg-yellow-600 -mt-20"
       style={{
@@ -42,7 +41,6 @@ const Logout = () => {
       </Link>
       </div>
     </div>
-    </Parallax>
   );
 };
 

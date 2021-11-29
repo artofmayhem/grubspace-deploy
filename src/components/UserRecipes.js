@@ -159,7 +159,7 @@ const UserRecipes = (props) => {
     <>
       <div
         className={
-          "recipes-container bg-black  w-screen flex flex-col justify-center align-center"
+          "vault-container bg-black  w-screen flex flex-col justify-center align-center"
         }
       >
         <h2

@@ -1,6 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
-import { searchValue, getRecipe } from "../state/ReducerState/Actions";
 import { AppRecipeCards } from "./index";
 import {
   RecipesOneImg,
@@ -27,11 +25,6 @@ const Recipes = (props) => {
     //console.log("Incoming event target value in recipe", event.target.value);
     setSearchValue(event.target.value);
   };
-
-  // const handleNumber = (event) => {
-  //   //console.log("Incoming event number in recipe", event.target.value);
-  //   setNumber(event.target.value);
-  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -96,17 +89,5 @@ const Recipes = (props) => {
     </div>
   );
 };
-const mapStateToProps = (state) => {
-  getRecipe(state.searchValue);
-  // console.log("searchValue being sent into getRecipes from recipe input", state.searchValue, state.number);
-  return {
-    searchValue: state.searchValue,
-  };
-};
 
-const mapDispatchToProps = {
-  searchValue,
-  getRecipe,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Recipes);
+export default Recipes;

@@ -29,7 +29,7 @@ const Recipes = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    searchValue(searchValues);
+    // searchValue(searchValues);
     // getRecipes(searchValues);
     // props.number(numbers);
     setSearchValue("");

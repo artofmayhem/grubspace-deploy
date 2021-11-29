@@ -8,6 +8,8 @@ import {
   RecipesSixImg,
 } from "../assets/index";
 import ScrollToTop from "react-scroll-to-top";
+import {connect} from "react-redux";
+import { getRecipes } from "../state/ReducerState/Actions/index";
 
 const initialState = {
   searchValue: "",
@@ -17,7 +19,7 @@ const initialState = {
 const Recipes = () => {
 
   //initialize the recipes list
-  const [searchValues, setSearchValue] = React.useState(
+  const [searchValue, setSearchValue] = React.useState(
     initialState.searchValue
   );
   // const [numbers, setNumber] = React.useState(initialState.number);
@@ -29,8 +31,9 @@ const Recipes = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    searchValue(searchValues);
-    // getRecipes(searchValues);
+    console.log("Incoming search value in recipe", searchValue);
+    // searchValue(searchValues);
+    getRecipes(searchValue);
     // props.number(numbers);
     setSearchValue("");
   };
@@ -64,7 +67,7 @@ const Recipes = () => {
             "animate-fade-in-1 border-solid border-2 border-white p-4 w-60 text-center  mb-20 mt-10 m-auto"
           }
           type="text"
-          value={searchValues}
+          value={searchValue}
           style={{ boxShadow: "0 0 1.5rem #444" }}
           onChange={handleChange}
           placeholder="Find your next meal here!"
@@ -91,4 +94,15 @@ const Recipes = () => {
   );
 };
 
-export default Recipes;
+const mapStateToProps = (state) => {
+  console.log("Incoming state in Recipes", state);
+  return {
+    loading: state.loading,
+    error: state.error,
+    recipe: state.recipe,
+  };
+};
+
+const mapDispatchToProps = { getRecipes };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Recipes);

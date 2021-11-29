@@ -10,8 +10,8 @@ import { Button } from "@material-ui/core";
 import { LinearProgress } from "@material-ui/core";
 import ShareIcon from "@material-ui/icons/Share";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
-import { API_START } from "../state/constants";
-import { getRecipes } from "../state/actionCreators";
+import {connect} from "react-redux";
+import { getRecipes } from "../state/ReducerState/Actions/index";
 const baseUri = "https://spoonacular.com/recipeImages/";
 
 const useStyles = makeStyles({
@@ -181,6 +181,15 @@ const Recipe = (props) => {
   }
 };
 
+const mapStateToProps = (state) => {
+  return {
+    loading: state.loading,
+    error: state.error,
+    recipe: state.recipe,
+  };
+};
 
-export default Recipe
+const mapDispatchToProps = { getRecipes };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Recipe);
 

@@ -9,8 +9,8 @@ export const searchValue = (newSearch) => {
   return { type: SEARCH_VALUE, payload: newSearch };
 };
 
-export const getRecipe = (props) => (dispatch) => {
-  //console.log("Incoming props.searchValue to actions = ", props);
+export const getRecipes = (props) => (dispatch) => {
+  console.log("Incoming props.searchValue to actions = ", props);
   const options = {
     method: "GET",
     url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search",

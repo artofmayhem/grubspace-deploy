@@ -1,6 +1,4 @@
-import React from "react";
-import { connect } from "react-redux";
-import { getRecipe } from "../state/ReducerState/Actions";
+import React, {useEffect} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -12,7 +10,8 @@ import { Button } from "@material-ui/core";
 import { LinearProgress } from "@material-ui/core";
 import ShareIcon from "@material-ui/icons/Share";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
-
+import { API_START } from "../state/constants";
+import { getRecipes } from "../state/actionCreators";
 const baseUri = "https://spoonacular.com/recipeImages/";
 
 const useStyles = makeStyles({
@@ -41,8 +40,12 @@ const useStyles = makeStyles({
 
 const Recipe = (props) => {
   const [like, setLike] = React.useState(false);
-  const { recipe, loading } = props;
   const classes = useStyles();
+  const {loading,recipe,getRecipes} = props;
+
+  useEffect(()=>{
+    getRecipes();
+  },[getRecipes]);
 
   //this helper function will convert mins to hours and mins
   const convertMinToHoursAndMin = (min) => {
@@ -178,14 +181,6 @@ const Recipe = (props) => {
   }
 };
 
-const mapStateToProps = (state) => {
-  return {
-    loading: state.loading,
-    error: state.error,
-    recipe: state.recipe,
-  };
-};
 
-const mapDispatchToProps = { getRecipe };
+export default Recipe
 
-export default connect(mapStateToProps, mapDispatchToProps)(Recipe);

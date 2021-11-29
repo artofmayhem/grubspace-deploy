@@ -34,6 +34,7 @@ import Team from "./team.jpg";
 import FamilyDinner from "./familyDinner.jpg";
 import Kiwi from "./kiwi.jpg";
 import Family from "./family.jpg";
+import EightBitFood from "./8bitfood.jpg";
 
 export { 
     Grubspace as Logo,
@@ -71,5 +72,6 @@ export {
     Team,
     FamilyDinner,
     Kiwi,
-    Family
+    Family,
+    EightBitFood
 };

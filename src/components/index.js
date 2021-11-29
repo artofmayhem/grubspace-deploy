@@ -16,6 +16,7 @@ import PairingResults from "./PairingResults";
 import UserRecipes from "./UserRecipes";
 import RecipeBoxCards from "./RecipeBoxCards";
 import RecipeBox from "./RecipeBox";
+import GamePage from "./GamesPage";
 
 
 export {
@@ -35,5 +36,6 @@ export {
   PairingResults as AppPairingResults,
   RecipeBoxCards,
   UserRecipes,
-  RecipeBox
+  RecipeBox,
+  GamePage,
 };

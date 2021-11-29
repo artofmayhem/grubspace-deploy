@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-const api = () => {
+const API = () => {
     const token = localStorage.getItem('token');
     return axios.create({
-        baseURL: 'https://grubspace-server.herokuapp.com/api',
+        baseURL: 'https://secret-family-recipes-101.herokuapp.com/api',
         headers: {
             Authorization: token
         }
     });
 }
 
-export default api;
+export default API;
 

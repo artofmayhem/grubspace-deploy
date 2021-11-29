@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Button, TextField } from "@material-ui/core";
-import useStyles from "../styles/styles";
 import axiosWithAuth from "../api/api";
 import { RecipeBox } from "./index";
+import ScrollToTop from "react-scroll-to-top";
 import {
   RecipesOneImg,
   RecipesTwoImg,
@@ -14,10 +13,11 @@ import {
 import initialRecipeFormValues from "../state/initial-states/initialRecipeFormState";
 
 const UserRecipes = (props) => {
-  const classes = useStyles();
+  // const classes = useStyles();
   let history = useHistory();
   //const isDisabled = false;
-
+  const [localUser, setLocalUser] = useState();
+  // console.log("localUser from user recipes", Number( localUser ));
   const [recipe, setRecipe] = useState({});
   const [formValues, setFormValues] = useState(initialRecipeFormValues);
   //const [disabled, setDisabled] = useState(isDisabled);
@@ -27,10 +27,31 @@ const UserRecipes = (props) => {
   //FORM CONSTRUCTORS
 
   const addIngredientInputs = () => {
+    const username = localStorage.getItem("username");
+    console.log("username", username);
     return formValues.ingredients.map((item, idx) => {
       return (
-        <div className="flex flex-row flex-wrap justify-evenly" key={idx}>
-          <TextField
+        
+        <div
+          className="flex flex-row flex-wrap justify-evenly items-center "
+          key={idx}
+          style={{ width: "100%" }}
+        >
+       
+          <p className={'mx-2'}>{`Ingredient: ${idx + 1}`}</p>
+          <input
+            name="quantity"
+            value={item.quantity}
+            key={`quantity-${idx}`}
+            placeholder="Quantity"
+            onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
+            margin="dense"
+            className={
+              "animate-fade-in-up border-solid border-2 border-white p-2 w-16 mx-1 my-1 text-center text-black"
+            }
+            style={{ boxShadow: "0 0 1.5rem #444" }}
+          />
+          <input
             name="ingredient"
             value={item.ingredient_name}
             key={idx}
@@ -39,18 +60,10 @@ const UserRecipes = (props) => {
               updateIngredients(e, { idx, key: "ingredient_name" })
             }
             margin="dense"
-            className={classes.input}
-            style={{ margin: "auto 5px" }}
-          />
-          <TextField
-            name="ingredient"
-            value={item.quantity}
-            key={`quantity-${idx}`}
-            placeholder="Quantity"
-            onChange={(e) => updateIngredients(e, { idx, key: "quantity" })}
-            margin="dense"
-            className={classes.input}
-            style={{ margin: "auto 5px" }}
+            className={
+              "animate-fade-in-up border-solid border-2 border-white p-2 w-48 mx-1 my-1 text-center text-black"
+            }
+            style={{ boxShadow: "0 0 1.5rem #444" }}
           />
         </div>
       );
@@ -79,13 +92,17 @@ const UserRecipes = (props) => {
   const createInstructionsInputs = () => {
     return formValues.instructions.map((item, idx) => {
       return (
-        <div key={idx}>
-          <TextField
+        <div className={"flex flex-row flex-wrap items-center"} key={idx}>
+          <p className={'mx-2'}>{`Step: ${idx + 1}`}</p>
+          <input
             value={formValues.instruction}
             placeholder={`Step ${idx + 1}`}
             onChange={(e) => updateInstructions(e, idx)}
             margin="dense"
-            className={classes.input}
+            className={
+              "animate-fade-in-up border-solid border-2 border-white p-2 w-72 mx-auto my-1 text-center text-black"
+            }
+            style={{ boxShadow: "0 0 1.5rem #444" }}
           />
         </div>
       );
@@ -111,9 +128,12 @@ const UserRecipes = (props) => {
 
   //CHANGE HANDLERS
 
-  const postNewRecipe = (newRecipe) => {
+  const postNewRecipe = (req, newRecipe) => {
+   
+    setLocalUser(localStorage.getItem("user"))
+    console.log('1 from userRecipes req:',req, 'user passed into endpoint', localUser);
     axiosWithAuth()
-      .post("/recipes", newRecipe)
+      .post(`/recipes/my-list/:${localUser}`, newRecipe)
       .then((res) => {
         setRecipe(res.data);
         console.log(recipe);
@@ -122,7 +142,7 @@ const UserRecipes = (props) => {
         history.push("/user_recipes");
       })
       .catch((error) => {
-        console.log(error);
+        console.log({ error });
       });
   };
 
@@ -132,64 +152,73 @@ const UserRecipes = (props) => {
       ...prevFormValue,
       [name]: value,
     }));
-    console.log(formValues);
+    // console.log(formValues);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formValues);
+    // console.log(formValues);
 
     const newRecipe = {
       recipe_name: formValues.recipe_name,
       recipe_description: formValues.recipe_description,
       recipe_source: formValues.recipe_source,
-      user_id: 0,
+      user_id: Number(localUser),
       image_source: formValues.image_source,
-      category_id: formValues.category_id,
+      category_id: Number(formValues.category_id),
       ingredients: formValues.ingredients,
       instructions: formValues.instructions,
     };
 
     postNewRecipe(newRecipe);
-    alert("Your Recipe Has Been Added To YOur Recipe Box");
+    alert("This Recipe Has Been Added To Your Recipe Box");
     setFormValues(initialRecipeFormValues);
   };
 
   return (
-    <>
+    <React.Fragment>  
+    <ScrollToTop/> 
       <div
         className={
           "vault-container bg-black  w-screen flex flex-col justify-center align-center"
         }
       >
+          
         <h2
           className={"animate-fade-in-down text-white mx-auto -mt-10 text-5xl"}
+          style={{ textShadow: "0px 0px 1rem #000" }}
         >
           Recipe Vault
         </h2>
       </div>
       <div
         className={
-          "bg-gray-800 text-white text-center flex flex-row flex-wrap py-20"
+          "bg-gray-800 text-white text-center flex flex-row flex-wrap items-start justify-center py-20"
         }
         name="outerDivContainer"
       >
-        <div className="flex justify-start flex-col border-r-2 py-32 px-10">
+        <div
+          className="flex justify-center items-center flex-col border-r-2 py-0 px-10"
+          style={{
+            margin: "5vh auto",
+            minWidth: 375,
+            width: "50vw",
+            textSelf: "center",
+          }}
+        >
           <div
-            className="flex justify-center flex-col"
+            className="flex justify-center text-center item-center flex-col"
             style={{
-              margin: "5vh auto",
+              margin: "5vh",
               minWidth: 375,
-              width: "48vw",
+              width: "50vw",
               textSelf: "center",
             }}
           >
-            <h4 className="self-center text-5xl">
-              Welcome to your recipe box!
-            </h4>
-            <h5 className="py-6 text-2xl">
+       
+            <h4 className="py-6 text-4xl px-10">
               Add your favorite recipes and get started collecting today.
-            </h5>
+            </h4>
           </div>
           <form
             className="flex items-center justify-center flex-col"
@@ -198,11 +227,17 @@ const UserRecipes = (props) => {
           >
             <div
               className={
-                "flex flex-row flex-wrap justify-evenly bg-yellow-600 border-2 py-16 px-5"
+                "flex flex-row flex-wrap justify-evenly bg-yellow-600 border-2 pb-16 pt-10 px-5"
               }
-              style={{ width: "40vw" }}
+              style={{ width: "47vw", minWidth: 375 }}
             >
-              <TextField
+              <h3
+                className={"text-3xl mb-4"}
+                style={{ width: "40vw", minWidth: 375 }}
+              >
+                -Details-
+              </h3>
+              <input
                 type="text"
                 name="recipe_name"
                 id="recipe_name"
@@ -211,10 +246,12 @@ const UserRecipes = (props) => {
                 label="Recipe Name"
                 placeholder="Recipe Name"
                 margin="dense"
-                variant="outlined"
-                className={classes.input}
+                className={
+                  "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+                }
+                style={{ boxShadow: "0 0 1.5rem #444" }}
               />
-              <TextField
+              <input
                 type="text"
                 name="recipe_description"
                 id="recipe_description"
@@ -223,10 +260,12 @@ const UserRecipes = (props) => {
                 label="Description"
                 placeholder="Description"
                 margin="dense"
-                variant="outlined"
-                className={classes.input}
+                  className={
+                  "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+                }
+                style={{ boxShadow: "0 0 1.5rem #444" }}
               />
-              <TextField
+              <input
                 type="text"
                 name="image_source"
                 id="image_source"
@@ -235,10 +274,12 @@ const UserRecipes = (props) => {
                 label="Image Source"
                 placeholder="Image Source"
                 margin="dense"
-                variant="outlined"
-                className={classes.input}
+                className={
+                  "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+                }
+                style={{ boxShadow: "0 0 1.5rem #444" }}
               />
-              <TextField
+              <input
                 type="text"
                 name="recipe_source"
                 id="recipe_source"
@@ -247,14 +288,16 @@ const UserRecipes = (props) => {
                 label="Recipe Source"
                 placeholder="Recipe Name"
                 margin="dense"
-                variant="outlined"
-                className={classes.input}
+                className={
+                  "animate-fade-in-1 border-solid border-2 border-white p-2 w-60 mx-auto my-1 text-center text-black"
+                }
+                style={{ boxShadow: "0 0 1.5rem #444" }}
               />
             </div>
             <div
               className="flex justify-center items-center flex-column"
               style={{
-                padding: "2vh 4vw",
+                padding: "3vh 4vw",
                 color: "white",
                 fontSize: "3.5vh",
                 margin: "2vh auto",
@@ -262,7 +305,11 @@ const UserRecipes = (props) => {
             >
               <label htmlFor="category_id">Meal Type</label>
             </div>
-            <select onChange={handleChange} name="category_id">
+            <select
+              onChange={handleChange}
+              name="category_id"
+              className={"h-10 text-white bg-gray-600 text-xl"}
+            >
               <option>---Select category---</option>
               <option value="">--Meal Period--</option>
               <option value={1}>Breakfast</option>
@@ -296,17 +343,17 @@ const UserRecipes = (props) => {
               }}
             >
               <div
-                className="flex flex-col justify-start items-center bg-yellow-600"
-                style={{ border: ".5px solid white" }}
+                className="flex flex-col justify-center items-center bg-yellow-600 "
+                style={{ border: ".5px solid white", width: "100%" }}
               >
                 <label
                   className={"text-3xl"}
                   htmlFor="ingredients"
-                  style={{ color: "white", margin: "25px" }}
+                  style={{ color: "white", margin: "25px 5px" }}
                 >
                   -Ingredients-
                 </label>
-                {addIngredientInputs()}
+                <div >{addIngredientInputs()}</div>
                 <button
                   onClick={addIngredient}
                   type="submit"
@@ -328,7 +375,7 @@ const UserRecipes = (props) => {
                 >
                   -Instructions-
                 </label>
-                {createInstructionsInputs()}
+                <div>{createInstructionsInputs()}</div>
                 <button
                   onClick={addStep}
                   type="submit"
@@ -361,13 +408,12 @@ const UserRecipes = (props) => {
           }}
         >
           <div
-            className="flex justify-center flex-col"
+            className="flex justify-center items-center flex-col"
             style={{
               opacity: "0.8",
               width: "50vw",
               minWidth: 375,
-              margin: "5vh auto",
-              padding: "2vh 0",
+              padding: "1vh 0",
             }}
           >
             <h5 className="text-5xl mt-24">Recipe Box</h5>
@@ -383,7 +429,7 @@ const UserRecipes = (props) => {
         <img src={RecipesFourImg} alt="Recipes Four" className="h-80 p-2" />
         <img src={RecipesSixImg} alt="Recipes Six" className="h-80 p-2" />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

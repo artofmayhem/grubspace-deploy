@@ -1,5 +1,3 @@
-@import "~react-image-gallery/styles/scss/image-gallery.scss";
-
 .App {
   text-align: center;
   font-family: "Ringside Extra Wide SSm A", "Ringside Extra Wide SSm B";
@@ -10,13 +8,19 @@
 }
 
 html {
-  overflow-x: hidden; 
-  width: 100vw
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 .recipes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
@@ -40,115 +44,121 @@ h3 {
   text-shadow: 0 0 2.5rem black;
 }
 
-h4, h5, h6, p {
+h4,
+h5,
+h6,
+p {
   font-family: "Verlag A", "Verlag B";
   font-style: normal;
   font-weight: 400;
 }
 
-// home component css
+.hero {
+  visibility: hidden;
+}
+
 .home {
-  // this creates a background image
   background-image: url("./assets/pasta.jpg");
 }
 
-.each-slide > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 350px;
-}
-
-.each-slide span {
-  padding: 20px;
-  font-size: 20px;
-  background: #efefef;
-  text-align: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-//containers
 .recipes-container {
-  background-image: url('./assets/recipe.jpg');
+  background-image: url("./assets/recipe.jpg");
   background-size: cover;
   background-position: center center;
   height: 34rem;
+  width: 100vw;
+}
+
+.login-container {
+  background-image: url('./assets/churros.jpg');
+  background-size: cover;
+  background-position: 25% 25%;
+  height: 39rem;
   width: 100vw
 }
 
-.chef-container-two {
-  background-image: url('./assets/winepairing.jpg');
+.logout-container {
+  background-image: url('./assets/logout.jpg');
   background-size: cover;
-  background-position: center center;
-  height: 34vh;
+  background-position: 25% 25%;
+  height: 39rem;
+  width: 100vw
+}
+
+.arcade-container {
+  background-image: url('./assets/8bit.png');
+  background-position: 25% 25%;
+  height: 39rem;
+  width: 100vw
+}
+
+.vault-container {
+  background-image: url('./assets/bread.jpg');
+  background-size: cover;
+  background-position: 25% 25%;
+  height: 39rem;
   width: 100vw
 }
 
 .about-container {
-  background-image: url('./assets/about.jpg');
+  background-image: url("./assets/about.jpg");
   background-size: cover;
   background-position: 25% 25%;
   height: 39rem;
-  width: 100vw
+  width: 100vw;
 }
 
 .chef-container {
-  background-image: url('./assets/chef.jpg');
+  background-image: url("./assets/chef.jpg");
   background-size: cover;
   background-position: center center;
   height: 39rem;
-  width: 100vw
+  width: 100vw;
 }
 
-
 .nutrition-container {
-  background-image: url('./assets/nutrition.jpg');
+  background-image: url("./assets/nutrition.jpg");
   background-size: cover;
   background-position: 25% 25%;
   height: 34rem;
-  width: 100vw
+  width: 100vw;
 }
 
 .cocktail-container {
-  background-image: url('./assets/vino-bg.jpg');
+  background-image: url("./assets/vino-bg.jpg");
   background-size: cover;
   background-position: center 5%;
   height: 39rem;
-  width: 100vw
+  width: 100vw;
 }
 
 .content-wine {
-  background-image: url('./assets/sunset.jpg');
+  background-image: url("./assets/sunset.jpg");
   background-size: cover;
   background-position: center center;
-  width: 100vw
+  width: 100vw;
 }
 
 .progress {
-  color: black
+  color: black;
 }
 
 .progress-container {
-height: 64vh;
-background-image: url('./assets/wines.jpg');
-background-size: cover;
-background-position: center center;
-width: 100vw
+  height: 64vh;
+  background-image: url("./assets/wines.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
 }
+
 @media screen and (max-width: 400px) {
   .mobile-hide {
     display: none;
   }
-  
 }
-
 .pink-image {
- background-color: white; 
+  background-color: white;
 }
-
-// Complete css for swiper element below widths set for mobile and desktop
 
 .slides {
   padding: 0;
@@ -169,22 +179,25 @@ width: 100vw
   -webkit-touch-callout: none;
 }
 
-.slides input { display: none; }
+.slides input {
+  display: none;
+}
 
-.slide-container { display: block; }
+.slide-container {
+  display: block;
+}
 
 .slide {
   top: 0;
   opacity: 0;
-  max-width: 640px;
-  min-width: 375px;
+  width: 375px;
   height: 420px;
   display: block;
   position: absolute;
-
+  -webkit-transform: scale(0);
   transform: scale(0);
-
-  transition: all .7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 .slide Youtube {
@@ -198,61 +211,67 @@ width: 100vw
   height: 100%;
   display: none;
   position: absolute;
-
   opacity: 0;
   z-index: 9;
   cursor: pointer;
-
-  transition: opacity .2s;
-
-  color: #FFF;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  color: #fff;
   font-size: 156pt;
   text-align: center;
   line-height: 380px;
   font-family: "Varela Round", sans-serif;
-  background-color: rgba(255, 255, 255, .3);
-  text-shadow: 0px 0px 15px rgb(119, 119, 119);
+  background-color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0px 0px 15px #777777;
 }
 
-.slide:hover + .nav label { opacity: 0.5; }
+.slide:hover + .nav label {
+  opacity: 0.5;
+}
 
-.nav label:hover { opacity: 1; }
-
-.nav .next { right: 0; }
-
-input:checked + .slide-container  .slide {
+.nav label:hover {
   opacity: 1;
+}
 
+.nav .next {
+  right: 0;
+}
+
+input:checked + .slide-container .slide {
+  opacity: 1;
+  -webkit-transform: scale(1);
   transform: scale(1);
-
+  -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
 
-input:checked + .slide-container .nav label { display: block; }
+input:checked + .slide-container .nav label {
+  display: block;
+}
 
 .nav-dots {
-width: 100%;
-bottom: 9px;
-height: 11px;
-display: block;
-position: absolute;
-text-align: center;
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
 }
 
 .nav-dots .nav-dot {
-top: -5px;
-width: 11px;
-height: 11px;
-margin: 0 4px;
-position: relative;
-border-radius: 100%;
-display: inline-block;
-background-color: rgba(0, 0, 0, 0.6);
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .nav-dots .nav-dot:hover {
-cursor: pointer;
-background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 input#img-1:checked ~ .nav-dots label#img-dot-1,
@@ -265,113 +284,43 @@ input#img-7:checked ~ .nav-dots label#img-dot-7,
 input#img-8:checked ~ .nav-dots label#img-dot-8,
 input#img-9:checked ~ .nav-dots label#img-dot-9,
 input#img-10:checked ~ .nav-dots label#img-dot-10 {
-background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
-//photo effects
 /*Zoom #1 Animation*/
 .hover01 figure img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
+
 .hover01 figure:hover img {
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 /* Zoom In #2 Animation*/
 .hover02 figure img {
-	width: 300px;
-	height: auto;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover02 figure:hover img {
-	width: 350px;
+  width: 300px;
   height: auto;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.hover02 figure:hover img {
+  width: 350px;
 }
 
 /* Gray Scale Animation*/
 .hover08 figure img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
+
 .hover08 figure:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }
-
-
-/* Slideshow */
-
-.slideshow {
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 500px;
-}
-
-.slideshowSlider {
-  white-space: nowrap;
-  transition: ease 1000ms;
-}
-
-.slide {
-  display: inline-block;
-
-  height: 400px;
-  width: 100%;
-  border-radius: 40px;
-}
-
-/* Buttons */
-
-.slideshowDots {
-  text-align: center;
-}
-
-.slideshowDot {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-
-  cursor: pointer;
-  margin: 15px 7px 0px;
-
-  background-color: #c4c4c4;
-}
-
-.slideshowDot.active {
-  background-color: #6a0dad;
-}
-
-.login {
-  background: url(images/kiwi.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 75%;
-  opacity: 0.8; 
-  min-width: 60vw;
-  min-height: 100vh;
-}
-
-.signup {
-  margin: auto auto;
-  padding: 10rem;
-  min-width: auto;
-  background: url('./images/kiwi.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 50%;
-  opacity: 0.9;
-  color: white;
-  text-align: center;
-}
-
-

@@ -1,7 +1,7 @@
 const initialCredentials = {
-    username: '',
-    password: '',
-    email: ''
+    user_username: '',
+    user_password: '',
+    user_email: ''
 }
 
 

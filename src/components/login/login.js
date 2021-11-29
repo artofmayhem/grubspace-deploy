@@ -6,10 +6,10 @@ import { useHistory } from "react-router-dom";
 import signUpSchema from "./signUpSchema";
 import loginSchema from "./loginSchema";
 import initialFormErrors from "../../state/initial-states/initialFormErrors";
-import initialCredentials from '../../state/initial-states/initialCredentials';
+import initialCredentials from "../../state/initial-states/initialCredentials";
 // import { Parallax } from "react-parallax";
 import * as yup from "yup";
-// import { postLogIn, createUser } from "../../state/actionCreators";
+import { postLogIn, createUser } from "../../state/actionCreators";
 // import { FamilyDinner } from "../../assets/index";
 import { connect } from "react-redux";
 const LoginForm = (props) => {
@@ -188,13 +188,13 @@ const LoginForm = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  // status: state.api.postLogIn.status,
-  // error: state.api.postLogIn.errMsg
+  status: state.api.postLogIn.status,
+  error: state.api.postLogIn.errMsg
 });
 
 const mapDispatchToProps = {
-  // postLogIn,
-  // createUser
+  postLogIn,
+  createUser
 };
 
 

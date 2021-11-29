@@ -184,12 +184,15 @@ export default function Chef() {
             }
             style={{ width: 375 }}
           >
+            <p className={'my-6'}>Click left or right on slide to navigate</p>
             <ul className="slides">
+              
               <input type="radio" name="radio-btn" id="img-1" defaultChecked />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="E1z55dYHv8c" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="E1z55dYHv8c" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -214,12 +217,13 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-2" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube
+                    name={"weissman"}
+                    opts={youtubeOptions}
+                    videoId="gjhOPHoRJBs"
+                  />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube
-                      name={"weissman"}
-                      opts={youtubeOptions}
-                      videoId="gjhOPHoRJBs"
-                    />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -244,8 +248,9 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-3" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="-65DoHCZGdQ" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="-65DoHCZGdQ" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -270,8 +275,9 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-4" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="mCJUcJJUmvg" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="mCJUcJJUmvg" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -296,8 +302,9 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-5" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="BMgLRD2v5w0" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="BMgLRD2v5w0" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -322,8 +329,9 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-6" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="UbNiP8ilvCc" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="UbNiP8ilvCc" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -348,8 +356,9 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-7" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="E8b7PwchlIg" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="E8b7PwchlIg" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -373,8 +382,9 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-8" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="nW_Tpken5cg" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="nW_Tpken5cg" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -398,8 +408,9 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-9" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="bF9zOykErJ4" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="bF9zOykErJ4" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -421,8 +432,9 @@ export default function Chef() {
               <input type="radio" name="radio-btn" id="img-10" />
               <li className="slide-container">
                 <div className="slide">
+                  {" "}
+                  <YouTube opts={youtubeOptions} videoId="7IZeh7w5ekY" />{" "}
                   <p className={"text-2xl"}>
-                    <YouTube opts={youtubeOptions} videoId="7IZeh7w5ekY" />{" "}
                     <a
                       target="_blank"
                       rel="noreferrer"

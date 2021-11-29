@@ -6,7 +6,7 @@ import './index.css';
 //2. import wrapper and store
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux'
-
+import { appReducer } from './state/ReducerState';
 import thunk from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 const logger = createLogger({
@@ -14,7 +14,7 @@ const logger = createLogger({
 });
 
 //3. Create store passing in rootReducer
-const store = createStore(applyMiddleware(thunk))
+const store = createStore(appReducer, applyMiddleware(thunk, logger))
 
 ReactDOM.render(
   <React.StrictMode>

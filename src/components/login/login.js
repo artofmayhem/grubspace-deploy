@@ -3,25 +3,22 @@ import styled from "styled-components";
 import { LinearProgress } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 // import API from "../../api/api";
-import axios from "axios";
 import signUpSchema from "./signUpSchema";
 import loginSchema from "./loginSchema";
 import initialFormErrors from "../../state/initial-states/initialFormErrors";
 import initialCredentials from "../../state/initial-states/initialCredentials";
 // import { Parallax } from "react-parallax";
 import * as yup from "yup";
-
+import { postLogIn, createUser } from "../../state/actionCreators";
 // import { FamilyDinner } from "../../assets/index";
-
-const LoginForm = () => {
+import { connect } from "react-redux";
+const LoginForm = (props) => {
   const history = useHistory();
   const [user, setUser] = useState(initialCredentials);
   const [login, setLogin] = useState(true);
   const [fetching, setFetching] = useState(false);
   const [formErrors, setErrors] = useState(initialFormErrors);
   const [disabled, setDisabled] = useState(true);
-  const [backendError, setBackendError] = useState();
-  const [userData, setUserData] = useState();
 
   //helper functions
 
@@ -86,49 +83,24 @@ const LoginForm = () => {
     setFetching(true);
     if (login) {
       console.log("user from login", user);
-      axios
-      .post("https://secret-family-recipes-101.herokuapp.com/api/users/login", user)
-        .then((res) => {
-          alert(`Welcome back, ${res.data.user_username}`);
-          localStorage.setItem("token", res.data.token);
-          localStorage.setItem("user", res.data.user_id);
-          localStorage.setItem("username", res.data.user_username);
-          setUserData(res.data);
-          // console.log("1. user data", res.data);
-          
-          setUser(initialCredentials);
+      props.postLogIn(user,(isSuccessful)=>{
+        if(isSuccessful){
           history.push("/userrecipes");
-          setFetching(false)
-        })
-        .catch((err) => {
-          alert(
-            "Please Provide a Valid Username, and Password Combination or Start A New Account By Clicking The Sign-up Button"
-          );
-          const backError = err;
-          setBackendError(backError);
-        console.log({err}, "sign in error from the api");
-        });
+        }
+      });
     } else {
       console.log("user from register", user);
-      axios
-      .post("https://secret-family-recipes-101.herokuapp.com/api/users/register", user)
-        .then(({ data }) => {
+      props.createUser(user,(isSuccessful)=>{
+        if(isSuccessful){
           alert("Account Created! Please Login to Continue");
           setLogin(true);
           setFetching(false);
           history.push("/login");
-        })
-        .catch((err) => {
-          alert(
-            "Please Provide a Valid Username, Email, and Password (6-15 characters long) to Create an Account"
-          );
-          const backError = err.response.data.message;
-          setBackendError(err);
-          console.log("sign in error from the api", backendError, backError, {err} );
-        });
+        }
+      });
     }
   };
-  console.log("user data", userData );
+  // console.log("user data", userData );
 
 
   return (
@@ -215,7 +187,18 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+const mapStateToProps = (state) => ({
+  status: state.api.postLogIn.status,
+  error: state.api.postLogIn.errMsg
+});
+
+const mapDispatchToProps = {
+  postLogIn,
+  createUser
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(LoginForm);
 
 const Form = styled.form`
   display: flex;

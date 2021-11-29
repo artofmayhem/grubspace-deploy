@@ -14,7 +14,8 @@ const initialState = {
   number: 10,
 };
 
-const Recipes = (props) => {
+const Recipes = () => {
+
   //initialize the recipes list
   const [searchValues, setSearchValue] = React.useState(
     initialState.searchValue
@@ -28,8 +29,8 @@ const Recipes = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.searchValue(searchValues);
-    props.getRecipe(searchValues);
+    searchValue(searchValues);
+    // getRecipes(searchValues);
     // props.number(numbers);
     setSearchValue("");
   };

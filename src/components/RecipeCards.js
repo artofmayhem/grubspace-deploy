@@ -10,7 +10,8 @@ import { Button } from "@material-ui/core";
 import { LinearProgress } from "@material-ui/core";
 import ShareIcon from "@material-ui/icons/Share";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
-
+import { API_START } from "../state/constants";
+import { getRecipes } from "../state/actionCreators";
 const baseUri = "https://spoonacular.com/recipeImages/";
 
 const useStyles = makeStyles({
@@ -39,8 +40,12 @@ const useStyles = makeStyles({
 
 const Recipe = (props) => {
   const [like, setLike] = React.useState(false);
-  const { recipe, loading } = props;
   const classes = useStyles();
+  const {loading,recipe,getRecipes} = props;
+
+  useEffect(()=>{
+    getRecipes();
+  },[getRecipes]);
 
   //this helper function will convert mins to hours and mins
   const convertMinToHoursAndMin = (min) => {
@@ -176,4 +181,6 @@ const Recipe = (props) => {
   }
 };
 
+
 export default Recipe
+

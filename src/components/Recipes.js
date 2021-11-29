@@ -1,5 +1,4 @@
 import React from "react";
-import { searchValue } from "../state/ReducerState/Actions";
 import { AppRecipeCards } from "./index";
 import {
   RecipesOneImg,
@@ -27,11 +26,6 @@ const Recipes = () => {
     //console.log("Incoming event target value in recipe", event.target.value);
     setSearchValue(event.target.value);
   };
-
-  // const handleNumber = (event) => {
-  //   //console.log("Incoming event number in recipe", event.target.value);
-  //   setNumber(event.target.value);
-  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -96,9 +90,5 @@ const Recipes = () => {
     </div>
   );
 };
-
-
-
-
 
 export default Recipes;

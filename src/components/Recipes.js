@@ -1,5 +1,4 @@
 import React from "react";
-import { searchValue } from "../state/ReducerState/Actions";
 import { AppRecipeCards } from "./index";
 import {
   RecipesOneImg,
@@ -30,16 +29,12 @@ const Recipes = () => {
     setSearchValue(event.target.value);
   };
 
-  // const handleNumber = (event) => {
-  //   //console.log("Incoming event number in recipe", event.target.value);
-  //   setNumber(event.target.value);
-  // };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Incoming event in recipe", searchValues);
     //searchValue(searchValues);
     getRecipes(searchValues);
+
     // props.number(numbers);
     setSearchValue("");
   };
@@ -102,7 +97,6 @@ const Recipes = () => {
 
 
 
-
 const mapStateToProps = (state) => {
   return {
     loading: state.loading,
@@ -114,3 +108,4 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = { getRecipes };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Recipes);
+

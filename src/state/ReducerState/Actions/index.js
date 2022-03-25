@@ -5,12 +5,12 @@ export const FETCHING_API_FAILURE = "FETCHING_API_FAIL";
 export const SEARCH_VALUE = "SEARCH_VALUE";
 
 export const searchValue = (newSearch) => {
-  //console.log("5. new searchValue is", newSearch);
+  console.log("5. >>>>>>>>>>>>>>>>>>new searchValue is", newSearch);
   return { type: SEARCH_VALUE, payload: newSearch };
 };
 
 export const getRecipes = (props) => (dispatch) => {
-  console.log("Incoming props.searchValue to actions = ", props);
+  // console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>Incoming props.searchValue to actions = ", props);
   const options = {
     method: "GET",
     url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search",
@@ -18,10 +18,10 @@ export const getRecipes = (props) => (dispatch) => {
       query: props,
       number: 100,
      },
-    headers: {
-      "x-rapidapi-key": "b461d692bemshe80b4354ca6ba03p184f2ejsn08a3bb994638",
-      "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-    },
+     headers: {
+      'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+      'x-rapidapi-key': 'cc687eba84mshcc7485fcf110baap193a15jsnfb1be463a74d'
+    }
   };
   //   console.log('options incoming to getRecipe', options)
     console.log("API call is going");

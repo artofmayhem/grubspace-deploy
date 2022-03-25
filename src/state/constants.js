@@ -1,5 +1,6 @@
 // status of each api call
-export const API_IDLE = "API_IDLE";
-export const API_START = "API_START";
-export const API_SUCCESS = "API_SUCCESS";
-export const API_FAILURE = "API_FAILURE";
+export const FETCHING_API_START = "FETCHING_API_START";
+export const FETCHING_API_SUCCESS = "FETCHING_API_SUCCESS";
+export const FETCHING_API_FAILURE = "FETCHING_API_FAILURE";
+export const FETCHING_SEARCH_VALUE = "FETCHING_SEARCH_VALUE";
+export const SEARCH_VALUE = "SEARCH_VALUE";

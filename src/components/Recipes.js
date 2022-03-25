@@ -11,6 +11,7 @@ import {
 import ScrollToTop from "react-scroll-to-top";
 import { getRecipes } from "../state/actionCreators";
 import { connect } from "react-redux";
+import axios from "axios";
 
 const initialState = {
   searchValue: "",
@@ -26,7 +27,7 @@ const Recipes = () => {
   // const [numbers, setNumber] = React.useState(initialState.number);
 
   const handleChange = (event) => {
-    console.log("Incoming event target value in recipe", event.target.value);
+    // console.log("Incoming event target value in recipe", event.target.value);
     setSearchValue(event.target.value);
   };
 
@@ -35,11 +36,32 @@ const Recipes = () => {
   //   setNumber(event.target.value);
   // };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event, props) => {
     event.preventDefault();
     console.log("Incoming event in recipe", searchValues);
-    //searchValue(searchValues);
-    getRecipes(searchValues);
+    searchValue(searchValues);
+    // getRecipes(searchValues);
+    
+    const options = {
+      method: 'GET',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search',
+      params: {
+        query: searchValues,
+        number: '100',
+
+      },
+      headers: {
+        'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+        'x-rapidapi-key': 'cc687eba84mshcc7485fcf110baap193a15jsnfb1be463a74d'
+      }
+    };
+    
+    axios.request(options).then(function (response) {
+      console.log(response.data.results);
+    }).catch(function (error) {
+      console.error(error);
+    });
+ 
     // props.number(numbers);
     setSearchValue("");
   };
@@ -104,10 +126,12 @@ const Recipes = () => {
 
 
 const mapStateToProps = (state) => {
+  console.log("Incoming state in recipes", state);
   return {
     loading: state.loading,
     error: state.error,
     recipe: state.recipe,
+    searchValue: state.searchValue,
   };
 };
 

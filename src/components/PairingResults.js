@@ -18,7 +18,7 @@ export default function PairingResults(props) {
   } else {
     return (
       <div className={"flex flex-col justify-center"}>
-        <div className="row bg-gray-600 text-white">
+        <div className="row bg-gray-600 text-white">0
           <h1 className={"my-16 py-16 bg-gray-400 text-4xl"}>
             Your recommendations{" "}
             <em className={"text-lg"}>powered by Spoonacular</em>

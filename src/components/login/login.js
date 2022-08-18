@@ -188,8 +188,8 @@ const LoginForm = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  status: state.api.postLogIn.status,
-  error: state.api.postLogIn.errMsg
+  // status: state.api.postLogIn.status,
+  // error: state.api.postLogIn.errMsg
 });
 
 const mapDispatchToProps = {

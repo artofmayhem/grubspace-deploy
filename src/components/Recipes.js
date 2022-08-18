@@ -8,6 +8,8 @@ import {
   RecipesSixImg,
 } from "../assets/index";
 import ScrollToTop from "react-scroll-to-top";
+import { getRecipes } from "../state/actionCreators";
+import { connect } from "react-redux";
 
 const initialState = {
   searchValue: "",
@@ -23,14 +25,16 @@ const Recipes = () => {
   // const [numbers, setNumber] = React.useState(initialState.number);
 
   const handleChange = (event) => {
-    //console.log("Incoming event target value in recipe", event.target.value);
+    console.log("Incoming event target value in recipe", event.target.value);
     setSearchValue(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // searchValue(searchValues);
-    // getRecipes(searchValues);
+    console.log("Incoming event in recipe", searchValues);
+    //searchValue(searchValues);
+    getRecipes(searchValues);
+
     // props.number(numbers);
     setSearchValue("");
   };
@@ -91,4 +95,17 @@ const Recipes = () => {
   );
 };
 
-export default Recipes;
+
+
+const mapStateToProps = (state) => {
+  return {
+    loading: state.loading,
+    error: state.error,
+    recipe: state.recipe,
+  };
+};
+
+const mapDispatchToProps = { getRecipes };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Recipes);
+

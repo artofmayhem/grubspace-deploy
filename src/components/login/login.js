@@ -22,6 +22,8 @@ const LoginForm = (props) => {
 
   //helper functions
 
+
+  
   //Form Validation Feature
   const validateChange = (e) => {
     //allows react to keep the event object to play nicely with the async

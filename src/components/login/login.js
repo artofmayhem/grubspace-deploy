@@ -22,8 +22,10 @@ const LoginForm = (props) => {
 
   //helper functions
 
+// this function handles sliding menu
 
-  
+
+
   //Form Validation Feature
   const validateChange = (e) => {
     //allows react to keep the event object to play nicely with the async
